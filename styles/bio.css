@@ -1,0 +1,46 @@
+@font-face {
+  font-family: myFont;
+  src: url("/asset/fonts/AvenirNextLTProBold.ttf");
+  font-weight: 700;
+}
+body, html, head {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 10vh;
+  background-color: #323232;
+}
+.wrapper__title {
+  text-transform: uppercase;
+  font-family: myFont;
+  font-size: 24px;
+  color: #FFFFFF;
+  line-height: 32px;
+  margin: 0;
+  padding-top: 10px;
+  text-align: center;
+}
+.wrapper__menu {
+  grid-template-columns: repeat(2, 50%);
+  font-family: myFont;
+  font-size: 24px;
+  line-height: 32px;
+  margin: 0;
+  background-color: #323232;
+  display: flex;
+}
+.wrapper__menu--biography {
+  padding-left: 0;
+}
+.wrapper__menu ol {
+  color: #FFFFFF;
+  font-size: 14px;
+  margin-right: 60px;
+  margin-left: 0px;
+}
+.wrapper__menu ol:active, .wrapper__menu ol:hover {
+  border-bottom: 2px solid #FFFFFF;
+}/*# sourceMappingURL=bio.css.map */
