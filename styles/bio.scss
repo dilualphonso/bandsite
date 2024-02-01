@@ -5,73 +5,309 @@
 
 }
 
+@font-face {
+    font-family: AvnirmyFontRegular;
+    src: url("/asset/fonts/AvenirNextLTPro.ttf");
+    font-weight: 400;
+
+}
+
+@font-face {
+    font-family: AvnirmyFontDemi;
+    src: url("/asset/fonts/AvenirNextLTProDemi.ttf");
+    font-weight: 600;
+
+}
+
+body {
+    margin: 0;
+
+}
+
+.header {
+    height: 20vh;
+    width: 100vw;
+    background-color: #323232;
+    //  margin-bottom: -1em;
 
 
-body,html,head{
-    margin:0;
-    padding:0;
+    &__logo-container {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    &__logo {
+        width: 6.25rem;
+        padding: 16px 0px;
+    }
+
+    &__menu {
+        list-style-type: none;
+
+        display: flex;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+        color: #FFFFFF;
+        font-family: myFont;
+        padding: 0;
+        margin-bottom: 0;
+        width: 100%;
+    }
+
+    &__links {
+        text-align: center;
+        padding-bottom: 5px;
+        font-size: 1rem;
+        width: 50vw;
+    }
+
+    &__border-biography:hover {
+        color: #FFFFFF;
+        border-bottom: 5px solid #FFFFFF;
+    }
+
+    &__border-show:hover {
+        color: #FFFFFF;
+        border-bottom: 5px solid #FFFFFF;
+    } 
+
+
 }
 
 
-.wrapper {
+.heroimage {
 
-   width:100vw;;
-   height: 10vh;
-   background-color: #323232;
+    background-image: url("/asset/images/hero-bio.jpg");
 
-   &__title{
-       
-        text-transform: uppercase;
-        font-family: myFont;
-        font-size: 24px;
-        color: #FFFFFF;
-        line-height: 32px;
-        margin: 0;
-        padding-top: 10px;
-        text-align: center;
-        }
+    width: 100vw;
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 0;
 
-    &__menu {
-       grid-template-columns: repeat(2,50%);
-        font-family: myFont;
-        font-size: 24px;
-        line-height: 32px;
-        margin: 0;
-        background-color: #323232;
-        display:flex;
+    &__container {
 
-        &--biography{
-            padding-left: 0;
-        }
+        display: flex;
+        align-items: center;
+        min-height: 50vh;
+        //max-width: 62rem;
+        margin-inline: auto;
 
-        }
+        box-sizing: border-box;
 
-    &__menu ol {
-        color: #FFFFFF;
-        font-size: 14px;
-        margin-right: 60px;
-        margin-left: 0px;
-
-           &:active, &:hover{
-            border-bottom: 2px solid #FFFFFF ;
-          
-           }
-     
-
-        
-
-       
-        
-        
     }
 
-        }
+    &__title {
+        padding-left: 1rem;
+        font-family: myFont;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #FFFFFF;
+        line-height: 2rem;
+
+    }
+}
+
+.band {
+
+    &__title {
+        padding-left: 1rem;
+        font-family: myFont;
+        font-size: 1.5rem;
+        padding-top: 1.5rem;
+    }
+
+    &__img {
+        width: 90vw;
+        height: 40vh;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    &__des1 {
+        padding: 1rem 1rem 0 1rem;
+        font-size: 14px;
+        font-family: AvnirmyFontDemi;
+        line-height: 22px;
+        box-sizing: content-box;
+    }
+
+    &__des2 {
+        padding: 0 1rem 0 1rem;
+
+        font-size: 14px;
+        font-family: AvnirmyFontDemi;
+        margin: 0;
+        box-sizing: content-box;
+    }
+
+}
+
+.paragraph {
+
+    &__title {
+
+        font-size: 1.5rem;
+        padding: 1.5rem 1rem 0 1rem;
+        font-family: AvnirmyFontDemi;
+        box-sizing: content-box;
+    }
+
+    &__para1,
+    &__para2 {
+
+        font-size: 13px;
+        font-family: AvnirmyFontRegular;
+        padding: 0 1rem 0 1rem;
+        line-height: 18px;
+    }
+
+}
+
+.gallery {
+
+    background-color: #FAFAFA;
+    padding-top: 1.5rem;
+    margin: 0;
+
+    &__title {
+        padding-left: 1rem;
+        font-size: 1.5rem;
+        font-family: myFont;
+        padding-bottom: 1rem;
+        margin: 0;
+    }
+
+    &__photos img {
+        padding: 0 1rem 1rem 1rem;
+        width: 90vw;
+        height: 50vh;
+    }
+}
+
+.footer {
+    background-color: #323232;
+
+    &__container {
+        margin: 0 1rem;
+
+    }
+
+    &__title {
+
+        font-size: 1.5rem;
+        font-family: myFont;
+        color: #FFFFFF;
+        margin: 0;
+        padding: 3rem 0 1.5rem 0;
+    }
+}
+
+.social {
+
+    &__icons img {
+        width: 2rem;
+        height: 2rem;
+        margin-left: 0;
+        padding: 0 0 1.5rem 0;
+        margin-right: 1rem;
+    }
+}
+
+.address {
+
+    color: #FFFFFF;
+
+
+    &__name {
+        font-family: AvnirmyFontDemi;
+        font-size: 14px;
+        line-height: 22px;
+        margin: 0;
+        padding: 0 0 0 1rem;
+
+    }
+
+    &__details,
+    &__email {
+
+        font-size: 13px;
+        font-family: AvnirmyFontRegular;
+        line-height: 18px;
+        padding: 1rem 0 0 1rem;
+
+    }
+
+}
+
+.artist {
+    color: #FFFFFF;
+
+    &__title {
+        font-family: AvnirmyFontDemi;
+        font-size: 14px;
+        line-height: 22px;
+        margin: 0;
+        padding: 1rem 0 0 1rem;
+    }
+
+    &__country,
+    &__link {
+        font-size: 13px;
+        font-family: AvnirmyFontRegular;
+        line-height: 18px;
+        padding: 0rem 0 0 1rem;
+    }
+
+}
+
+.entertainment {
+    color: #FFFFFF;
 
 
 
+    &__title {
 
+        font-family: AvnirmyFontDemi;
+        font-size: 14px;
+        line-height: 22px;
+        margin: 0;
+        padding: 1rem 0 0 1rem;
 
+    }
 
+    &__country,
+    &__link {
+        font-size: 13px;
+        font-family: AvnirmyFontRegular;
+        line-height: 18px;
+        padding: 0rem 0 0 1rem;
+    }
 
+}
 
+.footerlogo {
 
+    &__img {
+
+        width: 8rem;
+        padding: 1.5rem 0 0 1rem;
+
+    }
+}
+
+.copyright {
+    &__sentence {
+        font-family: AvnirmyFontRegular;
+        line-height: 18px;
+        font-size: 13px;
+        color: #FFFFFF;
+        margin: 0;
+        padding: 0.5rem 0 1.5rem 1rem;
+    }
+}
