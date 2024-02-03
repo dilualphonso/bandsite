@@ -11,23 +11,21 @@
 <body>
   <header class="header">
 
-    <div class="header__medium">
+    <div class="header__logo-container">
+      <a href="index.html"><img class="header__logo" src="./asset/logo/Logo-bandsite.svg" alt="logo"></a>
+    </div>
 
-      <div class="header__logo-container">
-        <a href="index.html"><img class="header__logo" src="./asset/logo/Logo-bandsite.svg" alt="logo"></a>
+    <ul class="header__menu">
+      <div class="header__border-biography">
+        <li class="header__links">Biography</li>
+        <!-- <li class="header__border-bottom"></li> -->
       </div>
 
-      <ul class="header__menu">
-        <div class="header__border-biography">
-          <li class="header__links">Biography</li>
-          <!-- <li class="header__border-bottom"></li> -->
-        </div>
-
-        <div class="header__border-show">
-          <li class="header__links">Shows</li>
-          <!-- <li class="header__border-bottom"></li> -->
-        </div>
-      </ul>
+      <div class="header__border-show">
+        <li class="header__links">Shows</li>
+        <!-- <li class="header__border-bottom"></li> -->
+      </div>
+    </ul>
 
     </div>
   </header>
@@ -41,7 +39,7 @@
   <main>
     <section class="band">
       <h1 class="band__title">About the musicians</h1>
-      <div>
+      <div class="band__container">
         <img class="band__img" src="/asset/images/band.jpg" alt="">
       </div>
       <div class="band__desc">
@@ -52,7 +50,7 @@
 
       <section class="paragraph">
         <h3 class="paragraph__title">The bees knees</h3>
-        <div class="paragraph_para">
+        <article class="paragraph__para">
           <p class="paragraph__para1">
             The Bees Knees is a pop rock band originating from San Francisco, California.
             The band consists a dynamic lineup featuring two lead vocalists, two guitarists,
@@ -62,7 +60,7 @@
             confident the band could succeed even further with
             more support, pushing The Bees Knees to sign with a well known record label.
           </p>
-          <p class="paragraph__para2">
+          <p class="paragraph__para1">
             From there, the band has soared, gaining international recognition and ranking in the
             top 10 on the Poster Charts. New fans immediately fell in love with the band’s original
             and organic attitude, solidifying their place as one of the hottest and fastest up and
@@ -70,27 +68,28 @@
             are drawn to their candid and authentic performances on stage. The Bees Knees are
             currently recording their second studio album, looking to be released in early 2024.
           </p>
-        </div>
+        </article>
 
       </section>
 
       <section class="gallery">
-        <p class="gallery__title">Photo Gallery</p>
+        <div class="gallery__container">
+          <p class="gallery__title">Photo Gallery</p>
 
-        <div class="gallery__photos">
+          <div class="gallery__photos">
 
-          <img src="/asset/images/Photo-gallery-1.jpg" alt="photo1">
-          <img src="/asset/images/Photo-gallery-2.jpg" alt="photo2">
-          <img src="/asset/images/Photo-gallery-3.jpg" alt="photo3">
-          <img src="/asset/images/Photo-gallery-4.jpg" alt="photo4">
-          <img src="/asset/images/Photo-gallery-5.jpg" alt="photo5">
-          <img src="/asset/images/Photo-gallery-6.jpg" alt="photo6">
-          <img src="/asset/images/Photo-gallery-7.jpg" alt="photo7">
-          <img src="/asset/images/Photo-gallery-8.jpg" alt="photo8">
-          <img src="/asset/images/Photo-gallery-9.jpg" alt="photo9">
+            <img src="/asset/images/Photo-gallery-1.jpg" alt="photo1">
+            <img src="/asset/images/Photo-gallery-2.jpg" alt="photo2">
+            <img src="/asset/images/Photo-gallery-3.jpg" alt="photo3">
+            <img src="/asset/images/Photo-gallery-4.jpg" alt="photo4">
+            <img src="/asset/images/Photo-gallery-5.jpg" alt="photo5">
+            <img src="/asset/images/Photo-gallery-6.jpg" alt="photo6">
+            <img src="/asset/images/Photo-gallery-7.jpg" alt="photo7">
+            <img src="/asset/images/Photo-gallery-8.jpg" alt="photo8">
+            <img src="/asset/images/Photo-gallery-9.jpg" alt="photo9">
 
+          </div>
         </div>
-
 
       </section>
     </section>
@@ -98,20 +97,34 @@
 
   <footer>
     <div class="footer">
-
-      <div class="footer__container">
+          <div class="footer__container">
 
         <p class="footer__title">Get in touch</p>
-        <section class-="social">
-          <divs class="social__icons">
+            <section class="social">
+          <div class="social__icons">
 
             <img src="/asset/icons/Icon-instagram.svg" alt="Icon-instagram">
             <img src="/asset/icons/Icon-facebook.svg" alt="Icon-facebook">
             <img src="/asset/icons/Icon-twitter.svg" alt="Icon-twitter">
-      </div>
-      </section>
+          </div>
+        </section>
+
+        <div class="footer__mobilelogo">
+          <a href="index.html"><img class="footer__logoimg" src="./asset/logo/Logo-bandsite.svg" alt="logo"></a>
+          </div>
+          </div>
 
 
+
+
+
+
+
+
+
+
+
+    <div class="agents">
       <section class="address">
 
         <p class="address__name">The Bees Knees Management</p>
@@ -129,36 +142,44 @@
 
       <section class="artist">
 
+
+
         <p class="artist__title">Limitless Artist Group</p>
 
+        <div class="artist__details">
+          <p class="artist__country">Booking Agent for</br>
+            US / South America / Japan</p>
 
-        <p class="artist__country">Booking Agent for</br>
-          US / South America / Japan</p>
 
-
-        <p class="artist__link">bookings@limitlessag.com</p>
-
+          <p class="artist__link">bookings@limitlessag.com</p>
+        </div>
       </section>
 
       <section class="entertainment">
 
         <p class="entertainment__title">ARCH Entertainment</p>
 
-        <p class="entertainment__country"> Agent for </br>
+        <div class="entertainment__details">
 
-          UK / EU / AU </p>
+          <p class="entertainment__country"> Agent for </br>
 
-        <p class="entertainment__link">bookings@archentertainment.com</p>
+            UK / EU / AU </p>
 
+          <p class="entertainment__link">bookings@archentertainment.com</p>
+        </div>
       </section>
-      <section class="footerlogo">
-        <a href="index.html"><img class="footerlogo__img" src="./asset/logo/Logo-bandsite.svg" alt="logo"></a>
-      </section>
-         
-      <section class="copyright">
-      <p class="copyright__sentence"> The Bees Knees © 2023 All Rights Reserved </p>
+    </div>
+
+
+
+    <section class="logo">
+      <a href="index.html"><img class="logo__img" src="./asset/logo/Logo-bandsite.svg" alt="logo"></a>
     </section>
 
+    <section class="copyright">
+      <p class="copyright__sentence"> The Bees Knees © 2023 All Rights Reserved </p>
+    </section>
+    </div>
 
   </footer>
 </body>

@@ -1,3 +1,5 @@
+ @use './partials/mixin' as *;
+
 @font-face {
     font-family: myFont;
     src: url("/asset/fonts/AvenirNextLTProBold.ttf");
@@ -24,11 +26,13 @@ body {
 
 }
 
+html, body {width: auto!important; overflow-x: hidden!important}
+
 .header {
-    height: 20vh;
-    width: 100vw;
+
+    width: 100%;
     background-color: #323232;
-    //  margin-bottom: -1em;
+
 
 
     &__logo-container {
@@ -41,15 +45,14 @@ body {
 
 
     &__logo {
-        width: 6.25rem;
-        padding: 16px 0px;
+        width: 8.25rem;
+        padding: 1rem 0;
     }
 
     &__menu {
         list-style-type: none;
 
         display: flex;
-        -ms-flex-pack: distribute;
         justify-content: space-around;
         color: #FFFFFF;
         font-family: myFont;
@@ -60,7 +63,7 @@ body {
 
     &__links {
         text-align: center;
-        padding-bottom: 5px;
+        padding-bottom: 1rem;
         font-size: 1rem;
         width: 50vw;
     }
@@ -70,14 +73,100 @@ body {
         border-bottom: 5px solid #FFFFFF;
     }
 
-    &__border-show:hover {
-        color: #FFFFFF;
-        border-bottom: 5px solid #FFFFFF;
-    } 
+
 
 
 }
 
+//using header for tablet media query
+
+@include tablet{
+
+.header {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 62rem;
+    margin-inline: auto;
+
+
+    &__logo-container{
+
+ width:20%;
+ margin-right:2rem;
+ height: 100%;
+    }
+
+    &__logo  {
+
+    width: 8rem;
+    margin: 0 1.5rem;
+
+
+    }
+
+
+
+  &__links{
+
+    font-size: 1rem;
+    width:1vw;
+    border-bottom: none;
+    height:6rem;
+    position: relative;
+    bottom:-1.1rem;
+
+
+  }
+
+  &__menu{
+
+width:20%;
+height:100%;
+line-height: 4rem;
+display: flex;
+align-items: center;
+margin-top:0;
+margin-left: 1.5rem;
+justify-content: space-between;
+
+
+
+  }
+
+  &__border-biography{
+    width: 5rem;
+    height: 100%;
+    padding: 0;
+    font-size: 1rem;
+
+
+&:hover{
+    border-bottom: 4px solid #fff;
+    font-weight: 700;
+    padding-bottom: 0;
+
+     }
+
+  }
+
+  &__border-show{
+
+   width:  -50rem;
+
+    height: 100%;
+    padding-left: 1.5rem;
+    font-size: 1rem;
+    padding-right: 1.5rem;
+    margin-left: 1.5rem;
+
+
+  }
+}
+
+
+}
 
 .heroimage {
 
@@ -115,6 +204,7 @@ body {
 
 .band {
 
+
     &__title {
         padding-left: 1rem;
         font-family: myFont;
@@ -122,12 +212,16 @@ body {
         padding-top: 1.5rem;
     }
 
+
     &__img {
-        width: 90vw;
-        height: 40vh;
+
+        box-sizing:border-box;
+        height: 50vw;
+        width: 100vw;
+        margin-bottom: 1rem;
         padding-left: 1rem;
-        padding-right: 1rem;
-    }
+        padding-right:1rem ;
+}
 
     &__des1 {
         padding: 1rem 1rem 0 1rem;
@@ -150,30 +244,63 @@ body {
 
 .paragraph {
 
-    &__title {
 
-        font-size: 1.5rem;
-        padding: 1.5rem 1rem 0 1rem;
-        font-family: AvnirmyFontDemi;
-        box-sizing: content-box;
+        &__title {
+            font-size: 1.5rem;
+            padding: 1.5rem 1rem 0 1rem;
+            font-family: AvnirmyFontDemi;
+            box-sizing: content-box;
+
     }
 
-    &__para1,
-    &__para2 {
+
+
+
+
+    &__para1{
+
+
 
         font-size: 13px;
         font-family: AvnirmyFontRegular;
         padding: 0 1rem 0 1rem;
         line-height: 18px;
     }
+    }
+
+
+@include tablet{
+    .paragraph{
+
+        &__para{
+        display: flex;
+        gap:2rem;
+        padding-inline: 2rem;
+
+        }
+    &__para1 {
+
+    flex: 50%;
+    padding-top: 1rem;
+    }
 
 }
+}
 
-.gallery {
+  .gallery {
 
     background-color: #FAFAFA;
-    padding-top: 1.5rem;
+
+
+     // box-sizing: border-box;
     margin: 0;
+    width:100vw;
+
+
+
+
+
+
 
     &__title {
         padding-left: 1rem;
@@ -181,13 +308,42 @@ body {
         font-family: myFont;
         padding-bottom: 1rem;
         margin: 0;
+
+
     }
 
     &__photos img {
-        padding: 0 1rem 1rem 1rem;
-        width: 90vw;
-        height: 50vh;
+        box-sizing:border-box;
+        height: 50vw;
+        width: 100vw;
+        margin-bottom: 1rem;
+        padding-left: 1rem;
+        padding-right:1rem ;
     }
+}
+
+// tablet view
+@include tablet{
+
+    .gallery{
+
+&__photos{
+
+    display: flex;
+
+        flex-wrap: wrap;
+
+            flex-direction: row;
+
+            justify-content: center;
+  }
+  &__photos img {
+    height: 16.40625vw;
+    width: 29.166666vw;
+    margin: 0 1.5rem 1.5rem 0;
+  }
+
+}
 }
 
 .footer {
@@ -206,7 +362,13 @@ body {
         margin: 0;
         padding: 3rem 0 1.5rem 0;
     }
+    &__mobilelogo{
+        display:none;
+    }
+
 }
+
+
 
 .social {
 
@@ -229,12 +391,12 @@ body {
         font-size: 14px;
         line-height: 22px;
         margin: 0;
-        padding: 0 0 0 1rem;
+        padding: 1rem 0 0 1rem;
 
     }
 
-    &__details,
-    &__email {
+    &__details
+    {
 
         font-size: 13px;
         font-family: AvnirmyFontRegular;
@@ -256,12 +418,11 @@ body {
         padding: 1rem 0 0 1rem;
     }
 
-    &__country,
-    &__link {
+    &__details {
         font-size: 13px;
         font-family: AvnirmyFontRegular;
         line-height: 18px;
-        padding: 0rem 0 0 1rem;
+        padding: 1rem 0 0 1rem;
     }
 
 }
@@ -281,17 +442,16 @@ body {
 
     }
 
-    &__country,
-    &__link {
+    &__details {
         font-size: 13px;
         font-family: AvnirmyFontRegular;
         line-height: 18px;
-        padding: 0rem 0 0 1rem;
+        padding: 1rem 0 0 1rem;
     }
 
 }
 
-.footerlogo {
+.logo {
 
     &__img {
 
@@ -310,4 +470,89 @@ body {
         margin: 0;
         padding: 0.5rem 0 1.5rem 1rem;
     }
+}
+
+//tablet resolution
+@include tablet{
+.footer{
+
+    &__container {
+        margin-left:  1.5rem;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+
+    }
+
+    &__title{
+
+        margin: 0;
+        padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+
+    }
+
+    &__mobilelogo{
+
+        width:10rem;
+        display: unset;
+    }
+        &__logoimg{
+            padding-right: 1.5rem;
+           margin-left: 13rem;
+
+        }
+
+    }
+}
+
+
+.logo {
+
+ display: none;
+}
+
+@include tablet{
+    .social {
+
+    padding-top:1.5rem;
+
+        &__icons img {
+            width: 2rem;
+            height: 2rem;
+            margin-left: 1.5ren;
+            padding: 0 0 1.5rem 0;
+            margin-right: 1.5rem;
+        }
+    }
+
+    .agents{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin:1.5rem;
+    }
+
+    .address{
+
+        &__name{
+            margin-right :1.5rem
+        }
+    }
+
+    .footerlogo {
+       display: none;
+    }
+
+    .copyright {
+        &__sentence {
+            font-family: AvnirmyFontRegular;
+            line-height: 18px;
+            font-size: 13px;
+            color: #FFFFFF;
+            margin: 0;
+            padding: 0.5rem 0 1.5rem 1.5rem;
+        }
+
+
+}
 }
