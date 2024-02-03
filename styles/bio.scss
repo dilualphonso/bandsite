@@ -132,7 +132,8 @@
              align-items: center;
              margin-top: 0;
              margin-left: 1.5rem;
-             justify-content: space-between;
+             //justify-content: center;
+             //justify-content: space-between;
              padding-left: 0;
 
 
@@ -181,9 +182,9 @@
 
         display: flex;
         flex-direction: row;
-        align-items: center;
+
         max-width: 100%;
-        margin:0;
+
         margin: 0 auto;
 
 
@@ -196,9 +197,11 @@
         &__logo  {
 
             width: 6.25rem;
-            margin: 0 1.75rem 0 11.25rem;
+            //margin: 0 2.25rem 0 12.25rem;
             padding: 0;
             height:3.5rem;
+           margin-left: 2.25rem;
+           padding-left: 3.938rem;
         }
 
         &__links {
@@ -233,6 +236,7 @@
         &__border-biography {
 
             padding-right: 5rem;
+            //padding-right: 2.25rem;
             font-size: 1rem;
             padding-left: 0;
             box-sizing: border-box;
@@ -257,6 +261,7 @@
             margin-right: 4.5rem;
 
 
+
         }
     }
 
@@ -278,24 +283,24 @@
 
      &__container {
 
-         display: flex;
-         align-items: center;
-         min-height: 50vh;
-         //max-width: 62rem;
-         margin-inline: auto;
+       display: flex;
+      align-items: center;
+     min-height: 50vh;
+      margin-inline: auto;
 
-         box-sizing: border-box;
+
 
      }
 
      &__title {
-         padding-left: 1rem;
-         font-family: myFont;
-         font-size: 1.5rem;
-         font-weight: 700;
-         color: #FFFFFF;
-         line-height: 2rem;
-         text-transform: capitalize;
+
+            padding-left: 1rem;
+            padding-right: 1rem;
+            font-family: myFont;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #FFFFFF;
+            line-height: 2rem;
 
 
      }
@@ -344,9 +349,8 @@
     .heroimage {
 
         background-image: url("/asset/images/hero-bio.jpg");
-
         max-width: 100%;
-        max-height: 50rem;
+        height: 40rem;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -356,21 +360,28 @@
 
             display: flex;
             align-items: center;
-            min-height: 28rem;
-            margin-inline: auto;
-
+            min-height: 100%;
+            margin:0 auto;
         }
 
         &__title {
 
-            font-family: myFont;
-            font-size: 3.75rem;
-            font-weight: 700;
-            color: #FFFFFF;
-            line-height: 4.25rem;
-            margin-left: 2.25rem;
-            padding: 0 1.5rem 0 0;
+             font-family: myFont;
+            // font-size: 3.75rem;
+            // font-weight: 700;
+            // color: #FFFFFF;
+            // line-height: 4.25rem;
 
+            //margin: 0 auto;
+            padding: 0 5rem 0 5rem;
+
+
+           font-size: 3.75rem;
+           line-height: 4.25rem;
+           color: #FFFFFF;
+
+           width: 31.875rem;
+          // margin-left:5rem;
 
 
         }
@@ -489,6 +500,70 @@
 
  }
 
+ @include desktop {
+    .band {
+
+
+        &__title {
+
+
+            font-size: 2.25rem;
+            padding: 3rem 0 2.25rem 3.938rem;
+            line-height: 2.75rem;
+            margin-left: 2.25rem;
+            max-width: 100%;
+        }
+
+        &__container {
+
+           margin: 0 5rem;
+  }
+
+
+        &__img {
+
+            margin:0 auto;
+            padding: 0 3.938rem 0 3.938rem;
+            margin: 0 5rem 0 0 ;
+            //height:35rem;
+
+        }
+
+        &__desc {
+
+
+            margin: 0 5rem;
+
+
+        }
+
+        &__des1 {
+            padding: 2.25rem 3.938rem 0 3.938rem;
+            font-size: 1.5rem;
+            font-family: AvnirmyFontDemi;
+            line-height: 2rem;
+
+
+
+        }
+
+        &__des2 {
+            // line-height: 2rem;
+
+            font-family: AvnirmyFontDemi;
+
+            padding: 1rem 3.938rem 0 3.938rem;
+
+            font-size: 0.8125rem;
+            line-height: 1.125rem;
+
+
+        }
+
+    }
+
+}
+
  .paragraph {
 
 
@@ -558,6 +633,48 @@
      }
  }
 
+ @include desktop {
+    .paragraph {
+
+        &__title {
+            font-size: 1.5rem;
+            padding: 3rem 3.938rem 0 3.938rem;
+            font-family: AvnirmyFontDemi;
+            margin-left: 5rem;
+
+
+        }
+
+        &__para {
+            display: flex;
+            gap: 2rem;
+
+            padding: 0 3.938rem 2.25rem 3rem;
+            margin:auto;
+            box-sizing: content-box;
+
+        }
+
+        &__para1 {
+
+            flex: 50%;
+            margin-left: 5rem;
+            font-size: 0.875;
+            line-height: 1.375rem;
+
+        }
+
+        &__para2 {
+
+            flex: 50%;
+            margin-right: 5rem;
+            font-size: 0.875;
+            line-height: 1.375rem;
+
+        }
+    }
+}
+
  .gallery {
 
      background-color: #FAFAFA;
@@ -599,7 +716,7 @@
             font-family: myFont;
 
             margin: 0 2.25rem;
-            padding: 3rem 2.25rem 2.25rem;
+            padding: 3rem 2.25rem 0 3.938rem;
 
 
         }
@@ -624,6 +741,43 @@
 
      }
  }
+
+
+ @include desktop {
+
+    .gallery {
+
+       &__title {
+
+           font-size: 2.25rem;
+           font-family: myFont;
+
+           margin: 0 5rem;
+           padding: 3rem 2.25rem 2.25rem;
+
+
+       }
+
+        &__photos {
+
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            margin-right:5rem;
+            margin-left: 5rem;
+
+        }
+
+        &__photos img {
+            max-height: 21rem;
+            max-width: 23rem;
+            padding: 0 1.5rem 1.25rem 0rem;
+            gap:1rem;
+        }
+
+    }
+}
 
  .footer {
      background-color: #323232;
@@ -899,3 +1053,157 @@
 
      }
  }
+
+ @include desktop {
+    .footer {
+
+        &__container {
+           margin-left: 5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items:center ;
+
+
+
+        }
+
+        &__title {
+
+
+            padding:3rem 2.25rem 2.25rem;
+            font-size: 2.25rem;
+
+        }
+
+        &__tabletlogo {
+
+
+            //min-height: 15rem;
+           display: inline-block;
+
+        }
+
+        &__logoimg {
+            //padding-right: 1.5rem;
+            //margin-left: 3rem;
+            max-width:25rem;
+            height: 1.5rem;
+            padding-top: 0.9rem;
+            margin-right: 5rem;
+            padding-right:2.25rem;
+
+        }
+
+    }
+
+    .logo {
+
+        display: none;
+    }
+}
+
+
+
+
+@include desktop {
+    .social {
+
+        padding-top: 1.5rem;
+
+        &__icons{
+
+           padding-right:27rem;
+
+        }
+
+        &__icons img {
+            width: 2rem;
+            height: 2rem;
+            margin-left: 1.5ren;
+            padding: 0 0 1rem;
+            margin-right: 1rem;
+        }
+    }
+
+    .agents {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        margin: 0 20rem 0 5rem;
+        padding-left: 1rem;
+        align-items: center;
+
+
+
+    }
+
+    .address {
+
+        margin-right: 6rem;
+
+        &__name {
+
+           font-size:0.875rem;
+           line-height: 1.25rem;
+           padding-bottom:1rem;
+        }
+
+        &__email{
+           padding-top: 1.5rem;
+
+
+
+        }
+    }
+
+    .artist{
+        margin-right: 6rem;
+
+       &__link{
+           padding-top: 1.5rem;
+       }
+
+       &__title{
+
+           font-size:0.875rem;
+           line-height: 1.25rem;
+           padding-bottom:1rem;
+
+       }
+    }
+
+    .entertainment{
+
+        padding-right: 8rem;
+       &__title{
+
+           font-size:0.875rem;
+           line-height: 1.25rem;
+           padding-bottom:1rem;
+
+       }
+
+       &__link{
+           padding-top: 1.5rem;
+       }
+
+    }
+
+    .footerlogo {
+        display: none;
+    }
+
+    .copyright {
+        &__sentence {
+            font-family: AvnirmyFontRegular;
+            font-size:0.875rem;
+            line-height: 1.25rem;
+            color: #FFFFFF;
+            margin-left: 5rem;
+            padding: 2.25rem 2.25rem 2.5rem  2rem;
+        }
+
+
+    }
+}
