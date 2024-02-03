@@ -51,6 +51,7 @@ html, body {
   padding-bottom: 1rem;
   font-size: 1rem;
   width: 50vw;
+  margin: 0 1rem 0 1rem;
 }
 .header__border-biography:hover {
   color: #FFFFFF;
@@ -67,8 +68,7 @@ html, body {
   }
   .header__logo-container {
     width: 20%;
-    margin-right: 2rem;
-    height: 100%;
+    margin-left: 2.25rem;
   }
   .header__logo {
     width: 8rem;
@@ -77,26 +77,26 @@ html, body {
   .header__links {
     font-size: 1rem;
     width: 1vw;
-    border-bottom: none;
     height: 6rem;
     position: relative;
     bottom: -1.1rem;
   }
   .header__menu {
-    width: 20%;
+    width: 30%;
     height: 100%;
-    line-height: 4rem;
+    line-height: 5rem;
     display: flex;
     align-items: center;
     margin-top: 0;
     margin-left: 1.5rem;
     justify-content: space-between;
+    padding-left: 0;
   }
   .header__border-biography {
     width: 5rem;
-    height: 100%;
-    padding: 0;
+    padding-right: 1.5rem;
     font-size: 1rem;
+    padding-left: 0;
   }
   .header__border-biography:hover {
     border-bottom: 4px solid #fff;
@@ -135,48 +135,113 @@ html, body {
   font-weight: 700;
   color: #FFFFFF;
   line-height: 2rem;
+  text-transform: capitalize;
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  .heroimage {
+    background-image: url("/asset/images/hero-bio.jpg");
+    max-width: 100%;
+    height: 30rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .heroimage__container {
+    display: flex;
+    align-items: center;
+    min-height: 28rem;
+    margin-inline: auto;
+  }
+  .heroimage__title {
+    font-family: myFont;
+    font-size: 3.75rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    line-height: 4.25rem;
+    margin-left: 2.25rem;
+    padding: 0 1.5rem 0 1.5rem;
+  }
+}
 .band__title {
   padding-left: 1rem;
   font-family: myFont;
   font-size: 1.5rem;
   padding-top: 1.5rem;
+  margin-bottom: 0;
+  margin-top: 0;
+  text-transform: capitalize;
 }
 .band__img {
   box-sizing: border-box;
   height: 50vw;
   width: 100vw;
-  margin-bottom: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
+  padding-top: 1rem;
+}
+.band .desc {
+  margin: 0;
 }
 .band__des1 {
   padding: 1rem 1rem 0 1rem;
   font-size: 14px;
   font-family: AvnirmyFontDemi;
   line-height: 22px;
-  box-sizing: content-box;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 .band__des2 {
-  padding: 0 1rem 0 1rem;
+  padding: 1rem 1rem 0 1rem;
   font-size: 14px;
   font-family: AvnirmyFontDemi;
   margin: 0;
-  box-sizing: content-box;
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  .band__title {
+    padding-left: 1rem;
+    font-size: 2.25rem;
+    padding: 3rem 3rem 1.5rem 2.25rem;
+    line-height: 2.75rem;
+  }
+  .band__img {
+    box-sizing: border-box;
+    height: 50vw;
+    width: 100vw;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .band__des1 {
+    padding: 1rem 1rem 0 1rem;
+    font-size: 14px;
+    font-family: AvnirmyFontDemi;
+    line-height: 22px;
+  }
+  .band__des2 {
+    padding: 0 1rem 0 1rem;
+    font-size: 14px;
+    font-family: AvnirmyFontDemi;
+    margin: 0;
+  }
+}
 .paragraph__title {
   font-size: 1.5rem;
-  padding: 1.5rem 1rem 0 1rem;
+  padding: 1.5rem 1rem 0 0rem;
   font-family: AvnirmyFontDemi;
-  box-sizing: content-box;
+  box-sizing: border-box;
+  margin-left: 1rem;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 .paragraph__para1 {
   font-size: 13px;
   font-family: AvnirmyFontRegular;
-  padding: 0 1rem 0 1rem;
+  padding: 1rem 1rem 0 1rem;
   line-height: 18px;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -201,6 +266,7 @@ html, body {
   font-family: myFont;
   padding-bottom: 1rem;
   margin: 0;
+  padding-top: 1.5rem;
 }
 .gallery__photos img {
   box-sizing: border-box;
@@ -333,11 +399,10 @@ html, body {
     padding-right: 1.5rem;
     margin-left: 13rem;
   }
+  .logo {
+    display: none;
+  }
 }
-.logo {
-  display: none;
-}
-
 @media (min-width: 768px) and (max-width: 1024px) {
   .social {
     padding-top: 1.5rem;
