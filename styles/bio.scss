@@ -20,7 +20,7 @@
 
 
     &__logo {
-        width: 8.25rem;
+        width: 7rem;
         padding: 1rem 0;
     }
 
@@ -46,7 +46,7 @@
 
         &--active{
             color:$primary-white;
-            border-bottom: 5px solid $primary-white;
+            border-bottom: 3px solid $primary-white;
             font-weight: 700;
         }
 
@@ -69,20 +69,21 @@
          display: flex;
          flex-direction: row;
          align-items: center;
-        margin:0;
+
 
 
          &__logo-container {
 
              width: 20%;
-             margin-left: 2.25rem;
+            margin-left: 1.5rem;
+            padding-left: 1.5rem;
 
          }
 
          &__logo {
 
-             width: 8rem;
-             margin: 0
+         width: 7rem;
+            //margin: 0;
 
          }
 
@@ -92,7 +93,7 @@
              width: 1vw;
              height: 6rem;
              position: relative;
-              top:3rem
+              top:2.5rem;
 
 
 
@@ -105,17 +106,17 @@
              margin-top: 0;
              margin-left: 1.5rem;
              justify-content: center;
-             padding-left: 0;
+             padding-right: 2rem;
 
 
 
          }
 
          &__border-biography {
-             width: 4.5rem;
+             width: 4rem;
               padding-left: 0;
-             padding-top:0.3rem;
-             border-bottom: 5px solid $primary-white;
+
+             border-bottom: 2px solid $primary-white;
 
 
 
@@ -145,25 +146,26 @@
         display: flex;
         flex-direction: row;
 
-        max-width: 100%;
+        width: 100%;
 
 
 
 
         &__logo-container {
-
-            max-width: 20%;
+        //width: 7rem;
+            max-width:20%
           }
 
 
         &__logo  {
 
-            width: 6.25rem;
+           // width: 6.25rem;
             //margin: 0 2.25rem 0 12.25rem;
-            padding: 0;
-            height:3.5rem;
+           // padding: 0;
+
            //margin-left: 2.25rem;
-           padding-left: 3.938rem;
+           padding: 0 0 0 3.938rem;
+           box-sizing: content-box;
         }
 
         &__links {
@@ -177,7 +179,7 @@
             // left:-0.1rem;
             // margin: 0;
 
-            display: flex;
+           // display: flex;
     align-items: center;
   //  height: 100%;
     width: 100%;
@@ -187,11 +189,11 @@
 
     &--active{
         padding-bottom:1.25rem;
-        border-bottom: 3px solid #FFFFFF;
+        //border-bottom: 3px solid #FFFFFF;
     }
 
     &--inactive{
-        //margin-left:0rem;
+        padding-top: 1rem;
 
     }
 
@@ -203,9 +205,8 @@
         &__menu {
 
             width: 20%;
-          //  height: 100%;
+            height: 100%;
             line-height: 5rem;
-            display: flex;
             align-items: center;
             margin-top: 0;
              margin-left: 3.5rem;
@@ -262,7 +263,7 @@
 
  .heroimage {
 
-     background-image: url("/asset/images/hero-bio.jpg");
+    background-image: url("/asset/images/hero-bio.jpg");
 
      max-width: 100%;
      height: 30vh;
@@ -340,7 +341,7 @@
              font-weight: 700;
              line-height: 4.25rem;
              margin-left: 2.25rem;
-             padding: 0 1.5rem 0 0;
+             padding: 0 1.5rem 0 0rem;
 
 
 
@@ -351,16 +352,23 @@
  @include desktop {
     .heroimage {
 
-        background-image: url("/asset/images/hero-bio.jpg");
+       // background-image: url("/asset/images/hero-bio.jpg");
         max-width: 100%;
         height: 40rem;
+
+
 
 
         &__container {
 
             // display: flex;
             // align-items: center;
+
              min-height: 100%;
+
+
+
+
             // margin:0 auto;
         }
 
@@ -372,16 +380,18 @@
             // color: #$primary-white;
             // line-height: 4.25rem;
 
+
             //margin: 0 auto;
-            padding: 0 5rem 0 3.5rem;
+            padding: 0;
+            padding-left: 3rem;
 
 
-           font-size: 3.75rem;
+            font-size: 3.75rem;
            line-height: 4.25rem;
-           color: $primary-white;
+
 
            width: 31.875rem;
-          // margin-left:5rem;
+         // margin-left:3.5rem;
 
 
         }
@@ -392,10 +402,7 @@
      &__title {
 
          padding-left: 1rem;
-         font-family:  Avnirbold;
-         font-size: 1.5rem;
-         font-weight: 700;
-         line-height: 2rem;
+      @include mobilefontforh2;
          padding-top: 1.5rem;
         //  margin-bottom: 0;
         //  margin-top: 0;
@@ -527,7 +534,9 @@
         &__desc {
 
 
-            margin: 0 5rem;
+            //margin: 0 5rem;
+            margin-right: 5rem;
+            margin-left: 5rem;
 
 
         }
@@ -568,7 +577,7 @@
          box-sizing: border-box;
          margin-left: 1rem;
         // margin-bottom: 0;
-         //margin-top: 0;
+        // margin-top: 0;
          text-transform: capitalize;
 
 
@@ -601,6 +610,8 @@
              padding: 3rem 2.25rem 0 2.25rem;
           @include des_tab_fontforh3;
              margin-left: 2.25rem;
+             margin-top: 0;
+             margin-bottom: 0;
 
 
          }
@@ -667,8 +678,8 @@
 
             flex: 50%;
             margin-right: 5rem;
-            font-size: 0.875;
-            line-height: 1.375rem;
+            @include des_tab_fontforbody;
+
 
         }
     }
@@ -717,7 +728,7 @@
 
           @include des_tab_fontforh2;
             margin: 0 2.25rem;
-            padding: 3rem 2.25rem 1.5rem;
+            padding: 3rem 2.25rem 1.5rem 0rem;
 
 
         }
@@ -728,16 +739,19 @@
              flex-wrap: wrap;
              flex-direction: row;
              justify-content: center;
-             margin-right:2.25rem;
-             margin-left: 2.25rem;
+            // margin-right:2.5rem;
+            margin-left: 1rem;
+             padding-left: 0;
 
          }
 
          &__photos img {
-             max-height: 6rem;
-             max-width: 13rem;
-             margin: 0 0.5rem 2.25rem 0rem;
-             gap:1rem;
+             max-height: 7rem;
+             max-width: 15rem;
+             margin: 0 0.5rem 1.5rem 0rem;
+             //gap:1rem;
+
+
          }
 
      }
@@ -752,7 +766,7 @@
 
         @include des_tab_fontforh2 ;
 
-           margin-bottom: 0;
+
            padding: 3rem 2.25rem  2.25rem 3.938rem;
 
 
@@ -764,15 +778,15 @@
             flex-wrap: wrap;
             flex-direction: row;
             justify-content: center;
-            // margin-right:5rem;
-            // margin-left: 5rem;
+       // margin-right:5rem;
+        // margin-left: 0rem;
 
         }
 
         &__photos img {
-            max-height: 13rem;
-            max-width: 22rem;
-            padding: 0 1.5rem 1.25rem 0rem;
+            max-height: 14rem;
+            max-width: 24rem;
+            padding: 0 1.5rem 1.25rem 1rem;
             gap:1rem;
         }
 
@@ -781,6 +795,7 @@
 
  .footer {
      background-color: $primary-Black;
+     margin:0 auto;
 
      &__container {
          margin: 0 1rem;
@@ -904,6 +919,7 @@
              display: flex;
              justify-content: space-between;
              align-items:center ;
+             margin-right:2.25rem;
 
 
 
@@ -911,27 +927,29 @@
 
          &__title {
             @include des_tab_fontforh2;
-             padding:3rem 2.25rem 2.25rem;
+            padding:0;
+
 
 
          }
 
-        //  &__tabletlogo {
+          &__tabletlogo {
 
 
-        //      //min-height: 15rem;
-        //     display: inline-block;
+        min-height: 10rem;
+            display: unset;
 
-        //  }
+    }
 
          &__logoimg {
              //padding-right: 1.5rem;
              //margin-left: 3rem;
              max-width:25rem;
-             height: 1.5rem;
-             padding-top: 0.9rem;
-             margin-right: 2.25rem;
-             padding-right:2.25rem;
+             //height: 0.5rem;
+             padding-top: 1.5rem;
+             //margin-right: 2.25rem;
+
+             margin-top: 3rem;
 
          }
 
@@ -948,19 +966,24 @@
 
  @include tablet {
      .social {
+       //display:flex;
 
          padding-top: 1.5rem;
+         padding-right: 1.5rem;
 
          &__icons{
 
-            padding-right:4rem;
+            padding-right:6rem;
+            // width: 3rem;
+            // height: 4rem;
+
 
          }
 
          &__icons img {
-             width: 2rem;
-             height: 2rem;
-             margin-left: 1.5ren;
+             width: 3rem;
+             height: 3rem;
+             //margin-left: 1rem;
              padding: 0 0 1rem;
              margin-right: 1rem;
          }
@@ -970,9 +993,10 @@
          display: flex;
          flex-direction: row;
          justify-content: space-between;
-         box-sizing: border-box;
-         margin: 0 2.25rem 0 1.5rem;
-         padding-left: 2.5rem;
+
+         //margin: 0 1rem 0 0rem;
+         margin-right: 1.5rem;
+         padding-left: 1.5rem;
          align-items: center;
 
 
@@ -1017,6 +1041,9 @@
      }
 
      .entertainment{
+        padding-right: 1rem
+
+        ;
         &__title{
 
            @include des_tab_fontforbody;
@@ -1043,7 +1070,7 @@
              font-size:0.875rem;
              line-height: 1.25rem;
               margin-left: 2.25rem;
-             padding: 2.25rem 2.25rem 2.5rem  2.25rem;
+             padding: 2.25rem 2.25rem 2.5rem  0rem;
          }
 
 
@@ -1054,7 +1081,7 @@
     .footer {
 
         &__container {
-           margin-left: 5rem;
+
             display: flex;
             justify-content: space-between;
             align-items:center ;
@@ -1065,16 +1092,18 @@
 
         &__title {
 
-
-            padding:3rem 2.25rem 2.25rem;
+@include des_tab_fontforh2;
+            padding:3rem 2.25rem 2.25rem 1.25rem;
             font-size: 2.25rem;
+            margin-left:2.25rem;
 
         }
 
         &__tabletlogo {
 
 
-            //min-height: 15rem;
+           // min-height: 15rem;
+
            display: inline-block;
 
         }
@@ -1082,11 +1111,12 @@
         &__logoimg {
             //padding-right: 1.5rem;
             //margin-left: 3rem;
+            box-sizing: content-box;
             max-width:25rem;
             height: 1.5rem;
             padding-top: 0.9rem;
-            margin-right: 5rem;
-            padding-right:2.25rem;
+            margin-right: 2rem;
+            padding-right:3rem;
 
         }
 
@@ -1108,13 +1138,13 @@
 
         &__icons{
 
-           padding-right:27rem;
+           padding-right:29rem;
 
         }
 
         &__icons img {
-            width: 2rem;
-            height: 2rem;
+            width: 3rem;
+            height: 3rem;
             margin-left: 1.5ren;
             padding: 0 0 1rem;
             margin-right: 1rem;
@@ -1124,9 +1154,11 @@
     .agents {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
 
-        margin: 0 20rem 0 5rem;
+
+justify-content: space-between;
+
+
         padding-left: 1rem;
         align-items: center;
 
@@ -1136,12 +1168,16 @@
 
     .address {
 
-        margin-right: 6rem;
+       // margin-right: 1.5rem;
+        margin-left:3rem;
+        //margin-right: 5rem;
+        //padding-left: 3rem;
+
 
         &__name {
 
-           font-size:0.875rem;
-           line-height: 1.25rem;
+         @include footercopyfont ;
+
            padding-bottom:1rem;
         }
 
@@ -1154,7 +1190,8 @@
     }
 
     .artist{
-        margin-right: 6rem;
+       // margin-right: 4rem;
+       //margin-left: 5rem;
 
        &__link{
            padding-top: 1.5rem;
@@ -1162,8 +1199,7 @@
 
        &__title{
 
-           font-size:0.875rem;
-           line-height: 1.25rem;
+        @include footercopyfont ;
            padding-bottom:1rem;
 
        }
@@ -1171,11 +1207,11 @@
 
     .entertainment{
 
-        padding-right: 8rem;
+        margin-right: 28rem;
+        margin-left: 1rem;
        &__title{
 
-           font-size:0.875rem;
-           line-height: 1.25rem;
+        @include footercopyfont ;
            padding-bottom:1rem;
 
        }
@@ -1192,12 +1228,9 @@
 
     .copyright {
         &__sentence {
-            font-family: AvnirmyFontRegular;
-            font-size:0.875rem;
-            line-height: 1.25rem;
-            color: $primary-white;
-            margin-left: 5rem;
-            padding: 2.25rem 2.25rem 2.5rem  2rem;
+            @include footercopyfont ;
+            margin-left: 2.25rem;
+            padding: 2.25rem 2.25rem 2.5rem  2.25rem;
         }
 
 

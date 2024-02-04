@@ -24,7 +24,7 @@
   justify-content: center;
 }
 .header__logo {
-  width: 8.25rem;
+  width: 7rem;
   padding: 1rem 0;
 }
 .header__menu {
@@ -47,7 +47,7 @@
 }
 .header__links--active {
   color: #FFFFFF;
-  border-bottom: 5px solid #FFFFFF;
+  border-bottom: 3px solid #FFFFFF;
   font-weight: 700;
 }
 .header__links--inactive {
@@ -59,21 +59,20 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 0;
   }
   .header__logo-container {
     width: 20%;
-    margin-left: 2.25rem;
+    margin-left: 1.5rem;
+    padding-left: 1.5rem;
   }
   .header__logo {
-    width: 8rem;
-    margin: 0;
+    width: 7rem;
   }
   .header__links {
     width: 1vw;
     height: 6rem;
     position: relative;
-    top: 3rem;
+    top: 2.5rem;
   }
   .header__menu {
     width: 30%;
@@ -81,13 +80,12 @@
     margin-top: 0;
     margin-left: 1.5rem;
     justify-content: center;
-    padding-left: 0;
+    padding-right: 2rem;
   }
   .header__border-biography {
-    width: 4.5rem;
+    width: 4rem;
     padding-left: 0;
-    padding-top: 0.3rem;
-    border-bottom: 5px solid #FFFFFF;
+    border-bottom: 2px solid #FFFFFF;
   }
   .header__border-show {
     padding-left: 1.5rem;
@@ -99,33 +97,32 @@
   .header {
     display: flex;
     flex-direction: row;
-    max-width: 100%;
+    width: 100%;
   }
   .header__logo-container {
     max-width: 20%;
   }
   .header__logo {
-    width: 6.25rem;
-    padding: 0;
-    height: 3.5rem;
-    padding-left: 3.938rem;
+    padding: 0 0 0 3.938rem;
+    box-sizing: content-box;
   }
   .header__links {
     height: 100%;
     top: 3rem;
-    display: flex;
     align-items: center;
     width: 100%;
     justify-content: center;
   }
   .header__links--active {
     padding-bottom: 1.25rem;
-    border-bottom: 3px solid #FFFFFF;
+  }
+  .header__links--inactive {
+    padding-top: 1rem;
   }
   .header__menu {
     width: 20%;
+    height: 100%;
     line-height: 5rem;
-    display: flex;
     align-items: center;
     margin-top: 0;
     margin-left: 3.5rem;
@@ -196,12 +193,11 @@
     font-weight: 700;
     line-height: 4.25rem;
     margin-left: 2.25rem;
-    padding: 0 1.5rem 0 0;
+    padding: 0 1.5rem 0 0rem;
   }
 }
 @media (min-width: 1280px) {
   .heroimage {
-    background-image: url("/asset/images/hero-bio.jpg");
     max-width: 100%;
     height: 40rem;
   }
@@ -210,18 +206,18 @@
   }
   .heroimage__title {
     font-family: Avnirbold;
-    padding: 0 5rem 0 3.5rem;
+    padding: 0;
+    padding-left: 3rem;
     font-size: 3.75rem;
     line-height: 4.25rem;
-    color: #FFFFFF;
     width: 31.875rem;
   }
 }
 .band__title {
   padding-left: 1rem;
-  font-family: Avnirbold;
   font-size: 1.5rem;
   font-weight: 700;
+  font-family: Avnirbold;
   line-height: 2rem;
   padding-top: 1.5rem;
   margin: 0 auto;
@@ -302,7 +298,8 @@
     margin: 0 5rem 0 0;
   }
   .band__desc {
-    margin: 0 5rem;
+    margin-right: 5rem;
+    margin-left: 5rem;
   }
   .band__des1 {
     padding: 2.25rem 3.938rem 0 3.938rem;
@@ -351,6 +348,8 @@
     font-family: AvnirmyFontDemi;
     line-height: 2rem;
     margin-left: 2.25rem;
+    margin-top: 0;
+    margin-bottom: 0;
   }
   .paragraph__para {
     display: flex;
@@ -403,8 +402,10 @@
   .paragraph__para2 {
     flex: 50%;
     margin-right: 5rem;
-    font-size: 0.875;
+    font-size: 0.875rem;
+    font-family: AvnirmyFontRegular;
     line-height: 1.375rem;
+    font-weight: 400;
   }
 }
 .gallery {
@@ -440,21 +441,20 @@
     font-family: Avnirbold;
     line-height: 2.75rem;
     margin: 0 2.25rem;
-    padding: 3rem 2.25rem 1.5rem;
+    padding: 3rem 2.25rem 1.5rem 0rem;
   }
   .gallery__photos {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    margin-right: 2.25rem;
-    margin-left: 2.25rem;
+    margin-left: 1rem;
+    padding-left: 0;
   }
   .gallery__photos img {
-    max-height: 6rem;
-    max-width: 13rem;
-    margin: 0 0.5rem 2.25rem 0rem;
-    gap: 1rem;
+    max-height: 7rem;
+    max-width: 15rem;
+    margin: 0 0.5rem 1.5rem 0rem;
   }
 }
 @media (min-width: 1280px) {
@@ -463,7 +463,6 @@
     font-weight: 700;
     font-family: Avnirbold;
     line-height: 2.75rem;
-    margin-bottom: 0;
     padding: 3rem 2.25rem 2.25rem 3.938rem;
   }
   .gallery__photos {
@@ -473,14 +472,15 @@
     justify-content: center;
   }
   .gallery__photos img {
-    max-height: 13rem;
-    max-width: 22rem;
-    padding: 0 1.5rem 1.25rem 0rem;
+    max-height: 14rem;
+    max-width: 24rem;
+    padding: 0 1.5rem 1.25rem 1rem;
     gap: 1rem;
   }
 }
 .footer {
   background-color: #323232;
+  margin: 0 auto;
 }
 .footer__container {
   margin: 0 1rem;
@@ -584,20 +584,23 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-right: 2.25rem;
   }
   .footer__title {
     font-size: 2.25rem;
     font-weight: 700;
     font-family: Avnirbold;
     line-height: 2.75rem;
-    padding: 3rem 2.25rem 2.25rem;
+    padding: 0;
+  }
+  .footer__tabletlogo {
+    min-height: 10rem;
+    display: unset;
   }
   .footer__logoimg {
     max-width: 25rem;
-    height: 1.5rem;
-    padding-top: 0.9rem;
-    margin-right: 2.25rem;
-    padding-right: 2.25rem;
+    padding-top: 1.5rem;
+    margin-top: 3rem;
   }
   .logo {
     display: none;
@@ -606,14 +609,14 @@
 @media (min-width: 768px) and (max-width: 1279px) {
   .social {
     padding-top: 1.5rem;
+    padding-right: 1.5rem;
   }
   .social__icons {
-    padding-right: 4rem;
+    padding-right: 6rem;
   }
   .social__icons img {
-    width: 2rem;
-    height: 2rem;
-    margin-left: 1.5ren;
+    width: 3rem;
+    height: 3rem;
     padding: 0 0 1rem;
     margin-right: 1rem;
   }
@@ -621,9 +624,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    box-sizing: border-box;
-    margin: 0 2.25rem 0 1.5rem;
-    padding-left: 2.5rem;
+    margin-right: 1.5rem;
+    padding-left: 1.5rem;
     align-items: center;
   }
   .address__name {
@@ -655,6 +657,9 @@
     font-family: AvnirmyFontRegular;
     line-height: 1.375rem;
     font-weight: 400;
+  }
+  .entertainment {
+    padding-right: 1rem;
   }
   .entertainment__title {
     font-size: 0.875rem;
@@ -679,29 +684,34 @@
     font-size: 0.875rem;
     line-height: 1.25rem;
     margin-left: 2.25rem;
-    padding: 2.25rem 2.25rem 2.5rem 2.25rem;
+    padding: 2.25rem 2.25rem 2.5rem 0rem;
   }
 }
 @media (min-width: 1280px) {
   .footer__container {
-    margin-left: 5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
   .footer__title {
-    padding: 3rem 2.25rem 2.25rem;
     font-size: 2.25rem;
+    font-weight: 700;
+    font-family: Avnirbold;
+    line-height: 2.75rem;
+    padding: 3rem 2.25rem 2.25rem 1.25rem;
+    font-size: 2.25rem;
+    margin-left: 2.25rem;
   }
   .footer__tabletlogo {
     display: inline-block;
   }
   .footer__logoimg {
+    box-sizing: content-box;
     max-width: 25rem;
     height: 1.5rem;
     padding-top: 0.9rem;
-    margin-right: 5rem;
-    padding-right: 2.25rem;
+    margin-right: 2rem;
+    padding-right: 3rem;
   }
   .logo {
     display: none;
@@ -712,11 +722,11 @@
     padding-top: 1.5rem;
   }
   .social__icons {
-    padding-right: 27rem;
+    padding-right: 29rem;
   }
   .social__icons img {
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
     margin-left: 1.5ren;
     padding: 0 0 1rem;
     margin-right: 1rem;
@@ -725,38 +735,41 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 0 20rem 0 5rem;
     padding-left: 1rem;
     align-items: center;
   }
   .address {
-    margin-right: 6rem;
+    margin-left: 3rem;
   }
   .address__name {
     font-size: 0.875rem;
+    font-family: AvnirmyFontRegular;
     line-height: 1.25rem;
+    font-weight: 400;
     padding-bottom: 1rem;
   }
   .address__email {
     padding-top: 1.5rem;
-  }
-  .artist {
-    margin-right: 6rem;
   }
   .artist__link {
     padding-top: 1.5rem;
   }
   .artist__title {
     font-size: 0.875rem;
+    font-family: AvnirmyFontRegular;
     line-height: 1.25rem;
+    font-weight: 400;
     padding-bottom: 1rem;
   }
   .entertainment {
-    padding-right: 8rem;
+    margin-right: 28rem;
+    margin-left: 1rem;
   }
   .entertainment__title {
     font-size: 0.875rem;
+    font-family: AvnirmyFontRegular;
     line-height: 1.25rem;
+    font-weight: 400;
     padding-bottom: 1rem;
   }
   .entertainment__link {
@@ -766,11 +779,11 @@
     display: none;
   }
   .copyright__sentence {
-    font-family: AvnirmyFontRegular;
     font-size: 0.875rem;
+    font-family: AvnirmyFontRegular;
     line-height: 1.25rem;
-    color: #FFFFFF;
-    margin-left: 5rem;
-    padding: 2.25rem 2.25rem 2.5rem 2rem;
+    font-weight: 400;
+    margin-left: 2.25rem;
+    padding: 2.25rem 2.25rem 2.5rem 2.25rem;
   }
 }/*# sourceMappingURL=bio.css.map */
