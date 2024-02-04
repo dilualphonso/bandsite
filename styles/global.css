@@ -6,4 +6,10 @@ html,
 body {
   width: auto !important;
   overflow-x: hidden !important;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
 }/*# sourceMappingURL=global.css.map */
