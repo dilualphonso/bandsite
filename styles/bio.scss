@@ -1,23 +1,17 @@
- @use './partials/mixin' as *;
- @use './partials/fonttype' as *;
- @use './partials/color' as *;
-
+@use './partials/mixin'as *;
+@use './partials/fonttype'as *;
+@use './partials/color'as *;
 
 .header {
-
     width: 100%;
-    background-color:$primary-Black;
-    margin:0 auto;
-
-
+    background-color: $primary-Black;
+    margin: 0 auto;
 
     &__logo-container {
-
         display: flex;
         align-items: center;
         justify-content: center;
     }
-
 
     &__logo {
         width: 7rem;
@@ -25,1121 +19,737 @@
     }
 
     &__menu {
-         list-style-type: none;
-          display: flex;
+        list-style-type: none;
+        display: flex;
         justify-content: space-around;
-
-
-         padding: 0;
-         margin-bottom: 0;
-         width: 100%;
-
-
+        padding: 0;
+        margin-bottom: 0;
+        width: 100%;
     }
 
     &__links {
         text-align: center;
-         padding-bottom: 1rem;
-         width: 50vw;
-         margin: 0 1rem 0 0;
+        padding-bottom: 1rem;
+        width: 50vw;
+        margin: 0 1rem 0 0;
         @include mobilefontforbody;
 
-        &--active{
-            color:$primary-white;
+        &--active {
+            color: $primary-white;
             border-bottom: 3px solid $primary-white;
             font-weight: 700;
         }
 
-
-    &--inactive{
-        color: $secondory-mercury;
+        &--inactive {
+            color: $secondory-mercury;
+        }
     }
-
-
-    }
-
 }
 
- //using header for tablet media query
-
- @include tablet {
-
-     .header {
-
-         display: flex;
-         flex-direction: row;
-         align-items: center;
-
-
-
-         &__logo-container {
-
-             width: 20%;
-            margin-left: 1.5rem;
-            padding-left: 1.5rem;
-
-         }
-
-         &__logo {
-
-         width: 7rem;
-            //margin: 0;
-
-         }
-
-         &__links {
-
-
-             width: 1vw;
-             height: 6rem;
-             position: relative;
-              top:2.5rem;
-
-
-
-         }
-
-         &__menu {
-
-             width: 30%;
-             align-items: center;
-             margin-top: 0;
-             margin-left: 1.5rem;
-             justify-content: center;
-             padding-right: 2rem;
-
-
-
-         }
-
-         &__border-biography {
-             width: 4rem;
-              padding-left: 0;
-
-             border-bottom: 2px solid $primary-white;
-
-
-
-         }
-
-
-         &__border-show {
-
-
-             padding-left: 1.5rem;
-            padding-right: 1.5rem;
-             margin-left: 1.5rem;
-
-
-
-         }
-     }
-
-     //--------------------------------------------------
-
- }
-
- @include desktop {
-
+//ending mobile view header and begining tabletview
+@include tablet {
     .header {
-
         display: flex;
         flex-direction: row;
-
-        width: 100%;
-
-
-
+        align-items: center;
 
         &__logo-container {
-        //width: 7rem;
-            max-width:20%
-          }
+            //  width: 20%;
+            margin-left: 1.5rem;
+            padding-left: 1.5rem;
+        }
 
-
-        &__logo  {
-
-           // width: 6.25rem;
-            //margin: 0 2.25rem 0 12.25rem;
-           // padding: 0;
-
-           //margin-left: 2.25rem;
-           padding: 0 0 0 3.938rem;
-           box-sizing: content-box;
+        &__logo {
+            width: 7rem;
+            //margin: 0;
         }
 
         &__links {
-
-            // font-size: 1.25rem;
-            // max-width: 1rem;
-            height:100%;
-            // height: 6rem;
-            // position: relative;
-             top: 3rem;
-            // left:-0.1rem;
-            // margin: 0;
-
-           // display: flex;
-    align-items: center;
-  //  height: 100%;
-    width: 100%;
-    justify-content: center;
-
-
-
-    &--active{
-        padding-bottom:1.25rem;
-        //border-bottom: 3px solid #FFFFFF;
-    }
-
-    &--inactive{
-        padding-top: 1rem;
-
-    }
-
-
-
-
+            width: 1vw;
+            height: 6rem;
+            position: relative;
+            top: 2.5rem;
         }
 
         &__menu {
+            width: 30%;
+            align-items: center;
+            margin-top: 0;
+            margin-left: 1.5rem;
+            justify-content: center;
+            padding-right: 2rem;
+        }
 
+        &__border-biography {
+            width: 4rem;
+            padding-left: 0;
+            border-bottom: 2px solid $primary-white;
+        }
+
+        &__border-show {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            margin-left: 1.5rem;
+        }
+    }
+}
+
+//ending tablet view hearder , destop view starts
+@include desktop {
+    .header {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+
+        &__logo {
+            padding: 0 0 0 3.938rem;
+            box-sizing: content-box;
+        }
+
+        &__links {
+            height: 100%;
+            top: 3rem;
+            align-items: center;
+            width: 100%;
+            justify-content: center;
+
+            &--active {
+                padding-bottom: 1.25rem;
+            }
+
+            &--inactive {
+                padding-top: 1rem;
+            }
+        }
+
+        &__menu {
             width: 20%;
             height: 100%;
             line-height: 5rem;
             align-items: center;
             margin-top: 0;
-             margin-left: 3.5rem;
+            margin-left: 3.5rem;
             padding-left: 0;
-
-
-
-
-
         }
 
         &__border-biography {
-
-            // padding-right: 5rem;
-            // //padding-right: 2.25rem;
-            // font-size: 1rem;
-            // padding-left: 0;
-            // box-sizing: border-box;
-
-
-                 width: 4rem;
-                 padding-left: 0;
-                 padding-top:1.5rem;
-
-
-
-
-
-
-
-
-
-
+            width: 4rem;
+            padding-left: 0;
+            padding-top: 1.5rem;
         }
 
         &__border-show {
-
             height: 100%;
-            padding-left:0;
+            padding-left: 0;
             font-size: 1rem;
-            padding-right:0rem;
+            padding-right: 0rem;
             margin-right: 4.5rem;
             margin-left: 0rem;
-
-
-
         }
     }
-
-    //--------------------------------------------------
-
 }
 
-
- .heroimage {
-
+//mobile view heroimage starts
+.heroimage {
     background-image: url("/asset/images/hero-bio.jpg");
+    max-width: 100%;
+    height: 30vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 0;
+    position: relative;
+    margin-inline: auto;
 
-     max-width: 100%;
-     height: 30vh;
-     background-position: center;
-     background-repeat: no-repeat;
-     background-size: cover;
-     padding-top: 0;
-     position: relative;
-     margin-inline: auto;
-
-     &__overlay{
-
+    &__overlay {
         position: absolute;
         height: 100%;
         width: 100%;
         top: 0%;
         left: 0%;
-        background-color: rgba(32,32,32,0.5);
+        background-color: rgba(32, 32, 32, 0.5);
+    }
 
-     }
-
-     &__container {
-
-
-      display: flex;
-      align-items: center;
-      height: 27vh;
+    &__container {
+        display: flex;
+        align-items: center;
+        height: 27vh;
         margin: 0 auto;
+    }
 
+    &__title {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        font-family: Avnirbold;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: $primary-white;
+        line-height: 2rem;
+        z-index: 1;
+        text-transform: capitalize;
+    }
+}
 
-     }
-
-     &__title {
-
-            padding-left: 1rem;
-            padding-right: 1rem;
-            font-family:  Avnirbold;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color:$primary-white;
-            line-height: 2rem;
-            z-index:1;
-            text-transform: capitalize;
-
-
-     }
- }
-
- //tablet view
-
- @include tablet {
-     .heroimage {
-
-         background-image: url("/asset/images/hero-bio.jpg");
-
-        // max-width: 100%;
-         height: 30rem;
-        // background-position: center;
-        // background-repeat: no-repeat;
-        // background-size: cover;
-
-
-         &__container {
-
-
-             min-height: 28rem;
-
-
-         }
-
-         &__title {
-
-             font-family:  Avnirbold;
-             font-size: 3.75rem;
-             font-weight: 700;
-             line-height: 4.25rem;
-             margin-left: 2.25rem;
-             padding: 0 1.5rem 0 0rem;
-
-
-
-         }
-     }
- }
-
- @include desktop {
+//ending mobile view of hero image tablet view starts
+@include tablet {
     .heroimage {
-
-       // background-image: url("/asset/images/hero-bio.jpg");
-        max-width: 100%;
-        height: 40rem;
-
-
-
+        height: 30rem;
 
         &__container {
-
-            // display: flex;
-            // align-items: center;
-
-             min-height: 100%;
-
-
-
-
-            // margin:0 auto;
+            min-height: 28rem;
         }
 
         &__title {
-
-             font-family:  Avnirbold;
-            // font-size: 3.75rem;
-            // font-weight: 700;
-            // color: #$primary-white;
-            // line-height: 4.25rem;
-
-
-            //margin: 0 auto;
-            padding: 0;
-            padding-left: 3rem;
-
-
+            font-family: Avnirbold;
             font-size: 3.75rem;
-           line-height: 4.25rem;
-
-
-           width: 31.875rem;
-         // margin-left:3.5rem;
-
-
+            font-weight: 700;
+            line-height: 4.25rem;
+            margin-left: 2.25rem;
+            padding: 0 1.5rem 0 0rem;
         }
     }
 }
 
- .band {
-     &__title {
+//end of tabview , starting of desktop view
+@include desktop {
+    .heroimage {
+        max-width: 100%;
+        height: 40rem;
 
-         padding-left: 1rem;
-      @include mobilefontforh2;
-         padding-top: 1.5rem;
-        //  margin-bottom: 0;
-        //  margin-top: 0;
-         margin: 0 auto;
-
-
-
-
-     }
-
-
-     &__img {
-
-         box-sizing: border-box;
-
-         width: 100%;
-         padding: 1rem 1rem 0 1rem;
-         max-height: 35rem;
-     }
-
-     &__desc {
-         margin: 0;
-         font-family: AvnirmyFontDemi;
-         font-size: 0.875rem;
-
-         line-height: 1.375rem;
-     }
-
-     &__des1 {
-         padding: 1rem 1rem 0 1rem;
-
-         margin-top: 0;
-         margin-bottom: 0;
-     }
-
-     &__des2 {
-         padding: 0.5rem 1rem 0 1rem;
-         margin: 0;
-
-     }
-
- }
-
- // tablet view
- @include tablet {
-     .band {
-
-
-         &__title {
-
-@include des_tab_fontforh2;
-             padding: 3rem 2.25rem 2.25rem 0;
-
-             margin-left: 2.25rem;
-             max-width: 100%;
-         }
-
-         &__container {
-             margin-right: 2.25rem;
-             padding-right: 2.25rem;
-
-
-         }
-
-
-         &__img {
-
-
-             padding: 0 3rem 0 3rem;
-             margin: 0 2.25rem 0 2.25rem;
-
-         }
-
-         &__desc {
-
-
-             margin: 0 2.25rem;
-
-
-         }
-
-         &__des1 {
-             padding: 2.25rem 2.25rem  0.5rem ;
-           @include des_tab_fontforh3;
-
-         }
-
-         &__des2 {
-             padding: 0rem 2.25rem 0 2.25rem;
-            @include mobilefontforh3;
-             font-weight: 700;
-
-         }
-
-     }
-
- }
-
- @include desktop {
-    .band {
-
+        &__container {
+            min-height: 100%;
+        }
 
         &__title {
+            font-family: Avnirbold;
+            padding: 0;
+            padding-left: 3rem;
+            font-size: 3.75rem;
+            line-height: 4.25rem;
+            width: 31.875rem;
+        }
+    }
+}
 
-@include des_tab_fontforh2;
+//mobile view band starting
+.band {
+    &__title {
+        padding-left: 1rem;
+        @include mobilefontforh2;
+        padding-top: 1.5rem;
+        margin: 0 auto;
+    }
 
-            padding: 3rem 0 2.25rem 3.938rem;
+    &__img {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 1rem 1rem 0 1rem;
+        max-height: 35rem;
+    }
 
+    &__desc {
+        @include mobilefontforh3;
+        margin: 0;
+        line-height: 1.375rem;
+    }
 
+    &__des1 {
+        padding: 1rem 1rem 0 1rem;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    &__des2 {
+        padding: 0.5rem 1rem 0 1rem;
+        margin: 0;
+    }
+}
+
+// tablet view started for band
+@include tablet {
+    .band {
+        &__title {
+            @include des_tab_fontforh2;
+            padding: 3rem 2.25rem 2.25rem 0;
+            margin-left: 2.25rem;
             max-width: 100%;
         }
 
         &__container {
-
-           margin: 0 5rem;
-
-  }
-
+            margin-right: 2.25rem;
+            padding-right: 2.25rem;
+        }
 
         &__img {
-
-           // margin:0 auto;
-            padding: 0 3.938rem 0 3.938rem;
-            margin: 0 5rem 0 0 ;
-            //height:3rem;
-
+            padding: 0 3rem 0 3rem;
+            margin: 0 2.25rem 0 2.25rem;
         }
 
         &__desc {
+            margin: 0 2.25rem;
+        }
 
+        &__des1 {
+            padding: 2.25rem 2.25rem 0.5rem;
+            @include des_tab_fontforh3;
+        }
 
-            //margin: 0 5rem;
+        &__des2 {
+            padding: 0rem 2.25rem 0 2.25rem;
+            @include mobilefontforh3;
+            font-weight: 700;
+        }
+    }
+}
+
+//desktop band view finished
+@include desktop {
+    .band {
+        &__title {
+            @include des_tab_fontforh2;
+            padding: 3rem 0 2.25rem 3.938rem;
+            max-width: 100%;
+        }
+
+        &__container {
+            margin: 0 5rem;
+        }
+
+        &__img {
+            padding: 0 3.938rem 0 3.938rem;
+            margin: 0 5rem 0 0;
+        }
+
+        &__desc {
             margin-right: 5rem;
             margin-left: 5rem;
-
-
         }
 
         &__des1 {
             padding: 2.25rem 3.938rem 0 3.938rem;
-           @include des_tab_fontforh3;
-
-
+            @include des_tab_fontforh3;
         }
 
         &__des2 {
-            // line-height: 2rem;
-
-           // font-family: AvnirmyFontDemi;
-
             padding: 1rem 3.938rem 0 3.938rem;
-
-            //font-size: 0.8125rem;
-
-
-
+            @include des_tab_fontforh3;
         }
-
     }
-
 }
 
- .paragraph {
-
+//mobile view paragraph
+.paragraph {
     margin-inline: auto;
 
-
-     &__title {
-
+    &__title {
         @include mobilefontforh3;
-         padding: 1.5rem 1rem 0 0rem;
-         box-sizing: border-box;
-         margin-left: 1rem;
-        // margin-bottom: 0;
-        // margin-top: 0;
-         text-transform: capitalize;
+        padding: 1.5rem 1rem 0 0rem;
+        box-sizing: border-box;
+        margin-left: 1rem;
+        margin-bottom: 0;
+        margin-top: 0;
+        text-transform: capitalize;
+    }
 
-
-     }
-
-     &__para1{
-
+    &__para1 {
         @include mobilefontforbody;
         padding: 1rem 1rem 0 1rem;
-        // margin-bottom: 0;
-        //  margin-top: 0;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
 
-     }
-     &__para2 {
-
-
+    &__para2 {
         @include mobilefontforbody;
+        padding: 1rem 1rem 0rem 1rem;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+}
 
-         padding:1rem 1rem 0rem 1rem;
-        //   margin-bottom: 0;
-        // margin-top: 0;
-     }
- }
-
-
- @include tablet {
-     .paragraph {
-
-         &__title {
-             padding: 3rem 2.25rem 0 2.25rem;
-          @include des_tab_fontforh3;
-             margin-left: 2.25rem;
-             margin-top: 0;
-             margin-bottom: 0;
-
-
-         }
-
-         &__para {
-             display: flex;
-             gap: 2rem;
-             padding: 0 2.25rem 0 1.5rem;
-
-
-         }
-
-         &__para1 {
-@include des_tab_fontforbody;
-             flex: 50%;
-             margin-left: 2.25rem;
-
-
-         }
-
-         &__para2 {
-@include des_tab_fontforbody;
-             flex: 50%;
-             margin-right: 2.25rem;
-             padding-bottom: 2.25rem;
-
-         }
-     }
- }
-
- @include desktop {
+//tablet view paragraph
+@include tablet {
     .paragraph {
-
         &__title {
-
+            padding: 3rem 2.25rem 0 2.25rem;
             @include des_tab_fontforh3;
-
-            padding: 3rem 3.938rem 0 3.938rem;
-             margin-bottom: 0;
-            margin-left: 5rem;
-
-
+            margin-left: 2.25rem;
+            margin-top: 0;
+            margin-bottom: 0;
         }
 
         &__para {
             display: flex;
             gap: 2rem;
-
-            padding: 2.25rem 3.938rem 2.5rem 3rem;
-           // margin:auto;
-            box-sizing: content-box;
-
+            padding: 0 2.25rem 0 1.5rem;
         }
 
         &__para1 {
-
+            @include des_tab_fontforbody;
             flex: 50%;
-            margin-left: 5rem;
-          @include des_tab_fontforbody;
-           padding-top: 0rem;
+            margin-left: 2.25rem;
         }
 
         &__para2 {
-
-            flex: 50%;
-            margin-right: 5rem;
             @include des_tab_fontforbody;
-
-
+            flex: 50%;
+            margin-right: 2.25rem;
+            padding-bottom: 2.25rem;
         }
     }
 }
 
-
-
- .gallery {
-
-     background-color: $primary_silver;
-
-     margin: 0;
-     width: 100vw;
-     margin: 0 auto;
-
-
-
-     &__title {
-        @include mobilefontforh2;
-         margin-left: 1rem;
-         padding-top: 1.5rem;
-         padding-bottom: 1rem;
-         margin-top: 0;
-         margin-bottom: 0;
-
-
-     }
-
-     &__photos img {
-         box-sizing: border-box;
-         height: 50vw;
-         width: 100vw;
-         margin-bottom: 1rem;
-         padding-left: 1rem;
-         padding-right: 1rem;
-     }
- }
-
- // tablet view
- @include tablet {
-
-     .gallery {
-
+//desktop viewnparagraph
+@include desktop {
+    .paragraph {
         &__title {
-
-
-          @include des_tab_fontforh2;
-            margin: 0 2.25rem;
-            padding: 3rem 2.25rem 1.5rem 0rem;
-
-
+            @include des_tab_fontforh3;
+            padding: 3rem 3.938rem 0 3.938rem;
+            margin-bottom: 0;
+            margin-left: 5rem;
         }
 
-         &__photos {
+        &__para {
+            display: flex;
+            gap: 2rem;
+            padding: 2.25rem 3.938rem 2.5rem 3rem;
+            box-sizing: content-box;
+        }
 
-             display: flex;
-             flex-wrap: wrap;
-             flex-direction: row;
-             justify-content: center;
-            // margin-right:2.5rem;
-            margin-left: 1rem;
-             padding-left: 0;
+        &__para1 {
+            flex: 50%;
+            margin-left: 5rem;
+            @include des_tab_fontforbody;
+            padding-top: 0rem;
+        }
 
-         }
+        &__para2 {
+            flex: 50%;
+            margin-right: 5rem;
+            @include des_tab_fontforbody;
+        }
+    }
+}
 
-         &__photos img {
-             max-height: 7rem;
-             max-width: 15rem;
-             margin: 0 0.5rem 1.5rem 0rem;
-             //gap:1rem;
+//mobile view gallery
+.gallery {
+    background-color: $primary_silver;
+    margin: 0;
+    width: 100vw;
+    margin: 0 auto;
 
+    &__title {
+        @include mobilefontforh2;
+        margin-left: 1rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1rem;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
 
-         }
+    &__photos img {
+        box-sizing: border-box;
+        height: 50vw;
+        width: 100vw;
+        margin-bottom: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
 
-     }
- }
-
-
- @include desktop {
-
+// tablet view gallery
+@include tablet {
     .gallery {
-
-       &__title {
-
-        @include des_tab_fontforh2 ;
-
-
-           padding: 3rem 2.25rem  2.25rem 3.938rem;
-
-
-       }
+        &__title {
+            @include des_tab_fontforh2;
+            margin: 0 2.25rem;
+            padding: 3rem 2.25rem 1.5rem 0rem;
+        }
 
         &__photos {
-
             display: flex;
             flex-wrap: wrap;
             flex-direction: row;
             justify-content: center;
-       // margin-right:5rem;
-        // margin-left: 0rem;
+            padding-left: 0;
+        }
 
+        &__photos img {
+            max-height: 7rem;
+            max-width: 15rem;
+            margin: 0 0.5rem 1.5rem 0rem;
+        }
+    }
+}
+
+//desktop view gallery
+@include desktop {
+    .gallery {
+        &__title {
+            @include des_tab_fontforh2;
+            padding: 3rem 2.25rem 2.25rem 3.938rem;
+        }
+
+        &__photos {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
         }
 
         &__photos img {
             max-height: 14rem;
             max-width: 24rem;
             padding: 0 1.5rem 1.25rem 1rem;
-            gap:1rem;
+            gap: 1rem;
         }
-
     }
 }
 
- .footer {
-     background-color: $primary-Black;
-     margin:0 auto;
+//mobile view footer
+.footer {
+    background-color: $primary-Black;
+    margin: 0 auto;
 
-     &__container {
-         margin: 0 1rem;
-
-     }
-
-     &__title {
-
-        @include mobilefontforh2;
-         color: $primary-white;
-         margin: 0;
-         padding: 3rem 0 1.5rem 0;
-     }
-
-
-
-     &__tabletlogo {
-         display: none;
-     }
-
- }
-
-
-
-
- .social {
-
-     &__icons img {
-         width: 3rem;
-         height: 4rem;
-         margin-left: 0;
-         margin-right: 1rem;
-         padding: 0 0 1.5rem 0;
-
-     }
- }
-
- .address {
-
-     color: $primary-white;
-
-
-     &__name {
-         @include mobilefontforh3;
-         margin: 0;
-         padding: 1rem 0 0 1rem;
-
-     }
-
-     &__details {
-
-         @include mobilefontforbody;
-         padding: 1rem 0 0 1rem;
-
-     }
-
- }
-
- .artist {
-     color: $primary-white;
-
-     &__title {
-       @include mobilefontforh3;
-         margin: 0;
-         padding: 1rem 0 0 1rem;
-     }
-
-     &__details {
-         @include mobilefontforbody;
-         padding: 1rem 0 0 1rem;
-     }
-
- }
-
- .entertainment {
-     color: $primary-white;
-
-
-
-     &__title {
-
-
-    @include  mobilefontforh3;
-         margin: 0;
-         padding: 1rem 0 0 1rem;
-
-     }
-
-     &__details {
-       @include mobilefontforbody;
-         padding: 1rem 0 0 1rem;
-     }
-
- }
-
- .logo {
-
-     &__img {
-
-         width: 8rem;
-         padding: 1.5rem 0 0 1rem;
-
-     }
- }
-
- .copyright {
-     &__sentence {
-       @include mobilefontforbody;
-         color: $primary-white;
-         margin: 0;
-         padding: 0.5rem 0 1.5rem 1rem;
-     }
- }
-
- //tablet resolution
- @include tablet {
-     .footer {
-
-         &__container {
-            margin-left: 2.25rem;
-             display: flex;
-             justify-content: space-between;
-             align-items:center ;
-             margin-right:2.25rem;
-
-
-
-         }
-
-         &__title {
-            @include des_tab_fontforh2;
-            padding:0;
-
-
-
-         }
-
-          &__tabletlogo {
-
-
-        min-height: 10rem;
-            display: unset;
-
+    &__container {
+        margin: 0 1rem;
     }
 
-         &__logoimg {
-             //padding-right: 1.5rem;
-             //margin-left: 3rem;
-             max-width:25rem;
-             //height: 0.5rem;
-             padding-top: 1.5rem;
-             //margin-right: 2.25rem;
+    &__title {
+        @include mobilefontforh2;
+        color: $primary-white;
+        margin: 0;
+        padding: 3rem 0 1.5rem 0;
+    }
 
-             margin-top: 3rem;
+    &__tabletlogo {
+        display: none;
+    }
+}
 
-         }
+.social {
+    &__icons img {
+        width: 3rem;
+        height: 3rem;
+        margin-left: 0;
+        padding: 0 0 1rem 0;
+    }
+}
 
-     }
+.address {
+    color: $primary-white;
 
-     .logo {
+    &__name {
+        @include mobilefontforbody;
+        margin: 0;
+        padding: 1rem 0 0 1rem;
+    }
 
-         display: none;
-     }
- }
+    &__details {
+        @include mobilefontforbody;
+        padding: 0rem 0 0 1rem;
+    }
+}
 
+.artist {
+    color: $primary-white;
 
+    &__title {
+        @include mobilefontforbody;
+        margin: 0;
+        padding: 1rem 0 0 1rem;
+    }
 
+    &__details {
+        @include mobilefontforbody;
+        padding: 0rem 0 1rem 1rem;
+    }
+}
 
- @include tablet {
-     .social {
-       //display:flex;
+.entertainment {
+    color: $primary-white;
 
-         padding-top: 1.5rem;
-         padding-right: 1.5rem;
+    &__title {
+        @include mobilefontforbody;
+        margin: 0;
+        padding: 0rem 0 0 1rem;
+    }
 
-         &__icons{
+    &__details {
+        @include mobilefontforbody;
+        padding: 0rem 0 0 1rem;
+    }
+}
 
-            padding-right:6rem;
-            // width: 3rem;
-            // height: 4rem;
+.logo {
+    &__img {
+        width: 8rem;
+        padding: 1.5rem 0 0 1rem;
+    }
+}
 
+.copyright {
+    &__sentence {
+        @include mobilefontforbody;
+        color: $primary-white;
+        margin: 0;
+        padding: 0.5rem 0 1.5rem 1rem;
+    }
+}
 
-         }
-
-         &__icons img {
-             width: 3rem;
-             height: 3rem;
-             //margin-left: 1rem;
-             padding: 0 0 1rem;
-             margin-right: 1rem;
-         }
-     }
-
-     .agents {
-         display: flex;
-         flex-direction: row;
-         justify-content: space-between;
-
-         //margin: 0 1rem 0 0rem;
-         margin-right: 1.5rem;
-         padding-left: 1.5rem;
-         align-items: center;
-
-
-
-     }
-
-     .address {
-
-         &__name {
-            @include des_tab_fontforbody;
-            font-weight: 700;
-            padding-bottom:1rem;
-         }
-
-         &__email{
-            padding-top: 1.5rem;
-            @include des_tab_fontforbody;
-
-
-
-         }
-     }
-
-     .artist{
-
-
-        &__title{
-
-            @include des_tab_fontforbody;
-            font-weight: 700;
-            padding-bottom:1rem;
-
-
-
-        }
-
-        &__link{
-
-            padding-top: 1.5rem;
-            @include des_tab_fontforbody;
-        }
-     }
-
-     .entertainment{
-        padding-right: 1rem
-
-        ;
-        &__title{
-
-           @include des_tab_fontforbody;
-           font-weight: 700;
-            padding-bottom:1rem;
-
-
-        }
-
-        &__link{
-            padding-top: 1.5rem;
-            @include des_tab_fontforbody;
-        }
-
-     }
-
-     .footerlogo {
-         display: none;
-     }
-
-     .copyright {
-         &__sentence {
-             font-family: AvnirmyFontRegular;
-             font-size:0.875rem;
-             line-height: 1.25rem;
-              margin-left: 2.25rem;
-             padding: 2.25rem 2.25rem 2.5rem  0rem;
-         }
-
-
-     }
- }
-
- @include desktop {
+//tablet view footer
+@include tablet {
     .footer {
-
         &__container {
-
+            margin-left: 2.25rem;
             display: flex;
             justify-content: space-between;
-            align-items:center ;
-
-
-
+            align-items: center;
+            margin-right: 2.25rem;
         }
 
         &__title {
-
-@include des_tab_fontforh2;
-            padding:3rem 2.25rem 2.25rem 1.25rem;
-            font-size: 2.25rem;
-            margin-left:2.25rem;
-
+            @include des_tab_fontforh2;
+            padding: 0;
         }
 
         &__tabletlogo {
+            min-height: 10rem;
+            display: unset;
+        }
 
+        &__logoimg {
+            max-width: 25rem;
+            padding-top: 1.5rem;
+            margin-top: 3rem;
+        }
+    }
 
-           // min-height: 15rem;
+    .logo {
+        display: none;
+    }
+}
 
-           display: inline-block;
+@include tablet {
+    .social {
+        padding-top: 1.5rem;
+        padding-right: 1.5rem;
 
+        &__icons {
+            padding-right: 6rem;
+        }
+
+        &__icons img {
+            width: 3rem;
+            height: 3rem;
+            padding: 0 0 1rem;
+            margin-right: 1rem;
+        }
+    }
+
+    .agents {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-right: 1.5rem;
+        padding-left: 1.5rem;
+        align-items: center;
+    }
+
+    .address {
+        &__name {
+            @include footercopyfont;
+            padding-bottom: 1rem;
+        }
+
+        &__email {
+            padding-top: 1.5rem;
+            @include footercopyfont;
+        }
+    }
+
+    .artist {
+        &__title {
+            @include footercopyfont;
+            padding-bottom: 1rem;
+        }
+
+        &__link {
+            padding-top: 1.5rem;
+            @include footercopyfont;
+        }
+    }
+
+    .entertainment {
+        padding-right: 1rem;
+
+        &__title {
+            @include footercopyfont;
+            padding-bottom: 1rem;
+        }
+
+        &__link {
+            padding-top: 1.5rem;
+            @include footercopyfont;
+        }
+    }
+
+    .footerlogo {
+        display: none;
+    }
+
+    .copyright {
+        &__sentence {
+            @include footercopyfont;
+            margin-left: 2.25rem;
+            padding: 2.25rem 2.25rem 2.5rem 0rem;
+        }
+    }
+}
+
+//desktop view footer
+@include desktop {
+    .footer {
+        &__container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &__title {
+            @include des_tab_fontforh2;
+            padding: 3rem 2.25rem 2.25rem 1.25rem;
+            font-size: 2.25rem;
+            margin-left: 2.25rem;
+        }
+
+        &__tabletlogo {
+            // min-height: 15rem;
+            display: inline-block;
         }
 
         &__logoimg {
             //padding-right: 1.5rem;
             //margin-left: 3rem;
             box-sizing: content-box;
-            max-width:25rem;
+            max-width: 25rem;
             height: 1.5rem;
             padding-top: 0.9rem;
             margin-right: 2rem;
-            padding-right:3rem;
-
+            padding-right: 3rem;
         }
-
     }
 
     .logo {
-
         display: none;
     }
 }
 
-
-
-
 @include desktop {
     .social {
-
         padding-top: 1.5rem;
 
-        &__icons{
-
-           padding-right:29rem;
-
+        &__icons {
+            padding-right: 29rem;
         }
 
         &__icons img {
@@ -1154,72 +764,53 @@
     .agents {
         display: flex;
         flex-direction: row;
-
-
-justify-content: space-between;
-
-
+        justify-content: space-between;
         padding-left: 1rem;
         align-items: center;
-
-
-
     }
 
     .address {
+        // margin-right: 1.5rem;
+        margin-left: 3rem;
 
-       // margin-right: 1.5rem;
-        margin-left:3rem;
         //margin-right: 5rem;
         //padding-left: 3rem;
-
-
         &__name {
-
-         @include footercopyfont ;
-
-           padding-bottom:1rem;
+            @include footercopyfont;
+            padding-bottom: 1rem;
         }
 
-        &__email{
-           padding-top: 1.5rem;
-
-
-
+        &__email {
+            padding-top: 1.5rem;
         }
     }
 
-    .artist{
-       // margin-right: 4rem;
-       //margin-left: 5rem;
+    .artist {
 
-       &__link{
-           padding-top: 1.5rem;
-       }
+        // margin-right: 4rem;
+        //margin-left: 5rem;
+        &__link {
+            padding-top: 1.5rem;
+        }
 
-       &__title{
-
-        @include footercopyfont ;
-           padding-bottom:1rem;
-
-       }
+        &__title {
+            @include footercopyfont;
+            padding-bottom: 1rem;
+        }
     }
 
-    .entertainment{
-
+    .entertainment {
         margin-right: 28rem;
         margin-left: 1rem;
-       &__title{
 
-        @include footercopyfont ;
-           padding-bottom:1rem;
+        &__title {
+            @include footercopyfont;
+            padding-bottom: 1rem;
+        }
 
-       }
-
-       &__link{
-           padding-top: 1.5rem;
-       }
-
+        &__link {
+            padding-top: 1.5rem;
+        }
     }
 
     .footerlogo {
@@ -1228,11 +819,9 @@ justify-content: space-between;
 
     .copyright {
         &__sentence {
-            @include footercopyfont ;
+            @include footercopyfont;
             margin-left: 2.25rem;
-            padding: 2.25rem 2.25rem 2.5rem  2.25rem;
+            padding: 2.25rem 2.25rem 2.5rem 2.25rem;
         }
-
-
     }
 }
