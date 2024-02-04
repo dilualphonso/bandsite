@@ -1,0 +1,9 @@
+body {
+  margin: 0;
+}
+
+html,
+body {
+  width: auto !important;
+  overflow-x: hidden !important;
+}/*# sourceMappingURL=global.css.map */

@@ -1,4 +1,4 @@
-
+@use './fonttype' as *;
 
 $breakpoint_tablet :1279px;
 $breakpoint_mobile:768px;
@@ -19,6 +19,52 @@ $breakpoint_desktop:1280px;
        @content;
 
  }
+}
+
+@mixin mobilefontforh2{
+  font-size: 1.5rem;
+  font-weight: 700;
+    font-family: Avnirbold;
+    line-height: 2rem;
+
+}
+
+@mixin mobilefontforh3{
+  font-size: 0.875rem;
+  font-weight: 600;
+    font-family: AvnirmyFontDemi;
+    line-height: 1.375rem;
+
+}
+
+@mixin mobilefontforbody{
+  font-size: 0.813rem;
+  font-family: AvnirmyFontRegular;
+  line-height: 1.125rem;
+  font-weight: 400;
+}
+
+@mixin des_tab_fontforh2{
+  font-size: 2.25rem;
+  font-weight: 700;
+    font-family: Avnirbold;
+    line-height: 2.75rem;
+
+}
+
+@mixin des_tab_fontforh3{
+  font-size: 1.5rem;
+  font-weight: 600;
+    font-family: AvnirmyFontDemi;
+    line-height: 2rem;
+
+}
+
+@mixin des_tab_fontforbody{
+  font-size: 0.875rem;
+  font-family: AvnirmyFontRegular;
+  line-height: 1.375rem;
+  font-weight: 400;
 }
 
 

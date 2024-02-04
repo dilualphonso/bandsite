@@ -1,5 +1,5 @@
 @font-face {
-  font-family: myFont;
+  font-family: Avnirbold;
   src: url("/asset/fonts/AvenirNextLTProBold.ttf");
   font-weight: 700;
 }
@@ -13,23 +13,12 @@
   src: url("/asset/fonts/AvenirNextLTProDemi.ttf");
   font-weight: 600;
 }
-body {
-  margin: 0;
-}
-
-html,
-body {
-  width: auto !important;
-  overflow-x: hidden !important;
-}
-
 .header {
   width: 100%;
   background-color: #323232;
 }
 .header__logo-container {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -41,8 +30,6 @@ body {
   list-style-type: none;
   display: flex;
   justify-content: space-around;
-  color: #FFFFFF;
-  font-family: myFont;
   padding: 0;
   margin-bottom: 0;
   width: 100%;
@@ -50,13 +37,20 @@ body {
 .header__links {
   text-align: center;
   padding-bottom: 1rem;
-  font-size: 1rem;
+  font-size: 0.875rem;
   width: 50vw;
-  margin: 0 1rem 0 1rem;
+  margin: 0 1rem 0 0;
+  line-height: 1.125rem;
+  font-weight: 400;
+  font-family: AvnirmyFontRegular;
 }
-.header__border-biography:hover {
+.header__links--active {
   color: #FFFFFF;
   border-bottom: 5px solid #FFFFFF;
+  font-weight: 700;
+}
+.header__links--inactive {
+  color: #E1E1E1;
 }
 
 @media (min-width: 768px) and (max-width: 1279px) {
@@ -64,7 +58,6 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    max-width: 100%;
     margin: 0;
   }
   .header__logo-container {
@@ -73,41 +66,30 @@ body {
   }
   .header__logo {
     width: 8rem;
-    margin: 0 1.5rem;
+    margin: 0;
   }
   .header__links {
-    font-size: 1.25rem;
     width: 1vw;
     height: 6rem;
     position: relative;
-    bottom: -1.1rem;
+    top: 3rem;
   }
   .header__menu {
     width: 30%;
-    height: 100%;
-    line-height: 5rem;
-    display: flex;
     align-items: center;
     margin-top: 0;
     margin-left: 1.5rem;
+    justify-content: center;
     padding-left: 0;
   }
   .header__border-biography {
-    width: 5rem;
-    padding-right: 1.5rem;
-    font-size: 1rem;
+    width: 4.5rem;
     padding-left: 0;
-  }
-  .header__border-biography:hover {
-    border-bottom: 4px solid #fff;
-    font-weight: 700;
-    padding-bottom: 0;
+    padding-top: 0.3rem;
+    border-bottom: 5px solid #FFFFFF;
   }
   .header__border-show {
-    width: -50rem;
-    height: 100%;
     padding-left: 1.5rem;
-    font-size: 1rem;
     padding-right: 1.5rem;
     margin-left: 1.5rem;
   }
@@ -130,13 +112,16 @@ body {
     padding-left: 3.938rem;
   }
   .header__links {
-    font-size: 1.25rem;
-    max-width: 1rem;
-    height: 6rem;
-    position: relative;
-    bottom: -1rem;
-    left: -0.1rem;
-    margin: 0;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    color: #afafaf;
+    font-size: 0.87rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+    padding-bottom: 2px;
   }
   .header__menu {
     width: 30%;
@@ -154,11 +139,6 @@ body {
     padding-left: 0;
     box-sizing: border-box;
   }
-  .header__border-biography:hover {
-    border-bottom: 4px solid #fff;
-    font-weight: 700;
-    padding-bottom: 0;
-  }
   .header__border-show {
     height: 100%;
     padding-left: 0;
@@ -169,49 +149,52 @@ body {
 }
 .heroimage {
   background-image: url("/asset/images/hero-bio.jpg");
-  width: 100vw;
-  height: 50vh;
+  max-width: 100%;
+  height: 30vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 0;
+  position: relative;
+}
+.heroimage__overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0%;
+  left: 0%;
+  background-color: rgba(32, 32, 32, 0.5);
 }
 .heroimage__container {
   display: flex;
   align-items: center;
-  min-height: 50vh;
+  height: 27vh;
   margin-inline: auto;
 }
 .heroimage__title {
   padding-left: 1rem;
   padding-right: 1rem;
-  font-family: myFont;
+  font-family: Avnirbold;
   font-size: 1.5rem;
   font-weight: 700;
   color: #FFFFFF;
   line-height: 2rem;
+  z-index: 1;
+  text-transform: capitalize;
 }
 
 @media (min-width: 768px) and (max-width: 1279px) {
   .heroimage {
     background-image: url("/asset/images/hero-bio.jpg");
-    max-width: 100%;
     height: 30rem;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
   }
   .heroimage__container {
-    display: flex;
-    align-items: center;
     min-height: 28rem;
-    margin-inline: auto;
   }
   .heroimage__title {
-    font-family: myFont;
+    font-family: Avnirbold;
     font-size: 3.75rem;
     font-weight: 700;
-    color: #FFFFFF;
     line-height: 4.25rem;
     margin-left: 2.25rem;
     padding: 0 1.5rem 0 0;
@@ -233,7 +216,7 @@ body {
     margin: 0 auto;
   }
   .heroimage__title {
-    font-family: myFont;
+    font-family: Avnirbold;
     padding: 0 5rem 0 5rem;
     font-size: 3.75rem;
     line-height: 4.25rem;
@@ -243,44 +226,43 @@ body {
 }
 .band__title {
   padding-left: 1rem;
-  font-family: myFont;
+  font-family: Avnirbold;
   font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 2rem;
   padding-top: 1.5rem;
   margin-bottom: 0;
   margin-top: 0;
-  text-transform: capitalize;
 }
 .band__img {
   box-sizing: border-box;
   width: 100%;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 1rem;
+  padding: 1rem 1rem 0 1rem;
+  max-height: 35rem;
 }
 .band__desc {
   margin: 0;
+  font-family: AvnirmyFontDemi;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
 }
 .band__des1 {
   padding: 1rem 1rem 0 1rem;
-  font-size: 14px;
-  font-family: AvnirmyFontDemi;
-  line-height: 22px;
   margin-top: 0;
   margin-bottom: 0;
 }
 .band__des2 {
-  padding: 1rem 1rem 0 1rem;
-  font-size: 14px;
-  font-family: AvnirmyFontDemi;
+  padding: 0.5rem 1rem 0 1rem;
   margin: 0;
 }
 
 @media (min-width: 768px) and (max-width: 1279px) {
   .band__title {
-    padding-left: 1rem;
     font-size: 2.25rem;
-    padding: 3rem 2.25rem 2.25rem 0;
+    font-weight: 700;
+    font-family: Avnirbold;
     line-height: 2.75rem;
+    padding: 3rem 2.25rem 2.25rem 0;
     margin-left: 2.25rem;
     max-width: 100%;
   }
@@ -289,7 +271,6 @@ body {
     padding-right: 2.25rem;
   }
   .band__img {
-    box-sizing: border-box;
     padding: 0 3rem 0 3rem;
     margin: 0 2.25rem 0 2.25rem;
   }
@@ -297,23 +278,28 @@ body {
     margin: 0 2.25rem;
   }
   .band__des1 {
-    padding: 2.25rem 2.25rem 1rem;
+    padding: 2.25rem 2.25rem 0.5rem;
     font-size: 1.5rem;
+    font-weight: 600;
     font-family: AvnirmyFontDemi;
     line-height: 2rem;
   }
   .band__des2 {
     padding: 0rem 2.25rem 0 2.25rem;
-    font-size: 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 600;
     font-family: AvnirmyFontDemi;
-    margin: 0;
+    line-height: 1.375rem;
+    font-weight: 700;
   }
 }
 @media (min-width: 1280px) {
   .band__title {
-    font-size: 2.25rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: AvnirmyFontDemi;
+    line-height: 2rem;
     padding: 3rem 0 2.25rem 3.938rem;
-    line-height: 2.75rem;
     margin-left: 2.25rem;
     max-width: 100%;
   }
@@ -324,6 +310,7 @@ body {
     margin: 0 auto;
     padding: 0 3.938rem 0 3.938rem;
     margin: 0 5rem 0 0;
+    height: 3rem;
   }
   .band__desc {
     margin: 0 5rem;
@@ -342,28 +329,43 @@ body {
   }
 }
 .paragraph__title {
-  font-size: 1.5rem;
-  padding: 1.5rem 1rem 0 0rem;
+  font-size: 0.875rem;
+  font-weight: 600;
   font-family: AvnirmyFontDemi;
+  line-height: 1.375rem;
+  padding: 1.5rem 1rem 0 0rem;
   box-sizing: border-box;
   margin-left: 1rem;
   margin-bottom: 0;
   margin-top: 0;
+  text-transform: capitalize;
 }
-.paragraph__para1, .paragraph__para2 {
-  font-size: 13px;
+.paragraph__para1 {
+  font-size: 0.813rem;
   font-family: AvnirmyFontRegular;
+  line-height: 1.125rem;
+  font-weight: 400;
   padding: 1rem 1rem 0 1rem;
-  line-height: 18px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.paragraph__para2 {
+  font-size: 0.813rem;
+  font-family: AvnirmyFontRegular;
+  line-height: 1.125rem;
+  font-weight: 400;
+  padding: 1rem 1rem 0rem 1rem;
   margin-bottom: 0;
   margin-top: 0;
 }
 
 @media (min-width: 768px) and (max-width: 1279px) {
   .paragraph__title {
-    font-size: 1.5rem;
     padding: 3rem 2.25rem 0 2.25rem;
+    font-size: 1.5rem;
+    font-weight: 600;
     font-family: AvnirmyFontDemi;
+    line-height: 2rem;
     margin-left: 2.25rem;
   }
   .paragraph__para {
@@ -372,16 +374,21 @@ body {
     padding: 0 2.25rem 0 1.5rem;
   }
   .paragraph__para1 {
+    font-size: 0.875rem;
+    font-family: AvnirmyFontRegular;
+    line-height: 1.375rem;
+    font-weight: 400;
     flex: 50%;
     margin-left: 2.25rem;
-    font-size: 0.875;
-    line-height: 1.375rem;
   }
   .paragraph__para2 {
+    font-size: 0.875rem;
+    font-family: AvnirmyFontRegular;
+    line-height: 1.375rem;
+    font-weight: 400;
     flex: 50%;
     margin-right: 2.25rem;
-    font-size: 0.875;
-    line-height: 1.375rem;
+    padding-bottom: 2.25rem;
   }
 }
 @media (min-width: 1280px) {
@@ -417,12 +424,13 @@ body {
   width: 100vw;
 }
 .gallery__title {
-  padding-left: 1rem;
   font-size: 1.5rem;
-  font-family: myFont;
-  padding-bottom: 1rem;
-  margin: 0;
+  font-weight: 700;
+  font-family: Avnirbold;
+  line-height: 2rem;
+  margin-left: 1rem;
   padding-top: 1.5rem;
+  padding-bottom: 1rem;
 }
 .gallery__photos img {
   box-sizing: border-box;
@@ -436,9 +444,11 @@ body {
 @media (min-width: 768px) and (max-width: 1279px) {
   .gallery__title {
     font-size: 2.25rem;
-    font-family: myFont;
+    font-weight: 700;
+    font-family: Avnirbold;
+    line-height: 2.75rem;
     margin: 0 2.25rem;
-    padding: 3rem 2.25rem 0 3.938rem;
+    padding: 3rem 2.25rem 1.5rem;
   }
   .gallery__photos {
     display: flex;
@@ -449,7 +459,7 @@ body {
     margin-left: 2.25rem;
   }
   .gallery__photos img {
-    max-height: 10rem;
+    max-height: 6rem;
     max-width: 13rem;
     margin: 0 0.5rem 2.25rem 0rem;
     gap: 1rem;
@@ -485,7 +495,9 @@ body {
 }
 .footer__title {
   font-size: 1.5rem;
-  font-family: myFont;
+  font-weight: 700;
+  font-family: Avnirbold;
+  line-height: 2rem;
   color: #FFFFFF;
   margin: 0;
   padding: 3rem 0 1.5rem 0;
@@ -498,24 +510,26 @@ body {
   width: 2rem;
   height: 2rem;
   margin-left: 0;
-  padding: 0 0 1.5rem 0;
   margin-right: 1rem;
+  padding: 0 0 1.5rem 0;
 }
 
 .address {
   color: #FFFFFF;
 }
 .address__name {
+  font-size: 0.875rem;
+  font-weight: 600;
   font-family: AvnirmyFontDemi;
-  font-size: 14px;
-  line-height: 22px;
+  line-height: 1.375rem;
   margin: 0;
   padding: 1rem 0 0 1rem;
 }
 .address__details {
-  font-size: 13px;
+  font-size: 0.813rem;
   font-family: AvnirmyFontRegular;
-  line-height: 18px;
+  line-height: 1.125rem;
+  font-weight: 400;
   padding: 1rem 0 0 1rem;
 }
 
@@ -523,16 +537,18 @@ body {
   color: #FFFFFF;
 }
 .artist__title {
-  font-family: AvnirmyFontDemi;
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.813rem;
+  font-family: AvnirmyFontRegular;
+  line-height: 1.125rem;
+  font-weight: 400;
   margin: 0;
   padding: 1rem 0 0 1rem;
 }
 .artist__details {
-  font-size: 13px;
+  font-size: 0.813rem;
   font-family: AvnirmyFontRegular;
-  line-height: 18px;
+  line-height: 1.125rem;
+  font-weight: 400;
   padding: 1rem 0 0 1rem;
 }
 
@@ -540,16 +556,18 @@ body {
   color: #FFFFFF;
 }
 .entertainment__title {
+  font-size: 0.875rem;
+  font-weight: 600;
   font-family: AvnirmyFontDemi;
-  font-size: 14px;
-  line-height: 22px;
+  line-height: 1.375rem;
   margin: 0;
   padding: 1rem 0 0 1rem;
 }
 .entertainment__details {
-  font-size: 13px;
+  font-size: 0.813rem;
   font-family: AvnirmyFontRegular;
-  line-height: 18px;
+  line-height: 1.125rem;
+  font-weight: 400;
   padding: 1rem 0 0 1rem;
 }
 
@@ -559,9 +577,10 @@ body {
 }
 
 .copyright__sentence {
+  font-size: 0.813rem;
   font-family: AvnirmyFontRegular;
-  line-height: 18px;
-  font-size: 13px;
+  line-height: 1.125rem;
+  font-weight: 400;
   color: #FFFFFF;
   margin: 0;
   padding: 0.5rem 0 1.5rem 1rem;
@@ -575,11 +594,11 @@ body {
     align-items: center;
   }
   .footer__title {
-    padding: 3rem 2.25rem 2.25rem;
     font-size: 2.25rem;
-  }
-  .footer__tabletlogo {
-    display: inline-block;
+    font-weight: 700;
+    font-family: Avnirbold;
+    line-height: 2.75rem;
+    padding: 3rem 2.25rem 2.25rem;
   }
   .footer__logoimg {
     max-width: 25rem;
@@ -616,28 +635,46 @@ body {
     align-items: center;
   }
   .address__name {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
+    @includes des_tab_fontforbody;
+    font-weight: 700;
     padding-bottom: 1rem;
   }
   .address__email {
     padding-top: 1.5rem;
+    font-size: 0.875rem;
+    font-family: AvnirmyFontRegular;
+    line-height: 1.375rem;
+    font-weight: 400;
   }
   .artist__link {
     padding-top: 1.5rem;
+    font-size: 0.875rem;
+    font-family: AvnirmyFontRegular;
+    line-height: 1.375rem;
+    font-weight: 400;
   }
   .artist__title {
     font-size: 0.875rem;
-    line-height: 1.25rem;
+    font-family: AvnirmyFontRegular;
+    line-height: 1.375rem;
+    font-weight: 400;
+    font-weight: 700;
     padding-bottom: 1rem;
   }
   .entertainment__title {
     font-size: 0.875rem;
-    line-height: 1.25rem;
+    font-family: AvnirmyFontRegular;
+    line-height: 1.375rem;
+    font-weight: 400;
+    font-weight: 700;
     padding-bottom: 1rem;
   }
   .entertainment__link {
     padding-top: 1.5rem;
+    font-size: 0.875rem;
+    font-family: AvnirmyFontRegular;
+    line-height: 1.375rem;
+    font-weight: 400;
   }
   .footerlogo {
     display: none;
@@ -646,9 +683,8 @@ body {
     font-family: AvnirmyFontRegular;
     font-size: 0.875rem;
     line-height: 1.25rem;
-    color: #FFFFFF;
     margin-left: 2.25rem;
-    padding: 2.25rem 2.25rem 2.5rem 2rem;
+    padding: 2.25rem 2.25rem 2.5rem 2.25rem;
   }
 }
 @media (min-width: 1280px) {

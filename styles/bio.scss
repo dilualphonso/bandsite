@@ -1,87 +1,66 @@
  @use './partials/mixin' as *;
+ @use './partials/fonttype' as *;
+ @use './partials/color' as *;
 
- @font-face {
-     font-family: myFont;
-     src: url("/asset/fonts/AvenirNextLTProBold.ttf");
-     font-weight: 700;
 
- }
+.header {
 
- @font-face {
-     font-family: AvnirmyFontRegular;
-     src: url("/asset/fonts/AvenirNextLTPro.ttf");
-     font-weight: 400;
-
- }
-
- @font-face {
-     font-family: AvnirmyFontDemi;
-     src: url("/asset/fonts/AvenirNextLTProDemi.ttf");
-     font-weight: 600;
-
- }
-
- body {
-     margin: 0;
-
- }
-
- html,
- body {
-     width: auto !important;
-     overflow-x: hidden !important
- }
-
- .header {
-
-     width: 100%;
-     background-color: #323232;
+    width: 100%;
+    background-color:$primary-Black;
 
 
 
-     &__logo-container {
+    &__logo-container {
 
-         display: flex;
-         flex-direction: column;
-         align-items: center;
-         justify-content: center;
-     }
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
 
-     &__logo {
-         width: 8.25rem;
-         padding: 1rem 0;
-     }
+    &__logo {
+        width: 8.25rem;
+        padding: 1rem 0;
+    }
 
-     &__menu {
+    &__menu {
          list-style-type: none;
+          display: flex;
+        justify-content: space-around;
 
-         display: flex;
-         justify-content: space-around;
-         color: #FFFFFF;
-         font-family: myFont;
+
          padding: 0;
          margin-bottom: 0;
          width: 100%;
-     }
 
-     &__links {
-         text-align: center;
+
+    }
+
+    &__links {
+        text-align: center;
          padding-bottom: 1rem;
-         font-size: 1rem;
+         font-size: 0.875rem;
          width: 50vw;
-         margin: 0 1rem 0 1rem;
-     }
+         margin: 0 1rem 0 0;
+        line-height: 1.125rem;
+        font-weight: 400;
+        font-family:AvnirmyFontRegular;
 
-     &__border-biography:hover {
-         color: #FFFFFF;
-         border-bottom: 5px solid #FFFFFF;
-     }
+        &--active{
+            color:$primary-white;
+            border-bottom: 5px solid $primary-white;
+            font-weight: 700;
+        }
 
 
+    &--inactive{
+        color: $secondory-mercury;
+    }
 
 
- }
+    }
+
+}
 
  //using header for tablet media query
 
@@ -92,9 +71,7 @@
          display: flex;
          flex-direction: row;
          align-items: center;
-         max-width: 100%;
-         //margin-inline: auto;
-         margin:0;
+       margin:0;
 
 
          &__logo-container {
@@ -107,18 +84,18 @@
          &__logo {
 
              width: 8rem;
-             margin: 0 1.5rem;
+             margin: 0
 
          }
 
          &__links {
 
-             font-size: 1.25rem;
-             width: 1vw;
 
+             width: 1vw;
              height: 6rem;
              position: relative;
-             bottom: -1.1rem;
+              top:3rem
+
 
 
          }
@@ -126,14 +103,10 @@
          &__menu {
 
              width: 30%;
-             height: 100%;
-             line-height: 5rem;
-             display: flex;
              align-items: center;
              margin-top: 0;
              margin-left: 1.5rem;
-             //justify-content: center;
-             //justify-content: space-between;
+             justify-content: center;
              padding-left: 0;
 
 
@@ -141,32 +114,23 @@
          }
 
          &__border-biography {
-             width: 5rem;
-
-             padding-right: 1.5rem;
-             font-size: 1rem;
-             padding-left: 0;
-
+             width: 4.5rem;
+              padding-left: 0;
+             padding-top:0.3rem;
+             border-bottom: 5px solid $primary-white;
 
 
-             &:hover {
-                 border-bottom: 4px solid #fff;
-                 font-weight: 700;
-                 padding-bottom: 0;
-
-             }
 
          }
 
+
          &__border-show {
 
-             width: -50rem;
 
-             height: 100%;
              padding-left: 1.5rem;
-             font-size: 1rem;
-             padding-right: 1.5rem;
+            padding-right: 1.5rem;
              margin-left: 1.5rem;
+
 
 
          }
@@ -206,13 +170,24 @@
 
         &__links {
 
-            font-size: 1.25rem;
-            max-width: 1rem;
-            height: 6rem;
-            position: relative;
-            bottom: -1rem;
-            left:-0.1rem;
-            margin: 0;
+            // font-size: 1.25rem;
+            // max-width: 1rem;
+            // height: 6rem;
+            // position: relative;
+            // bottom: -1rem;
+            // left:-0.1rem;
+            // margin: 0;
+
+            display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    color: #afafaf;
+    font-size: 0.87rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+    padding-bottom: 2px;
 
 
 
@@ -231,6 +206,7 @@
 
 
 
+
         }
 
         &__border-biography {
@@ -243,12 +219,12 @@
 
 
 
-            &:hover {
-                border-bottom: 4px solid #fff;
-                font-weight: 700;
-                padding-bottom: 0;
+            // &:hover {
+            //     border-bottom: 4px solid #fff;
+            //     font-weight: 700;
+            //     padding-bottom: 0;
 
-            }
+            // }
 
         }
 
@@ -274,20 +250,32 @@
 
      background-image: url("/asset/images/hero-bio.jpg");
 
-     width: 100vw;
-     height: 50vh;
+     max-width: 100%;
+     height: 30vh;
      background-position: center;
      background-repeat: no-repeat;
      background-size: cover;
      padding-top: 0;
+     position: relative;
+
+     &__overlay{
+
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0%;
+        left: 0%;
+        background-color: rgba(32,32,32,0.5);
+
+     }
 
      &__container {
 
-       display: flex;
-      align-items: center;
-     min-height: 50vh;
-      margin-inline: auto;
 
+    display: flex;
+      align-items: center;
+      height: 27vh;
+      margin-inline: auto;
 
 
      }
@@ -296,11 +284,13 @@
 
             padding-left: 1rem;
             padding-right: 1rem;
-            font-family: myFont;
+            font-family:  Avnirbold;
             font-size: 1.5rem;
             font-weight: 700;
-            color: #FFFFFF;
+            color:$primary-white;
             line-height: 2rem;
+            z-index:1;
+            text-transform: capitalize;
 
 
      }
@@ -313,28 +303,26 @@
 
          background-image: url("/asset/images/hero-bio.jpg");
 
-         max-width: 100%;
+        // max-width: 100%;
          height: 30rem;
-         background-position: center;
-         background-repeat: no-repeat;
-         background-size: cover;
+        // background-position: center;
+        // background-repeat: no-repeat;
+        // background-size: cover;
 
 
          &__container {
 
-             display: flex;
-             align-items: center;
+
              min-height: 28rem;
-             margin-inline: auto;
+
 
          }
 
          &__title {
 
-             font-family: myFont;
+             font-family:  Avnirbold;
              font-size: 3.75rem;
              font-weight: 700;
-             color: #FFFFFF;
              line-height: 4.25rem;
              margin-left: 2.25rem;
              padding: 0 1.5rem 0 0;
@@ -366,10 +354,10 @@
 
         &__title {
 
-             font-family: myFont;
+             font-family:  Avnirbold;
             // font-size: 3.75rem;
             // font-weight: 700;
-            // color: #FFFFFF;
+            // color: #$primary-white;
             // line-height: 4.25rem;
 
             //margin: 0 auto;
@@ -378,7 +366,7 @@
 
            font-size: 3.75rem;
            line-height: 4.25rem;
-           color: #FFFFFF;
+           color: $primary-white;
 
            width: 31.875rem;
           // margin-left:5rem;
@@ -392,12 +380,14 @@
      &__title {
 
          padding-left: 1rem;
-         font-family: myFont;
+         font-family:  Avnirbold;
          font-size: 1.5rem;
+         font-weight: 700;
+         line-height: 2rem;
          padding-top: 1.5rem;
          margin-bottom: 0;
          margin-top: 0;
-         text-transform: capitalize;
+
 
 
 
@@ -409,31 +399,27 @@
          box-sizing: border-box;
 
          width: 100%;
-
-
-         padding-left: 1rem;
-         padding-right: 1rem;
-         padding-top: 1rem;
+         padding: 1rem 1rem 0 1rem;
+         max-height: 35rem;
      }
 
      &__desc {
          margin: 0;
+         font-family: AvnirmyFontDemi;
+         font-size: 0.875rem;
+
+         line-height: 1.375rem;
      }
 
      &__des1 {
          padding: 1rem 1rem 0 1rem;
-         font-size: 14px;
-         font-family: AvnirmyFontDemi;
-         line-height: 22px;
+
          margin-top: 0;
          margin-bottom: 0;
      }
 
      &__des2 {
-         padding: 1rem 1rem 0 1rem;
-
-         font-size: 14px;
-         font-family: AvnirmyFontDemi;
+         padding: 0.5rem 1rem 0 1rem;
          margin: 0;
 
      }
@@ -447,10 +433,9 @@
 
          &__title {
 
-             padding-left: 1rem;
-             font-size: 2.25rem;
+@include des_tab_fontforh2;
              padding: 3rem 2.25rem 2.25rem 0;
-             line-height: 2.75rem;
+
              margin-left: 2.25rem;
              max-width: 100%;
          }
@@ -465,7 +450,7 @@
 
          &__img {
 
-             box-sizing: border-box;
+
              padding: 0 3rem 0 3rem;
              margin: 0 2.25rem 0 2.25rem;
 
@@ -480,19 +465,15 @@
          }
 
          &__des1 {
-             padding: 2.25rem 2.25rem 1rem;
-             font-size: 1.5rem;
-             font-family: AvnirmyFontDemi;
-             line-height: 2rem;
+             padding: 2.25rem 2.25rem  0.5rem ;
+           @include des_tab_fontforh3;
 
          }
 
          &__des2 {
              padding: 0rem 2.25rem 0 2.25rem;
-             // line-height: 2rem;
-             font-size: 1.25rem;
-             font-family: AvnirmyFontDemi;
-             margin: 0;
+            @include mobilefontforh3;
+             font-weight: 700;
 
          }
 
@@ -506,10 +487,10 @@
 
         &__title {
 
+@include des_tab_fontforh3;
 
-            font-size: 2.25rem;
             padding: 3rem 0 2.25rem 3.938rem;
-            line-height: 2.75rem;
+
             margin-left: 2.25rem;
             max-width: 100%;
         }
@@ -517,6 +498,7 @@
         &__container {
 
            margin: 0 5rem;
+
   }
 
 
@@ -525,7 +507,7 @@
             margin:0 auto;
             padding: 0 3.938rem 0 3.938rem;
             margin: 0 5rem 0 0 ;
-            //height:35rem;
+            height:3rem;
 
         }
 
@@ -568,27 +550,34 @@
 
 
      &__title {
-         font-size: 1.5rem;
+
+        @include mobilefontforh3;
          padding: 1.5rem 1rem 0 0rem;
-         font-family: AvnirmyFontDemi;
          box-sizing: border-box;
          margin-left: 1rem;
          margin-bottom: 0;
          margin-top: 0;
+         text-transform: capitalize;
+
 
      }
 
-     &__para1,
+     &__para1{
+
+        @include mobilefontforbody;
+        padding: 1rem 1rem 0 1rem;
+        margin-bottom: 0;
+         margin-top: 0;
+
+     }
      &__para2 {
 
 
+        @include mobilefontforbody;
 
-         font-size: 13px;
-         font-family: AvnirmyFontRegular;
-         padding: 1rem 1rem 0 1rem;
-         line-height: 18px;
-         margin-bottom: 0;
-         margin-top: 0;
+         padding:1rem 1rem 0rem 1rem;
+          margin-bottom: 0;
+        margin-top: 0;
      }
  }
 
@@ -597,9 +586,8 @@
      .paragraph {
 
          &__title {
-             font-size: 1.5rem;
              padding: 3rem 2.25rem 0 2.25rem;
-             font-family: AvnirmyFontDemi;
+          @include des_tab_fontforh3;
              margin-left: 2.25rem;
 
 
@@ -614,20 +602,18 @@
          }
 
          &__para1 {
-
+@include des_tab_fontforbody;
              flex: 50%;
              margin-left: 2.25rem;
-             font-size: 0.875;
-             line-height: 1.375rem;
+
 
          }
 
          &__para2 {
-
+@include des_tab_fontforbody;
              flex: 50%;
              margin-right: 2.25rem;
-             font-size: 0.875;
-             line-height: 1.375rem;
+             padding-bottom: 2.25rem;
 
          }
      }
@@ -675,9 +661,11 @@
     }
 }
 
+
+
  .gallery {
 
-     background-color: #FAFAFA;
+     background-color: $primary_silver;
 
      margin: 0;
      width: 100vw;
@@ -685,12 +673,10 @@
 
 
      &__title {
-         padding-left: 1rem;
-         font-size: 1.5rem;
-         font-family: myFont;
-         padding-bottom: 1rem;
-         margin: 0;
+        @include mobilefontforh2;
+         margin-left: 1rem;
          padding-top: 1.5rem;
+         padding-bottom: 1rem;
 
 
      }
@@ -712,11 +698,10 @@
 
         &__title {
 
-            font-size: 2.25rem;
-            font-family: myFont;
 
+          @include des_tab_fontforh2;
             margin: 0 2.25rem;
-            padding: 3rem 2.25rem 0 3.938rem;
+            padding: 3rem 2.25rem 1.5rem;
 
 
         }
@@ -733,7 +718,7 @@
          }
 
          &__photos img {
-             max-height: 10rem;
+             max-height: 6rem;
              max-width: 13rem;
              margin: 0 0.5rem 2.25rem 0rem;
              gap:1rem;
@@ -780,7 +765,7 @@
 }
 
  .footer {
-     background-color: #323232;
+     background-color: $primary-Black;
 
      &__container {
          margin: 0 1rem;
@@ -789,9 +774,8 @@
 
      &__title {
 
-         font-size: 1.5rem;
-         font-family: myFont;
-         color: #FFFFFF;
+        @include mobilefontforh2;
+         color: $primary-white;
          margin: 0;
          padding: 3rem 0 1.5rem 0;
      }
@@ -810,20 +794,19 @@
          width: 2rem;
          height: 2rem;
          margin-left: 0;
-         padding: 0 0 1.5rem 0;
          margin-right: 1rem;
+         padding: 0 0 1.5rem 0;
+
      }
  }
 
  .address {
 
-     color: #FFFFFF;
+     color: $primary-white;
 
 
      &__name {
-         font-family: AvnirmyFontDemi;
-         font-size: 14px;
-         line-height: 22px;
+         @include mobilefontforh3;
          margin: 0;
          padding: 1rem 0 0 1rem;
 
@@ -831,9 +814,7 @@
 
      &__details {
 
-         font-size: 13px;
-         font-family: AvnirmyFontRegular;
-         line-height: 18px;
+         @include mobilefontforbody;
          padding: 1rem 0 0 1rem;
 
      }
@@ -841,44 +822,37 @@
  }
 
  .artist {
-     color: #FFFFFF;
+     color: $primary-white;
 
      &__title {
-         font-family: AvnirmyFontDemi;
-         font-size: 14px;
-         line-height: 22px;
+       @include mobilefontforbody;
          margin: 0;
          padding: 1rem 0 0 1rem;
      }
 
      &__details {
-         font-size: 13px;
-         font-family: AvnirmyFontRegular;
-         line-height: 18px;
+         @include mobilefontforbody;
          padding: 1rem 0 0 1rem;
      }
 
  }
 
  .entertainment {
-     color: #FFFFFF;
+     color: $primary-white;
 
 
 
      &__title {
 
-         font-family: AvnirmyFontDemi;
-         font-size: 14px;
-         line-height: 22px;
+
+    @include  mobilefontforh3;
          margin: 0;
          padding: 1rem 0 0 1rem;
 
      }
 
      &__details {
-         font-size: 13px;
-         font-family: AvnirmyFontRegular;
-         line-height: 18px;
+       @include mobilefontforbody;
          padding: 1rem 0 0 1rem;
      }
 
@@ -896,10 +870,8 @@
 
  .copyright {
      &__sentence {
-         font-family: AvnirmyFontRegular;
-         line-height: 18px;
-         font-size: 13px;
-         color: #FFFFFF;
+       @include mobilefontforbody;
+         color: $primary-white;
          margin: 0;
          padding: 0.5rem 0 1.5rem 1rem;
      }
@@ -920,20 +892,19 @@
          }
 
          &__title {
-
-
+            @include des_tab_fontforh2;
              padding:3rem 2.25rem 2.25rem;
-             font-size: 2.25rem;
+
 
          }
 
-         &__tabletlogo {
+        //  &__tabletlogo {
 
 
-             //min-height: 15rem;
-            display: inline-block;
+        //      //min-height: 15rem;
+        //     display: inline-block;
 
-         }
+        //  }
 
          &__logoimg {
              //padding-right: 1.5rem;
@@ -993,14 +964,14 @@
      .address {
 
          &__name {
-            // margin-right: 1.5rem
-            font-size:0.875rem;
-            line-height: 1.25rem;
+            @includes des_tab_fontforbody;
+            font-weight: 700;
             padding-bottom:1rem;
          }
 
          &__email{
             padding-top: 1.5rem;
+            @include des_tab_fontforbody;
 
 
 
@@ -1009,13 +980,15 @@
 
      .artist{
         &__link{
+
             padding-top: 1.5rem;
+            @include des_tab_fontforbody;
         }
 
         &__title{
 
-            font-size:0.875rem;
-            line-height: 1.25rem;
+            @include des_tab_fontforbody;
+            font-weight: 700;
             padding-bottom:1rem;
 
         }
@@ -1024,14 +997,16 @@
      .entertainment{
         &__title{
 
-            font-size:0.875rem;
-            line-height: 1.25rem;
+           @include des_tab_fontforbody;
+           font-weight: 700;
             padding-bottom:1rem;
+
 
         }
 
         &__link{
             padding-top: 1.5rem;
+            @include des_tab_fontforbody;
         }
 
      }
@@ -1045,9 +1020,8 @@
              font-family: AvnirmyFontRegular;
              font-size:0.875rem;
              line-height: 1.25rem;
-             color: #FFFFFF;
-             margin-left: 2.25rem;
-             padding: 2.25rem 2.25rem 2.5rem  2rem;
+              margin-left: 2.25rem;
+             padding: 2.25rem 2.25rem 2.5rem  2.25rem;
          }
 
 
@@ -1199,7 +1173,7 @@
             font-family: AvnirmyFontRegular;
             font-size:0.875rem;
             line-height: 1.25rem;
-            color: #FFFFFF;
+            color: $primary-white;
             margin-left: 5rem;
             padding: 2.25rem 2.25rem 2.5rem  2rem;
         }

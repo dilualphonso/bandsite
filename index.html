@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/global.css">
   <link rel="stylesheet" href="./styles/bio.css">
   <title>Band site</title>
 </head>
@@ -17,28 +18,29 @@
 
     <ul class="header__menu">
       <div class="header__border-biography">
-        <li class="header__links">Biography</li>
-        <!-- <li class="header__border-bottom"></li> -->
-      </div>
-
-      <div class="header__border-show">
-        <li class="header__links">Shows</li>
-        <!-- <li class="header__border-bottom"></li> -->
-      </div>
+        <li class="header__links header__links--active">Biography</li>
+     </div>
+        <div class="header__border-show">
+        <li class="header__links header__links--inactive">Shows</li>
+        </div>
     </ul>
+
+
 
     </div>
   </header>
-  <div class="heroimage">
+  <section class="heroimage">
+    <div class="heroimage__overlay">
     <div class="heroimage__container">
 
       <h1 class="heroimage__title">The bees knees</h1>
     </div>
+    </div>
 
-  </div>
+  </section>
   <main>
     <section class="band">
-      <h2 class="band__title">About the musicians</h2>
+      <h2 class="band__title">About the Musicians</h2>
       <div class="band__container">
         <img class="band__img" src="/asset/images/band.jpg" alt="">
       </div>
