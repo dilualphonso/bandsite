@@ -69,27 +69,7 @@ const shows = [{
     location: "San Francisco, CA"
 }]
 
-//const showsFragment = document.createDocumentFragment()
 
-// showsData.forEach(show => {
-//     ticketPlaceholderEl.innerHTML += `
-// <div class="p-10 space-y-5">
-//     <div>
-//        <span class="text-gray-600 font-semibold uppercase">DATE</span>
-//        <h4 class="font-bold text-xl">${show.date}</h4>
-//     </div>
-//     <div>
-//        <span class="text-gray-600 font-semibold uppercase">Venue</span>
-//        <h4 class="font-bold text-xl">${show.venue}</h4>
-//     </div>
-//     <div>
-//        <span class="text-gray-600 font-semibold uppercase">Location</span>
-//        <h4 class="font-bold text-xl">${show.location}</h4>
-//     </div>
-//     <button class="px-4 py-3 rounded bg-gray-900 text-white w-full">BUY TICKETS</button>
-// </div>
-//     `
-// })
 
 
 

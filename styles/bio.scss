@@ -30,7 +30,7 @@
     &__links {
         text-align: center;
         padding-bottom: 1rem;
-        width: 50vw;
+        width: 50%;
         margin: 0 1rem 0 0;
         @include mobilefontforbody;
 
@@ -65,7 +65,7 @@
         }
 
         &__links {
-            width: 1vw;
+           width: 1vw;
             height: 6rem;
             position: relative;
             top: 2.5rem;
@@ -432,9 +432,9 @@
 
 //mobile view gallery
 .gallery {
-    background-color: $primary_silver;
+    background-color: $background_alabaster;
     margin: 0;
-    width: 100vw;
+    width: 100%;
     margin: 0 auto;
 
     &__title {
@@ -448,8 +448,8 @@
 
     &__photos img {
         box-sizing: border-box;
-        height: 50vw;
-        width: 100vw;
+        height: 50%;
+        width: 100%;
         margin-bottom: 1rem;
         padding-left: 1rem;
         padding-right: 1rem;
@@ -504,6 +504,131 @@
         }
     }
 }
+// ----------------------------------comments--------------------------------------------
+.comments {
+
+    &__form{
+
+
+    }
+
+    &__title{
+
+        @include mobilefontforh2;
+        margin-left: 1rem;
+        margin-top: 0;
+        padding-top: 1.5rem;
+    }
+
+    &__right-container{
+        display: flex;
+        flex-direction: column;
+        //flex: 1;
+        margin-right: 1rem;
+        margin-left: 0.5rem;
+    }
+
+
+
+
+    &__image-container{
+       margin-right:0;
+
+       //width: 3rem;
+ // height: 3rem;
+    }
+
+    &__fields{
+        display: flex;
+        flex-direction: row;
+        padding-left: 1rem;
+        justify-content: left;
+        align-items: start;
+        margin-right: 1rem;
+        margin-top: 1rem;
+        //margin-left: 1rem
+    }
+
+  &__name{
+    @include mobilefontforbody;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 0.5rem;
+
+
+  }
+
+  &__name-textBox{
+
+    height:2rem;
+    @include mobilefontforbody;
+
+  }
+
+    &__avatar{
+        width: 3rem;
+        height: 3rem;
+        border-radius: 60%;
+
+
+    //border-radius: 50%;
+    margin-right: 1rem;
+    //top: 1.15rem;
+
+
+}
+
+&__textwrap{
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+   // margin-right: 1rem;
+    //padding-right: 1rem;
+    @include mobilefontforbody;
+    height:60%;
+
+
+}
+
+&__textarea{
+    height: 5rem;
+    margin-right: 1rem;
+}
+
+// &__btn-container{
+
+//     margin-right: 1rem;
+//     padding-right: 1rem;
+
+// }
+
+&__button{
+    margin-top: 1rem;
+  // margin-left: 5rem;
+
+text-align: center;
+margin-right: 1.5rem;
+padding-right: 0rem;
+padding-left: 0rem;
+
+
+
+
+width: 100%;
+background-color: $primary-Black;
+margin-bottom: 1rem;
+height: 2rem;
+color: $primary-white;
+}
+
+
+    }
+
+
 
 //mobile view footer
 .footer {
