@@ -140,11 +140,11 @@ html,
     &__container {
         margin: 0 1rem;
         @include tablet{
-          margin-left: 2.25rem;
+          margin-left: 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-right: 2.25rem;
+            margin-right: 4rem;
         }
     }
 
@@ -190,7 +190,7 @@ html,
 
   @include tablet {
     padding-top: 1.5rem;
-        padding-right: 1.5rem;
+        padding-right: 4.5rem;
   }
     &__icons img {
         width: 3rem;

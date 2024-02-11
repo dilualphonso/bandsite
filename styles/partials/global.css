@@ -140,11 +140,11 @@ html,
 }
 @media (min-width: 768px) and (max-width: 1280px) {
   .footer__container {
-    margin-left: 2.25rem;
+    margin-left: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-right: 2.25rem;
+    margin-right: 4rem;
   }
 }
 .footer__title {
@@ -191,7 +191,7 @@ html,
 @media (min-width: 768px) and (max-width: 1280px) {
   .social {
     padding-top: 1.5rem;
-    padding-right: 1.5rem;
+    padding-right: 4.5rem;
   }
 }
 .social__icons img {
