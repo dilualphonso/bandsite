@@ -1,29 +1,29 @@
 
-//console.log("hello world");
-const ticketPlaceholderEl = document.querySelector("#ticketsPlaceholder")
 
 
-let body = document.body;
+// let body = document.body;
 
-const showcontainer = document.createElement('main');
-//showtitle.innerText= "Shows";
-body.append(showcontainer);
+// const showcontainer = document.createElement('main');
+// //showtitle.innerText= "Shows";
+// body.append(showcontainer);
 
-const showsection = document.createElement('section');
-//showtitle.innerText= "Shows";
+// const showsection = document.createElement('section');
+// //showtitle.innerText= "Shows";
 
-showsection.classList.add("shows");
-showcontainer.append(showsection);
-
-
-const showtitle = document.createElement('h2');
-showtitle.innerText = "Shows";
-showtitle.classList.add("shows__title");
-showsection.append(showtitle);
+// showsection.classList.add("shows");
+// showcontainer.append(showsection);
 
 
-const divcontainer = document.createElement('div');
-divcontainer.classList.add('show__container');
+// const showtitle = document.createElement('h2');
+// showtitle.innerText = "Shows";
+// showtitle.classList.add("shows__title");
+// showsection.append(showtitle);
+
+
+// const divcontainer = document.createElement('div');
+// divcontainer.classList.add('show__container');
+
+
 
 
 
@@ -38,37 +38,61 @@ const shows = [{
 {
     date: "Tue Sept 17 2024",
     venue: "Pier 3 East",
-    location: "San Francisco, CA"
+    location: "San Francisco,CA"
 },
 
 {
 
     date: "Sat Oct 12 2024 ",
-    venue: "View Lounge ",
-    location: "San Francisco, CA"
+    venue: "View Lounge",
+    location: "San Francisco,CA"
 },
 
 {
 
     date: "Sat Nov 16 2024",
     venue: "Hyatt Agency",
-    location: "San Francisco, CA"
+    location: "San Francisco,CA"
 },
 
 {
 
     date: "Fri Nov 29 2024",
-    venue: "Moscow Center ",
-    location: "San Francisco, CA"
+    venue: "Moscow Center",
+    location: "San Francisco,CA"
 
 },
 
 {
     date: "Wed Dec 18 2024 ",
-    venue: "Press Club ",
-    location: "San Francisco, CA"
+    venue: "Press Club",
+    location: "San Francisco,CA"
 }]
 
+const showsEl = document.querySelector(".shows");
+
+const showHeaderEl = document.createElement('div');
+showHeaderEl.classList.add("shows__header");
+showsEl.append(showHeaderEl);
+
+const tabDateTitleEl = document.createElement('h4');
+tabDateTitleEl.innerText = "Date";
+tabDateTitleEl.classList.add("shows__heading-date")
+showHeaderEl.append(tabDateTitleEl);
+
+const tabVenueTitleEl = document.createElement('h4');
+tabVenueTitleEl.innerText = "Venue";
+tabVenueTitleEl.classList.add("shows__heading-venue")
+showHeaderEl.append(tabVenueTitleEl);
+
+const tabLocationTitleEl = document.createElement('h4');
+tabLocationTitleEl.innerText = "Location";
+tabLocationTitleEl.classList.add("shows__heading-location")
+showHeaderEl.append(tabLocationTitleEl);
+
+const tabExtraEl = document.createElement('p');
+tabExtraEl.classList.add("shows__heading-element")
+showHeaderEl.append(tabExtraEl);
 
 
 
@@ -84,26 +108,39 @@ for (let i = 0; i < shows.length; i++) {
 
 function displayShowDetails(show) {
 
-    const show1 = document.createElement("article");
-    show1.classList.add("show");
-    showsection.append(show1);
+    const showsection = document.querySelector(".shows");
 
-    const show1list = document.createElement("ul");
-    show1list.classList.add("show__lists");
-    show1.append(show1list);
+    const showEl = document.createElement("article");
+    showEl.classList.add("show");
+    showsection.append(showEl);
+
+    const showContainerEl = document.createElement('div');
+    showContainerEl.classList.add("show__container");
+   showEl.append(showContainerEl);
+
+    const showlistEl = document.createElement("ul");
+    showlistEl.classList.add("show__lists");
+    showContainerEl.append(showlistEl);
+
+
+    const TabletEl = document.createElement('div');
+    TabletEl.classList.add("show__wrapper")
+    showlistEl.append(TabletEl);
 
 
 
-  const datetitle = document.createElement('div');
-  datetitle.innerText = "Date";
- datetitle.classList.add("show__subtitle")
-show1list.append(datetitle);
+  const dateTitleEl = document.createElement('div');
+  dateTitleEl.innerText = "Date";
+  dateTitleEl.classList.add("show__subtitle")
+  TabletEl.append(dateTitleEl);
 
-const showDateS1 = document.createElement("li");
-   showDateS1.classList.add("show__date");
-   showDateS1.innerText = show.date;
+
+
+const showDateEl = document.createElement("li");
+showDateEl.classList.add("show__date");
+showDateEl.innerText = show.date;
     //showDateS1.appendChild(document.createTextNode("Four"));
-    show1list.append(showDateS1);
+    TabletEl.append(showDateEl);
 
     // showDateS1.classList.add("show__date");
     // showDateS1.innerText = "Date: " + show.date;
@@ -114,35 +151,42 @@ const showDateS1 = document.createElement("li");
     // showtitle.innerText = "Venue";
     // showDateS1.append(showvenuetitle);
 
-    const venuetitle = document.createElement('div');
-    venuetitle.innerText = "Venue";
-    venuetitle.classList.add("show__subtitle")
-    show1list.append(venuetitle);
+    const venueTitleEl = document.createElement('div');
+    venueTitleEl.innerText = "Venue";
+    venueTitleEl.classList.add("show__subtitle")
+    TabletEl.append(venueTitleEl);
 
 
-    const showVenueS1 = document.createElement("li");
-    showVenueS1.classList.add("show__venue");
-    showVenueS1.innerText = show.venue;
-    show1list.append(showVenueS1);
+    const showVenueEl = document.createElement("li");
+    showVenueEl.classList.add("show__venue");
+    showVenueEl.innerText = show.venue;
+    TabletEl.append(showVenueEl);
 
-    const locationtitle = document.createElement('div');
-    locationtitle.innerText = "Location";
-    locationtitle.classList.add("show__subtitle")
-    show1list.append(locationtitle);
+    const locationTitleEl = document.createElement('div');
+    locationTitleEl.innerText = "Location";
+    locationTitleEl.classList.add("show__subtitle")
+    TabletEl.append(locationTitleEl);
 
-    const showlocationS1 = document.createElement("li");
-    showlocationS1.classList.add("show__location");
-    showlocationS1.innerText =show.location;
-    show1list.append(showlocationS1);
+    const showLocationEl = document.createElement("li");
+    showLocationEl.classList.add("show__location");
+    showLocationEl.innerText =show.location;
+    TabletEl.append(showLocationEl);
 
 
      //var container = document.getElementById('buttonContainer');
-     var btn = document.createElement('button');
-     btn.textContent = 'Buy Tickets';
-     btn.classList.add("show__button");
-     show1.append(btn)
 
-    let divider = document.createElement("hr"); //this will create a new element
+
+
+     var btnEl = document.createElement('button');
+     btnEl.textContent = 'Buy Tickets';
+     btnEl.classList.add("show__button");
+     TabletEl.append(btnEl);
+
+
+
+
+
+     let divider = document.createElement("hr"); //this will create a new element
 
      /* Use setAttribute to define the property and values you'd like give the element */
 
@@ -151,7 +195,7 @@ const showDateS1 = document.createElement("li");
     /* Then you'll need to add the element to the page */
     divider.classList.add("show__divider");
 
-    show1.append(divider);
+    showEl.append(divider);
 
 
 
@@ -172,6 +216,47 @@ const showDateS1 = document.createElement("li");
 //     }
 
 
+
+
+
+
+
+// // Add a mouseover event listener
+// showEl.addEventListener('mouseover', () => {
+
+
+
+//     showEl.classList.add('show--hovered');
+
+//     console.log(showEl);
+
+// });
+
+
+
+showEl.addEventListener('click', function(event){
+
+    event.preventDefault();
+    if ( document.querySelector(".show--selected")){
+
+       document.querySelector(".show--selected").classList.remove('show--selected');
+
+    }
+
+      console.log(showEl);
+
+      showEl.classList.add('show--selected');
+
+   });
+
  }
+
+
+//  const showElements = document.querySelectorAll(".show")
+
+//  console.log(showElements);
+
+
+
 
 

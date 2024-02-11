@@ -3,38 +3,30 @@
 @use './partials/color'as *;
 
 .header {
-    width: 100%;
-    background-color: $primary-Black;
-    margin: 0 auto;
-
-
-
-    &__logo-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    &__logo {
-        width: 7rem;
-        padding: 1rem 0;
-    }
-
-    &__menu {
-        list-style-type: none;
-        display: flex;
-        justify-content: space-around;
-        padding: 0;
-        margin-bottom: 0;
-        width: 100%;
-    }
 
     &__links {
         text-align: center;
         padding-bottom: 1rem;
-        width: 50%;
-        margin: 0 1rem 0 0;
+        width: 50vw;
+        margin: 0 0rem 0 0;
         @include mobilefontforbody;
+
+        @include tablet{
+            width: 1vw;
+            height: 6rem;
+            position: relative;
+            top: 2.5rem;
+          @include  des_tab_fontforbody;
+        }
+
+        @include desktop{
+            @include  des_tab_fontforbody;
+            height: 100%;
+            top: 3rem;
+            align-items: center;
+            width: 100%;
+            justify-content: center;
+        }
 
         &--active {
             color: $primary-white;
@@ -46,55 +38,37 @@
             color: $secondory-mercury;
         }
     }
-}
 
-//ending mobile view header and begining tabletview
-@include tablet {
-    .header {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
 
-        &__logo-container {
-            //  width: 20%;
-            margin-left: 1.5rem;
-            padding-left: 1.5rem;
-        }
-
-        &__logo {
-            width: 7rem;
-            //margin: 0;
-        }
-
-        &__links {
-           width: 1vw;
-            height: 6rem;
-            position: relative;
-            top: 2.5rem;
-        }
-
-        &__menu {
-            width: 30%;
-            align-items: center;
-            margin-top: 0;
-            margin-left: 1.5rem;
-            justify-content: center;
-            padding-right: 2rem;
-        }
 
         &__border-biography {
+            @include tablet{
             width: 4rem;
             padding-left: 0;
             border-bottom: 2px solid $primary-white;
+            }
         }
 
         &__border-show {
+
+         text-align: left;
+
+            @include tablet{
             padding-left: 1.5rem;
             padding-right: 1.5rem;
             margin-left: 1.5rem;
         }
     }
+
 }
+
+
+
+
+
+
+//ending mobile view header and begining tabletview
+
 
 //ending tablet view hearder , destop view starts
 @include desktop {
@@ -799,7 +773,7 @@ justify-content: right;
         border-top: 1px solid $secondory-mercury;
 
        margin-top: 0;
-       margin-bottom: 1.5rem;
+       margin-bottom: 1rem;
        }
 
     }
@@ -807,206 +781,12 @@ justify-content: right;
 
 
 
-//mobile view footer
-.footer {
-    background-color: $primary-Black;
-    margin: 0 auto;
 
-    &__container {
-        margin: 0 1rem;
-    }
-
-    &__title {
-        @include mobilefontforh2;
-        color: $primary-white;
-        margin: 0;
-        padding: 3rem 0 1.5rem 0;
-    }
-
-    &__tabletlogo {
-        display: none;
-    }
-}
-
-.social {
-    &__icons img {
-        width: 3rem;
-        height: 3rem;
-        margin-left: 0;
-        padding: 0 0 1rem 0;
-    }
-}
-
-.address {
-    color: $primary-white;
-
-    &__name {
-        @include mobilefontforbody;
-        margin: 0;
-        padding: 1rem 0 0 1rem;
-    }
-
-    &__details {
-        @include mobilefontforbody;
-        padding: 0rem 0 0 1rem;
-    }
-}
-
-.artist {
-    color: $primary-white;
-
-    &__title {
-        @include mobilefontforbody;
-        margin: 0;
-        padding: 1rem 0 0 1rem;
-    }
-
-    &__details {
-        @include mobilefontforbody;
-        padding: 0rem 0 1rem 1rem;
-    }
-}
-
-.entertainment {
-    color: $primary-white;
-
-    &__title {
-        @include mobilefontforbody;
-        margin: 0;
-        padding: 0rem 0 0 1rem;
-    }
-
-    &__details {
-        @include mobilefontforbody;
-        padding: 0rem 0 0 1rem;
-    }
-}
-
-.logo {
-    &__img {
-        width: 8rem;
-        padding: 1.5rem 0 0 1rem;
-    }
-}
-
-.copyright {
-    &__sentence {
-        @include mobilefontforbody;
-        color: $primary-white;
-        margin: 0;
-        padding: 0.5rem 0 1.5rem 1rem;
-    }
-}
 
 //tablet view footer
-@include tablet {
-    .footer {
-        &__container {
-            margin-left: 2.25rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-right: 2.25rem;
-        }
 
-        &__title {
-            @include des_tab_fontforh2;
-            padding: 0;
-        }
 
-        &__tabletlogo {
-            min-height: 10rem;
-            display: unset;
-        }
 
-        &__logoimg {
-            max-width: 25rem;
-            padding-top: 1.5rem;
-            margin-top: 3rem;
-        }
-    }
-
-    .logo {
-        display: none;
-    }
-}
-
-@include tablet {
-    .social {
-        padding-top: 1.5rem;
-        padding-right: 1.5rem;
-
-        &__icons {
-            padding-right: 6rem;
-        }
-
-        &__icons img {
-            width: 3rem;
-            height: 3rem;
-            padding: 0 0 1rem;
-            margin-right: 1rem;
-        }
-    }
-
-    .agents {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin-right: 1.5rem;
-        padding-left: 1.5rem;
-        align-items: center;
-    }
-
-    .address {
-        &__name {
-            @include footercopyfont;
-            padding-bottom: 1rem;
-        }
-
-        &__email {
-            padding-top: 1.5rem;
-            @include footercopyfont;
-        }
-    }
-
-    .artist {
-        &__title {
-            @include footercopyfont;
-            padding-bottom: 1rem;
-        }
-
-        &__link {
-            padding-top: 1.5rem;
-            @include footercopyfont;
-        }
-    }
-
-    .entertainment {
-        padding-right: 1rem;
-
-        &__title {
-            @include footercopyfont;
-            padding-bottom: 1rem;
-        }
-
-        &__link {
-            padding-top: 1.5rem;
-            @include footercopyfont;
-        }
-    }
-
-    .footerlogo {
-        display: none;
-    }
-
-    .copyright {
-        &__sentence {
-            @include footercopyfont;
-            margin-left: 2.25rem;
-            padding: 2.25rem 2.25rem 2.5rem 0rem;
-        }
-    }
-}
 
 //desktop view footer
 @include desktop {
