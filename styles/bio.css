@@ -1,15 +1,15 @@
 @font-face {
-  font-family: Avnirbold;
+  font-family: MyAvenir;
   src: url("/asset/fonts/AvenirNextLTProBold.ttf");
   font-weight: 700;
 }
 @font-face {
-  font-family: AvnirmyFontRegular;
+  font-family: MyAvenir;
   src: url("/asset/fonts/AvenirNextLTPro.ttf");
   font-weight: 400;
 }
 @font-face {
-  font-family: AvnirmyFontDemi;
+  font-family: MyAvenir;
   src: url("/asset/fonts/AvenirNextLTProDemi.ttf");
   font-weight: 600;
 }
@@ -41,7 +41,7 @@
   width: 50vw;
   margin: 0 0rem 0 0;
   font-size: 0.813rem;
-  font-family: AvnirmyFontRegular;
+  font-family: MyAvenir;
   line-height: 1.125rem;
   font-weight: 400;
 }
@@ -212,7 +212,7 @@
   padding-left: 1rem;
   font-size: 1.5rem;
   font-weight: 700;
-  font-family: Avnirbold;
+  font-family: MyAvenir;
   line-height: 2rem;
   padding-top: 1.5rem;
   margin: 0 auto;
@@ -226,7 +226,7 @@
 .band__desc {
   font-size: 0.875rem;
   font-weight: 600;
-  font-family: AvnirmyFontDemi;
+  font-family: MyAvenir;
   line-height: 1.375rem;
   margin: 0;
   line-height: 1.375rem;
@@ -245,7 +245,7 @@
   .band__title {
     font-size: 2.25rem;
     font-weight: 700;
-    font-family: Avnirbold;
+    font-family: MyAvenir;
     line-height: 2.75rem;
     padding: 3rem 2.25rem 2.25rem 0;
     margin-left: 2.25rem;
@@ -273,7 +273,7 @@
     padding: 0rem 2.25rem 0 2.25rem;
     font-size: 0.875rem;
     font-weight: 600;
-    font-family: AvnirmyFontDemi;
+    font-family: MyAvenir;
     line-height: 1.375rem;
     font-weight: 700;
   }
@@ -282,7 +282,7 @@
   .band__title {
     font-size: 2.25rem;
     font-weight: 700;
-    font-family: Avnirbold;
+    font-family: MyAvenir;
     line-height: 2.75rem;
     padding: 3rem 0 2.25rem 3.938rem;
     max-width: 100%;
@@ -319,7 +319,7 @@
 .paragraph__title {
   font-size: 0.875rem;
   font-weight: 600;
-  font-family: AvnirmyFontDemi;
+  font-family: MyAvenir;
   line-height: 1.375rem;
   padding: 1.5rem 1rem 0 0rem;
   box-sizing: border-box;
@@ -330,7 +330,7 @@
 }
 .paragraph__para1 {
   font-size: 0.813rem;
-  font-family: AvnirmyFontRegular;
+  font-family: MyAvenir;
   line-height: 1.125rem;
   font-weight: 400;
   padding: 1rem 1rem 0 1rem;
@@ -339,7 +339,7 @@
 }
 .paragraph__para2 {
   font-size: 0.813rem;
-  font-family: AvnirmyFontRegular;
+  font-family: MyAvenir;
   line-height: 1.125rem;
   font-weight: 400;
   padding: 1rem 1rem 0rem 1rem;
@@ -424,7 +424,7 @@
 .gallery__title {
   font-size: 1.5rem;
   font-weight: 700;
-  font-family: Avnirbold;
+  font-family: MyAvenir;
   line-height: 2rem;
   margin-left: 1rem;
   padding-top: 1.5rem;
@@ -445,7 +445,7 @@
   .gallery__title {
     font-size: 2.25rem;
     font-weight: 700;
-    font-family: Avnirbold;
+    font-family: MyAvenir;
     line-height: 2.75rem;
     margin: 0 2.25rem;
     padding: 3rem 2.25rem 1.5rem 0rem;
@@ -467,7 +467,7 @@
   .gallery__title {
     font-size: 2.25rem;
     font-weight: 700;
-    font-family: Avnirbold;
+    font-family: MyAvenir;
     line-height: 2.75rem;
     padding: 3rem 2.25rem 2.25rem 3.938rem;
   }
@@ -487,7 +487,7 @@
 .comments__title {
   font-size: 1.5rem;
   font-weight: 700;
-  font-family: Avnirbold;
+  font-family: MyAvenir;
   line-height: 2rem;
   margin-left: 1rem;
   margin-top: 0;
@@ -499,7 +499,7 @@
   .comments__title {
     font-size: 2.25rem;
     font-weight: 700;
-    font-family: Avnirbold;
+    font-family: MyAvenir;
     line-height: 2.75rem;
     margin-left: 2.5rem;
   }
@@ -508,7 +508,7 @@
   .comments__title {
     font-size: 2.25rem;
     font-weight: 700;
-    font-family: Avnirbold;
+    font-family: MyAvenir;
     line-height: 2.75rem;
     padding-left: 2rem;
   }
@@ -547,7 +547,7 @@
 }
 .comments__name {
   font-size: 0.813rem;
-  font-family: AvnirmyFontRegular;
+  font-family: MyAvenir;
   line-height: 1.125rem;
   font-weight: 400;
   display: flex;
@@ -580,7 +580,7 @@
 .comments__name-textBox {
   height: 3rem;
   font-size: 0.813rem;
-  font-family: AvnirmyFontRegular;
+  font-family: MyAvenir;
   line-height: 1.125rem;
   font-weight: 400;
   border-radius: 0.25rem;
@@ -601,7 +601,7 @@
 }
 .comments__subjecttxt {
   font-size: 0.813rem;
-  font-family: AvnirmyFontRegular;
+  font-family: MyAvenir;
   line-height: 1.125rem;
   font-weight: 400;
   text-transform: uppercase;
@@ -623,7 +623,7 @@
   width: 100%;
   padding-right: 0rem;
   font-size: 0.813rem;
-  font-family: AvnirmyFontRegular;
+  font-family: MyAvenir;
   line-height: 1.125rem;
   font-weight: 400;
   height: 60%;
@@ -634,7 +634,7 @@
   padding-bottom: 1rem;
   padding: 0.75rem;
   font-size: 0.813rem;
-  font-family: AvnirmyFontRegular;
+  font-family: MyAvenir;
   line-height: 1.125rem;
   font-weight: 400;
   border: 1px solid #E1E1E1;
@@ -670,7 +670,7 @@
   margin-top: 1rem;
   font-size: 0.875rem;
   font-weight: 600;
-  font-family: AvnirmyFontDemi;
+  font-family: MyAvenir;
   line-height: 1.375rem;
   text-align: center;
   margin-right: 1rem;
@@ -756,7 +756,7 @@
   margin-left: 1rem;
   font-size: 0.875rem;
   font-weight: 600;
-  font-family: AvnirmyFontDemi;
+  font-family: MyAvenir;
   line-height: 1.375rem;
 }
 @media (min-width: 768px) and (max-width: 1280px) {
@@ -776,7 +776,7 @@
 }
 .review__sentence {
   font-size: 0.813rem;
-  font-family: AvnirmyFontRegular;
+  font-family: MyAvenir;
   line-height: 1.125rem;
   font-weight: 400;
   margin-left: 1rem;
@@ -795,7 +795,7 @@
 }
 .review__date {
   font-size: 0.813rem;
-  font-family: AvnirmyFontRegular;
+  font-family: MyAvenir;
   line-height: 1.125rem;
   font-weight: 400;
   color: #AFAFAF;

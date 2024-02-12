@@ -1,959 +1,902 @@
-@use './partials/mixin'as *;
-@use './partials/fonttype'as *;
-@use './partials/color'as *;
+@use './partials/mixin' as *;
+@use './partials/fonttype' as *;
+@use './partials/color' as *;
 
 .header {
-    width: 100%;
-    background-color: $primary-Black;
-    margin: 0 auto;
+	width: 100%;
+	background-color: $primary-Black;
+	margin: 0 auto;
 
-    &__logo-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+	&__logo-container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 
-    &__logo {
-        width: 7rem;
-        padding: 1rem 0;
-    }
+	&__logo {
+		width: 7rem;
+		padding: 1rem 0;
+	}
 
-    &__menu {
-        list-style-type: none;
-        display: flex;
-        justify-content: space-around;
-        padding: 0;
-        margin-bottom: 0;
-        width: 100%;
+	&__menu {
+		list-style-type: none;
+		display: flex;
+		justify-content: space-around;
+		padding: 0;
+		margin-bottom: 0;
+		width: 100%;
 
-    }
+	}
 
-    &__links {
-        text-align: center;
-        padding-bottom: 1rem;
-        width: 50vw;
-        margin: 0 0rem 0 0;
-        @include mobilefontforbody;
-
-
+	&__links {
+		text-align: center;
+		padding-bottom: 1rem;
+		width: 50vw;
+		margin: 0 0rem 0 0;
+		@include mobilefontforbody;
 
 
-        &--active {
-            color: $primary-white;
-            border-bottom: 3px solid $primary-white;
-            font-weight: 700;
-        }
+		&--active {
+			color: $primary-white;
+			border-bottom: 3px solid $primary-white;
+			font-weight: 700;
+		}
 
-        &--inactive {
-            color: $secondory-mercury;
-        }
-    }
+		&--inactive {
+			color: $secondory-mercury;
+		}
+	}
 
 
 }
 
 //ending mobile view header and begining tabletview
 @include tablet {
-    .header {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+	.header {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
 
-        &__logo-container {
-            //  width: 20%;
-            margin-left: 1.5rem;
-            padding-left: 1.5rem;
-        }
+		&__logo-container {
 
-        &__logo {
-            width: 7rem;
-            //margin: 0;
-        }
+			margin-left: 1.5rem;
+			padding-left: 1.5rem;
+		}
 
-        &__links {
-            width: 1vw;
-            height: 6rem;
-            position: relative;
-            top: 2.5rem;
-        }
+		&__logo {
+			width: 7rem;
 
-        &__menu {
-            width: 30%;
-            align-items: center;
-            margin-top: 0;
-            margin-left: 1.5rem;
-            justify-content: center;
-            padding-right: 2rem;
-        }
+		}
 
-        &__border-biography {
-            width: 4rem;
-            padding-left: 0;
-            border-bottom: 2px solid $primary-white;
-        }
+		&__links {
+			width: 1vw;
+			height: 6rem;
+			position: relative;
+			top: 2.5rem;
+		}
 
-        &__border-show {
-            padding-left: 1.5rem;
-            padding-right: 1.5rem;
-            margin-left: 1.5rem;
-        }
-    }
+		&__menu {
+			width: 30%;
+			align-items: center;
+			margin-top: 0;
+			margin-left: 1.5rem;
+			justify-content: center;
+			padding-right: 2rem;
+		}
+
+		&__border-biography {
+			width: 4rem;
+			padding-left: 0;
+			border-bottom: 2px solid $primary-white;
+		}
+
+		&__border-show {
+			padding-left: 1.5rem;
+			padding-right: 1.5rem;
+			margin-left: 1.5rem;
+		}
+	}
 }
 
 //ending tablet view hearder , destop view starts
 @include desktop {
-    .header {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
+	.header {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
 
-        &__logo {
-            padding: 0 0 0 3.938rem;
-            box-sizing: content-box;
-        }
+		&__logo {
+			padding: 0 0 0 3.938rem;
+			box-sizing: content-box;
+		}
 
-        &__links {
-            height: 100%;
-            top: 3rem;
-            align-items: center;
-            width: 100%;
-            justify-content: center;
+		&__links {
+			height: 100%;
+			top: 3rem;
+			align-items: center;
+			width: 100%;
+			justify-content: center;
 
-            &--active {
-                padding-bottom: 1.25rem;
-            }
+			&--active {
+				padding-bottom: 1.25rem;
+			}
 
-            &--inactive {
-                padding-top: 1rem;
-            }
-        }
+			&--inactive {
+				padding-top: 1rem;
+			}
+		}
 
-        &__menu {
-            width: 20%;
-            height: 100%;
-            line-height: 5rem;
-            align-items: center;
-            margin-top: 0;
-            margin-left: 3.5rem;
-            padding-left: 0;
-        }
+		&__menu {
+			width: 20%;
+			height: 100%;
+			line-height: 5rem;
+			align-items: center;
+			margin-top: 0;
+			margin-left: 3.5rem;
+			padding-left: 0;
+		}
 
-        &__border-biography {
-            width: 4rem;
-            padding-left: 0;
-            padding-top: 1.5rem;
-        }
+		&__border-biography {
+			width: 4rem;
+			padding-left: 0;
+			padding-top: 1.5rem;
+		}
 
-        &__border-show {
-            height: 100%;
-            padding-left: 0;
-            font-size: 1rem;
-            padding-right: 0rem;
-            margin-right: 4.5rem;
-            margin-left: 0rem;
-        }
-    }
+		&__border-show {
+			height: 100%;
+			padding-left: 0;
+			font-size: 1rem;
+			padding-right: 0rem;
+			margin-right: 4.5rem;
+			margin-left: 0rem;
+		}
+	}
 }
 
 //mobile view heroimage starts
 .heroimage {
-    background-image: url("/asset/images/hero-bio.jpg");
-    max-width: 100%;
-    height: 30vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-top: 0;
-    position: relative;
-    margin-inline: auto;
+	background-image: url("/asset/images/hero-bio.jpg");
+	max-width: 100%;
+	height: 30vh;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-top: 0;
+	position: relative;
+	margin-inline: auto;
 
-    &__overlay {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        top: 0%;
-        left: 0%;
-        background-color: rgba(32, 32, 32, 0.5);
-    }
+	&__overlay {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		top: 0%;
+		left: 0%;
+		background-color: rgba(32, 32, 32, 0.5);
+	}
 
-    &__container {
-        display: flex;
-        align-items: center;
-        height: 27vh;
-        margin: 0 auto;
-    }
+	&__container {
+		display: flex;
+		align-items: center;
+		height: 27vh;
+		margin: 0 auto;
+	}
 
-    &__title {
-        padding-left: 1rem;
-        padding-right: 1rem;
-        font-family: Avnirbold;
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: $primary-white;
-        line-height: 2rem;
-        z-index: 1;
-        text-transform: capitalize;
-    }
+	&__title {
+		padding-left: 1rem;
+		padding-right: 1rem;
+		font-family: Avnirbold;
+		font-size: 1.5rem;
+		font-weight: 700;
+		color: $primary-white;
+		line-height: 2rem;
+		z-index: 1;
+		text-transform: capitalize;
+	}
 }
 
 //ending mobile view of hero image tablet view starts
 @include tablet {
-    .heroimage {
-        height: 30rem;
+	.heroimage {
+		height: 30rem;
 
-        &__container {
-            min-height: 28rem;
-        }
+		&__container {
+			min-height: 28rem;
+		}
 
-        &__title {
-            font-family: Avnirbold;
-            font-size: 3.75rem;
-            font-weight: 700;
-            line-height: 4.25rem;
-            margin-left: 2.25rem;
-            padding: 0 1.5rem 0 0rem;
-        }
-    }
+		&__title {
+			font-family: Avnirbold;
+			font-size: 3.75rem;
+			font-weight: 700;
+			line-height: 4.25rem;
+			margin-left: 2.25rem;
+			padding: 0 1.5rem 0 0rem;
+		}
+	}
 }
 
 //end of tabview , starting of desktop view
 @include desktop {
-    .heroimage {
-        max-width: 100%;
-        height: 40rem;
+	.heroimage {
+		max-width: 100%;
+		height: 40rem;
 
-        &__container {
-            min-height: 100%;
-        }
+		&__container {
+			min-height: 100%;
+		}
 
-        &__title {
-            font-family: Avnirbold;
-            padding: 0;
-            padding-left: 3rem;
-            font-size: 3.75rem;
-            line-height: 4.25rem;
-            width: 31.875rem;
-        }
-    }
+		&__title {
+			font-family: Avnirbold;
+			padding: 0;
+			padding-left: 3rem;
+			font-size: 3.75rem;
+			line-height: 4.25rem;
+			width: 31.875rem;
+		}
+	}
 }
 
 //mobile view band starting
 .band {
-    &__title {
-        padding-left: 1rem;
-        @include mobilefontforh2;
-        padding-top: 1.5rem;
-        margin: 0 auto;
-    }
+	&__title {
+		padding-left: 1rem;
+		@include mobilefontforh2;
+		padding-top: 1.5rem;
+		margin: 0 auto;
+	}
 
-    &__img {
-        box-sizing: border-box;
-        width: 100%;
-        padding: 1rem 1rem 0 1rem;
-        max-height: 35rem;
-    }
+	&__img {
+		box-sizing: border-box;
+		width: 100%;
+		padding: 1rem 1rem 0 1rem;
+		max-height: 35rem;
+	}
 
-    &__desc {
-        @include mobilefontforh3;
-        margin: 0;
-        line-height: 1.375rem;
-    }
+	&__desc {
+		@include mobilefontforh3;
+		margin: 0;
+		line-height: 1.375rem;
+	}
 
-    &__des1 {
-        padding: 1rem 1rem 0 1rem;
-        margin-top: 0;
-        margin-bottom: 0;
-    }
+	&__des1 {
+		padding: 1rem 1rem 0 1rem;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
 
-    &__des2 {
-        padding: 0.5rem 1rem 0 1rem;
-        margin: 0;
-    }
+	&__des2 {
+		padding: 0.5rem 1rem 0 1rem;
+		margin: 0;
+	}
 }
 
 // tablet view started for band
 @include tablet {
-    .band {
-        &__title {
-            @include des_tab_fontforh2;
-            padding: 3rem 2.25rem 2.25rem 0;
-            margin-left: 2.25rem;
-            max-width: 100%;
-        }
+	.band {
+		&__title {
+			@include des_tab_fontforh2;
+			padding: 3rem 2.25rem 2.25rem 0;
+			margin-left: 2.25rem;
+			max-width: 100%;
+		}
 
-        &__container {
-            margin-right: 2.25rem;
-            padding-right: 2.25rem;
-        }
+		&__container {
+			margin-right: 2.25rem;
+			padding-right: 2.25rem;
+		}
 
-        &__img {
-            padding: 0 3rem 0 3rem;
-            margin: 0 2.25rem 0 2.25rem;
-        }
+		&__img {
+			padding: 0 3rem 0 3rem;
+			margin: 0 2.25rem 0 2.25rem;
+		}
 
-        &__desc {
-            margin: 0 2.25rem;
-        }
+		&__desc {
+			margin: 0 2.25rem;
+		}
 
-        &__des1 {
-            padding: 2.25rem 2.25rem 0.5rem;
-            @include des_tab_fontforh3;
-        }
+		&__des1 {
+			padding: 2.25rem 2.25rem 0.5rem;
+			@include des_tab_fontforh3;
+		}
 
-        &__des2 {
-            padding: 0rem 2.25rem 0 2.25rem;
-            @include mobilefontforh3;
-            font-weight: 700;
-        }
-    }
+		&__des2 {
+			padding: 0rem 2.25rem 0 2.25rem;
+			@include mobilefontforh3;
+			font-weight: 700;
+		}
+	}
 }
 
 //desktop band view finished
 @include desktop {
-    .band {
-        &__title {
-            @include des_tab_fontforh2;
-            padding: 3rem 0 2.25rem 3.938rem;
-            max-width: 100%;
-        }
+	.band {
+		&__title {
+			@include des_tab_fontforh2;
+			padding: 3rem 0 2.25rem 3.938rem;
+			max-width: 100%;
+		}
 
-        &__container {
-            margin: 0 5rem;
-        }
+		&__container {
+			margin: 0 5rem;
+		}
 
-        &__img {
-            padding: 0 3.938rem 0 3.938rem;
-            margin: 0 5rem 0 0;
-        }
+		&__img {
+			padding: 0 3.938rem 0 3.938rem;
+			margin: 0 5rem 0 0;
+		}
 
-        &__desc {
-            margin-right: 5rem;
-            margin-left: 5rem;
-        }
+		&__desc {
+			margin-right: 5rem;
+			margin-left: 5rem;
+		}
 
-        &__des1 {
-            padding: 2.25rem 3.938rem 0 3.938rem;
-            @include des_tab_fontforh3;
-        }
+		&__des1 {
+			padding: 2.25rem 3.938rem 0 3.938rem;
+			@include des_tab_fontforh3;
+		}
 
-        &__des2 {
-            padding: 1rem 3.938rem 0 3.938rem;
-            @include des_tab_fontforh3;
-        }
-    }
+		&__des2 {
+			padding: 1rem 3.938rem 0 3.938rem;
+			@include des_tab_fontforh3;
+		}
+	}
 }
 
 //mobile view paragraph
 .paragraph {
-    margin-inline: auto;
+	margin-inline: auto;
 
-    &__title {
-        @include mobilefontforh3;
-        padding: 1.5rem 1rem 0 0rem;
-        box-sizing: border-box;
-        margin-left: 1rem;
-        margin-bottom: 0;
-        margin-top: 0;
-        text-transform: capitalize;
-    }
+	&__title {
+		@include mobilefontforh3;
+		padding: 1.5rem 1rem 0 0rem;
+		box-sizing: border-box;
+		margin-left: 1rem;
+		margin-bottom: 0;
+		margin-top: 0;
+		text-transform: capitalize;
+	}
 
-    &__para1 {
-        @include mobilefontforbody;
-        padding: 1rem 1rem 0 1rem;
-        margin-bottom: 0;
-        margin-top: 0;
-    }
+	&__para1 {
+		@include mobilefontforbody;
+		padding: 1rem 1rem 0 1rem;
+		margin-bottom: 0;
+		margin-top: 0;
+	}
 
-    &__para2 {
-        @include mobilefontforbody;
-        padding: 1rem 1rem 0rem 1rem;
-        margin-bottom: 0;
-        margin-top: 0;
-    }
+	&__para2 {
+		@include mobilefontforbody;
+		padding: 1rem 1rem 0rem 1rem;
+		margin-bottom: 0;
+		margin-top: 0;
+	}
 }
 
 //tablet view paragraph
 @include tablet {
-    .paragraph {
-        &__title {
-            padding: 3rem 2.25rem 0 2.25rem;
-            @include des_tab_fontforh3;
-            margin-left: 2.25rem;
-            margin-top: 0;
-            margin-bottom: 0;
-        }
+	.paragraph {
+		&__title {
+			padding: 3rem 2.25rem 0 2.25rem;
+			@include des_tab_fontforh3;
+			margin-left: 2.25rem;
+			margin-top: 0;
+			margin-bottom: 0;
+		}
 
-        &__para {
-            display: flex;
-            gap: 2rem;
-            padding: 0 2.25rem 0 1.5rem;
-        }
+		&__para {
+			display: flex;
+			gap: 2rem;
+			padding: 0 2.25rem 0 1.5rem;
+		}
 
-        &__para1 {
-            @include des_tab_fontforbody;
-            flex: 50%;
-            margin-left: 2.25rem;
-        }
+		&__para1 {
+			@include des_tab_fontforbody;
+			flex: 50%;
+			margin-left: 2.25rem;
+		}
 
-        &__para2 {
-            @include des_tab_fontforbody;
-            flex: 50%;
-            margin-right: 2.25rem;
-            padding-bottom: 2.25rem;
-        }
-    }
+		&__para2 {
+			@include des_tab_fontforbody;
+			flex: 50%;
+			margin-right: 2.25rem;
+			padding-bottom: 2.25rem;
+		}
+	}
 }
 
 //desktop viewnparagraph
 @include desktop {
-    .paragraph {
-        &__title {
-            @include des_tab_fontforh3;
-            padding: 3rem 3.938rem 0 3.938rem;
-            margin-bottom: 0;
-            margin-left: 5rem;
-        }
+	.paragraph {
+		&__title {
+			@include des_tab_fontforh3;
+			padding: 3rem 3.938rem 0 3.938rem;
+			margin-bottom: 0;
+			margin-left: 5rem;
+		}
 
-        &__para {
-            display: flex;
-            gap: 2rem;
-            padding: 2.25rem 3.938rem 2.5rem 3rem;
-            box-sizing: content-box;
-        }
+		&__para {
+			display: flex;
+			gap: 2rem;
+			padding: 2.25rem 3.938rem 2.5rem 3rem;
+			box-sizing: content-box;
+		}
 
-        &__para1 {
-            flex: 50%;
-            margin-left: 5rem;
-            @include des_tab_fontforbody;
-            padding-top: 0rem;
-        }
+		&__para1 {
+			flex: 50%;
+			margin-left: 5rem;
+			@include des_tab_fontforbody;
+			padding-top: 0rem;
+		}
 
-        &__para2 {
-            flex: 50%;
-            margin-right: 5rem;
-            @include des_tab_fontforbody;
-        }
-    }
+		&__para2 {
+			flex: 50%;
+			margin-right: 5rem;
+			@include des_tab_fontforbody;
+		}
+	}
 }
 
 //mobile view gallery
 .gallery {
-    background-color: $background_alabaster;
-    margin: 0;
-    width: 100%;
-    margin: 0 auto;
+	background-color: $background_alabaster;
+	margin: 0;
+	width: 100%;
+	margin: 0 auto;
 
-    &__title {
-        @include mobilefontforh2;
-        margin-left: 1rem;
-        padding-top: 1.5rem;
-        padding-bottom: 1rem;
-        margin-top: 0;
-        margin-bottom: 0;
-    }
+	&__title {
+		@include mobilefontforh2;
+		margin-left: 1rem;
+		padding-top: 1.5rem;
+		padding-bottom: 1rem;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
 
-    &__photos img {
-        box-sizing: border-box;
-        height: 50%;
-        width: 100%;
-        margin-bottom: 1rem;
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
+	&__photos img {
+		box-sizing: border-box;
+		height: 50%;
+		width: 100%;
+		margin-bottom: 1rem;
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
 }
 
 // tablet view gallery
 @include tablet {
-    .gallery {
-        &__title {
-            @include des_tab_fontforh2;
-            margin: 0 2.25rem;
-            padding: 3rem 2.25rem 1.5rem 0rem;
-        }
+	.gallery {
+		&__title {
+			@include des_tab_fontforh2;
+			margin: 0 2.25rem;
+			padding: 3rem 2.25rem 1.5rem 0rem;
+		}
 
-        &__photos {
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: row;
-            justify-content: center;
-            padding-left: 0;
-        }
+		&__photos {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+			justify-content: center;
+			padding-left: 0;
+		}
 
-        &__photos img {
-            max-height: 25%;
-            max-width: 30%;
-            margin: 0 0.5rem 1.5rem 0rem;
-        }
-    }
+		&__photos img {
+			max-height: 25%;
+			max-width: 30%;
+			margin: 0 0.5rem 1.5rem 0rem;
+		}
+	}
 }
 
 //desktop view gallery
 @include desktop {
-    .gallery {
-        &__title {
-            @include des_tab_fontforh2;
-            padding: 3rem 2.25rem 2.25rem 3.938rem;
-        }
+	.gallery {
+		&__title {
+			@include des_tab_fontforh2;
+			padding: 3rem 2.25rem 2.25rem 3.938rem;
+		}
 
-        &__photos {
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: row;
-            justify-content: center;
-        }
+		&__photos {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+			justify-content: center;
+		}
 
-        &__photos img {
-            max-height: 14rem;
-            max-width: 24rem;
-            padding: 0 1.5rem 1.25rem 1rem;
-            gap: 1rem;
-        }
-    }
+		&__photos img {
+			max-height: 14rem;
+			max-width: 24rem;
+			padding: 0 1.5rem 1.25rem 1rem;
+			gap: 1rem;
+		}
+	}
 }
+
 // ----------------------------------comments--------------------------------------------
 .comments {
 
-    &__form{
 
+	&__title {
 
-    }
+		@include mobilefontforh2;
+		margin-left: 1rem;
+		margin-top: 0;
+		padding-top: 1.5rem;
+		padding-bottom: 1rem;
+		margin-bottom: 0;
 
-    &__title{
+		@include tablet {
+			@include des_tab_fontforh2;
+			margin-left: 2.5rem;
+		}
 
-        @include mobilefontforh2;
-        margin-left: 1rem;
-        margin-top: 0;
-        padding-top: 1.5rem;
-        padding-bottom: 1rem;
-        margin-bottom: 0;
+		@include desktop {
+			@include des_tab_fontforh2;
+			padding-left: 2rem;
+		}
+	}
 
-        @include tablet {
-            @include des_tab_fontforh2;
-            margin-left: 2.5rem;
-        }
+	&__right-container {
+		display: flex;
+		flex-direction: column;
+		flex: 1;
 
-        @include desktop {
-            @include des_tab_fontforh2;
-            padding-left: 2rem;
-        }
-    }
+		margin-left: 0.5rem;
+		width: 100%;
+	}
 
-    &__right-container{
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-        //padding-right: 1rem;
-        //margin-right: 1rem;
-        margin-left: 0.5rem;
-        width: 100%;
-    }
 
+	&__image-container {
+		margin-right: 0;
 
 
+	}
 
-    &__image-container{
-       margin-right:0;
+	&__fields {
+		display: flex;
+		flex-direction: row;
+		padding-left: 1rem;
+		justify-content: left;
+		align-items: start;
+		margin-right: 1rem;
+		margin-top: 0;
 
-       //width: 3rem;
- // height: 3rem;
-    }
 
-    &__fields{
-        display: flex;
-        flex-direction: row;
-        padding-left: 1rem;
-        justify-content: left;
-        align-items: start;
-        margin-right: 1rem;
-        margin-top:0;
-        //margin-left: 1rem
+		padding-bottom: 1rem;
 
-        padding-bottom:1rem ;
+		@include tablet {
+			margin-left: 5rem;
+			margin-right: 5rem;
 
-        @include tablet {
-            margin-left: 5rem;
-            margin-right: 5rem;
+		}
 
-        }
+		@include desktop {
+			margin-left: 18rem;
+			margin-right: 18rem;
 
-        @include desktop {
-            margin-left: 18rem;
-            margin-right: 18rem;
+		}
+	}
 
-        }
-    }
+	&__name {
+		@include mobilefontforbody;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		margin-bottom: 0.5rem;
+		text-transform: uppercase;
+		color: $primary_silver;
 
-  &__name{
-    @include mobilefontforbody;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-bottom: 0.5rem;
-    text-transform: uppercase;
-    color: $primary_silver;
+		@include tablet {
+			@include des_tab_fontforbody;
+			font-weight: 600;
 
-    @include tablet{
-        @include des_tab_fontforbody;
-        font-weight: 600;
 
+		}
 
-       }
 
+	}
 
-  }
+	&__label-name {
+		padding-bottom: 0.25rem;
 
-  &__label-name{
-    padding-bottom: 0.25rem;
+		@include tablet {
+			@include des_tab_fontforbody;
 
-    @include tablet{
-        @include des_tab_fontforbody;
 
+		}
+	}
 
-       }
-  }
+	&__name-textBox {
 
-  &__name-textBox{
+		height: 3rem;
+		@include mobilefontforbody;
+		border-radius: 0.25rem;
+		padding: 0.75rem;
+		border: 1px solid $secondory-mercury;
+		color: $primary-Black;
 
-    height:3rem;
-    @include mobilefontforbody;
-    border-radius: 0.25rem;
-    padding:0.75rem;
-    border: 1px solid $secondory-mercury;
-    color: $primary-Black;
 
+		&:focus {
 
-    &:focus{
+			border: 1px solid $primary-Black;
+			outline-width: 0;
 
-            border: 1px solid $primary-Black;
-            outline-width: 0;
+		}
 
-      }
+	}
 
-  }
+	&__avatar {
+		width: 3rem;
+		height: 3rem;
+		border-radius: 50%;
+		margin-top: 1.3rem;
+		margin-right: 0.5rem;
 
-    &__avatar{
-        width: 3rem;
-        height: 3rem;
-        border-radius: 50%;
-        margin-top: 1.3rem;
-        margin-right: 0.5rem;
 
+	}
 
+	&__subjecttxt {
 
+		@include mobilefontforbody;
+		text-transform: uppercase;
+		padding-bottom: 0.5rem;
+		color: $primary_silver;
 
+		@include tablet {
+			@include des_tab_fontforbody;
 
-}
 
-&__subjecttxt{
+		}
 
-    @include mobilefontforbody;
-    text-transform: uppercase;
-    padding-bottom:0.5rem;
-    color: $primary_silver;
 
-    @include tablet{
-        @include des_tab_fontforbody;
+	}
 
+	&__textwrap {
+		display: flex;
+		flex-direction: column;
 
-       }
+		margin-top: 0.5rem;
+		width: 100%;
 
+		padding-right: 0rem;
+		@include mobilefontforbody;
+		height: 60%;
 
 
-}
+	}
 
-&__textwrap{
-    display: flex;
-    flex-direction: column;
+	&__textarea {
+		height: 7rem;
+		border-radius: 0.25rem;
+		padding-bottom: 1rem;
+		padding: 0.75rem;
+		@include mobilefontforbody;
+		border: 1px solid $secondory-mercury;
 
-    margin-top: 0.5rem;
-    width: 100%;
-  // margin-right: 0rem;
-padding-right: 0rem;
-    @include mobilefontforbody;
-    height:60%;
+		&:focus {
 
+			border: 1px solid $primary-Black;
+			outline-width: 0;
 
+		}
 
-}
+		@include tablet {
+			@include des_tab_fontforbody;
+			font-weight: 600;
 
-&__textarea{
-    height: 7rem;
-    border-radius: 0.25rem;
-    padding-bottom: 1rem;
-    padding:0.75rem;
-    @include mobilefontforbody;
-    border: 1px solid $secondory-mercury;
 
-    &:focus{
+		}
 
-        border: 1px solid $primary-Black;
-        outline-width: 0;
 
-  }
+	}
 
-  @include tablet{
-    @include des_tab_fontforbody;
-    font-weight: 600;
 
+	&__right-container {
 
-   }
+		@include tablet {
+			align-items: end;
+			justify-content: flex-end;
+		}
 
+		@include desktop {
+			align-items: end;
+			justify-content: flex-end;
+			padding-right: 0;
+			margin-right: 0;
 
+		}
+	}
 
-}
+	&__button {
+		margin-top: 1rem;
 
-// &__btn-container{
+		@include mobilefontforh3;
+		text-align: center;
+		margin-right: 1rem;
+		padding-right: 0rem;
+		padding-left: 0rem;
+		text-transform: uppercase;
 
-//     margin-right: 1rem;
-//     padding-right: 1rem;
 
-// }
+		border-radius: 0.25rem;
+		width: 100%;
+		background-color: $primary-Black;
 
-&__right-container{
+		height: 2.5rem;
+		color: $primary-white;
 
-    @include tablet {
-    align-items: end;
-    justify-content: flex-end;
-    }
 
-    @include desktop {
-        align-items: end;
-    justify-content: flex-end;
-    padding-right: 0;
-    margin-right: 0;
+		&:hover {
+			background-color: $secondary-darkBlack;
+			z-index: 1;
+		}
 
-        }
-}
+		@include tablet {
 
-&__button{
-    margin-top: 1rem;
-  // margin-left: 5rem;
-  @include mobilefontforh3;
-text-align: center;
-margin-right: 1rem;
-padding-right: 0rem;
-padding-left: 0rem;
-text-transform: uppercase;
+			width: 10rem;
+			padding-left: 2rem;
+			padding-right: 2rem;
+			margin-left: 24rem;
+			margin-right: 0;
+			height: 3rem;
 
-//padding-top: 1rem;
+			@include des_tab_fontforbody;
+			font-weight: 600;
 
-border-radius: 0.25rem;
-width: 100%;
-background-color: $primary-Black;
-//margin-bottom: 1rem;
-height: 2.5rem;
-color: $primary-white;
+			&:hover {
+				background-color: $secondary-darkBlack;
+				z-index: 1;
+			}
 
 
-&:hover{
-    background-color: $secondary-darkBlack;
-    z-index: 1;
-}
+		}
 
-@include tablet {
 
-    width: 10rem;
-    padding-left: 2rem;
-    padding-right: 2rem ;
-  margin-left: 24rem;
-  margin-right: 0;
-  height: 3rem;
+	}
 
-  @include des_tab_fontforbody;
-  font-weight: 600;
-
-  &:hover{
-    background-color: $secondary-darkBlack;
-    z-index: 1;
-}
-
+	&__bottom {
+		@include desktop {
+			margin-left: 10rem;
+			margin-right: 10rem;
+		}
+	}
 
 
 }
 
 
+.review {
+	margin-left: 1rem;
+	margin-right: 1rem;
+	margin-top: 0;
+	margin-bottom: 0;
+
+	@include desktop {}
+
+	@include tablet {
+		margin-left: 5rem;
+		margin-right: 5rem;
+	}
+
+
+	&__wrapper {
+		display: flex;
+		flex-direction: row;
+
+
+	}
+
+	&__line {
+		margin: auto;
+
+		color: $secondory-mercury;
+		width: 100%;
+		stroke-width: 1px;
+
+		border-top: 1px solid $secondory-mercury;
+
+		margin-top: 0;
+		margin-bottom: 1.5rem;
+
+
+	}
+
+	&__Avatar {
+
+		height: 3rem;
+		width: 3rem;
+		background-color: aqua;
+
+		border-radius: 50%;
+		padding-right: 3rem;
+		background-color: $secondory-mercury;
+
+	}
+
+	&__text-container {
+		display: flex;
+		justify-content: space-between;
+
+	}
+
+	&__name {
+		margin-top: 0;
+		margin-bottom: 0;
+		margin-left: 1rem;
+		@include mobilefontforh3;
+
+
+		@include tablet {
+			@include des_tab_fontforbody;
+			font-weight: 700;
+
+		}
+
+
+	}
+
+	&__right-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		width: 100%;
+
+
+	}
+
+	&__sentence {
+
+		@include mobilefontforbody;
+
+		margin-left: 1rem;
+		margin-top: 0;
+		margin-bottom: 0;
+		padding-bottom: 1rem;
+		padding-top: 1rem;
+
+
+		@include tablet {
+			@include des_tab_fontforbody;
+		}
+
+
+	}
+
+	&__date {
+
+		@include mobilefontforbody;
+		color: $primary_silver;
+		justify-content: right;
+
+
+		@include tablet {
+			@include des_tab_fontforbody;
+		}
+
+
+	}
+
+	&__line-bottom {
+		color: $secondory-mercury;
+
+		stroke-width: 1px;
+		margin-left: 1rem;
+		margin-right: 1rem;
+
+		border-top: 1px solid $secondory-mercury;
+
+		margin-top: 0;
+		margin-bottom: 1rem;
+
+		@include tablet {
+			margin-left: 5rem;
+			margin-right: 5rem;
+		}
+
+		@include desktop {
+			margin-left: 15rem;
+			margin-right: 15rem;
+		}
+
+	}
+
 
 }
-    &__bottom {
-    @include desktop{
-    margin-left: 10rem;
-    margin-right: 10rem;
-    }
-}
-
-
-    }
-
-
-
-
-.review{
-        margin-left:1rem;
-        margin-right:1rem ;
-        margin-top: 0;
-        margin-bottom: 0;
-
-        @include desktop{
-
-
-
-        }
-
-        @include tablet{
-            margin-left: 5rem;
-            margin-right: 5rem;
-        }
-
-
-
-
-
-
-        &__wrapper{
-            display: flex;
-            flex-direction: row;
-
-           // margin-right: 1rem;
-           //justify-content: space-between;
-
-        }
-
-        &__line{
-            margin: auto;
-
-            color: $secondory-mercury;
-            width: 100%;
-            stroke-width: 1px;
-            //margin-left: 1rem;
-           // border: 0;
-            border-top: 1px solid $secondory-mercury;
-
-           margin-top: 0;
-           margin-bottom: 1.5rem;
-          // padding-left: 1rem;
-
-
-        }
-
-        &__Avatar{
-
-            height:3rem;
-            width: 3rem;
-            background-color: aqua;
-            //margin-left: 1rem;
-            border-radius: 50%;
-            padding-right: 3rem;
-            background-color: $secondory-mercury;
-
-        }
-
-        &__text-container{
-            display: flex;
-            justify-content: space-between;
-           // align-items: flex-start;
-        }
-
-        &__name{
-            margin-top:0;
-            margin-bottom: 0;
-            margin-left: 1rem;
-            @include mobilefontforh3;
-           // margin-right: 7.5rem;
-
-           //flex-wrap: wrap;
-
-           @include tablet{
-            @include des_tab_fontforbody;
-            font-weight: 700;
-
-           }
-
-
-
-        }
-
-        &__right-container{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            //padding-left: 0;
-           // margin-left: 1rem;
-           width: 100%;
-
-
-        }
-
-        &__sentence{
-
-            @include mobilefontforbody;
-            //padding-left: 2rem;
-            margin-left: 1rem;
-            margin-top: 0;
-            margin-bottom: 0;
-            padding-bottom: 1rem;
-            padding-top: 1rem;
-           // font-weight: 600;
-           // line-height: 20px;
-           //text-indent: 1rem;
-
-           @include tablet{
-            @include des_tab_fontforbody;
-           }
-
-
-
-
-        }
-
-        &__date{
-
-            @include mobilefontforbody;
-            color: $primary_silver;
-justify-content: right;
-
-
-@include tablet{
-    @include des_tab_fontforbody;
-   }
-
-
-       }
-
-       &__line-bottom{
-        color: $secondory-mercury;
-     //   width: 100%;
-        stroke-width: 1px;
-        margin-left: 1rem;
-       margin-right: 1rem;
-       // border: 0;
-        border-top: 1px solid $secondory-mercury;
-
-       margin-top: 0;
-       margin-bottom: 1rem;
-
-       @include tablet{
-        margin-left: 5rem;
-        margin-right: 5rem;
-      }
-
-      @include desktop{
-        margin-left: 15rem;
-        margin-right: 15rem;
-      }
-
-       }
-
-
-    }
-
-
-
-
-
-
-//tablet view footer
-
-
-
-
-//desktop view foot

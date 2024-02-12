@@ -29,7 +29,7 @@ $breakpoint_desktop:1280px;
 @mixin mobilefontforh2{
   font-size: 1.5rem;
   font-weight: 700;
-    font-family: Avnirbold;
+    font-family: MyAvenir;
     line-height: 2rem;
 
 }
@@ -37,14 +37,14 @@ $breakpoint_desktop:1280px;
 @mixin mobilefontforh3{
   font-size: 0.875rem;
   font-weight: 600;
-    font-family: AvnirmyFontDemi;
+    font-family: MyAvenir;
     line-height: 1.375rem;
 
 }
 
 @mixin mobilefontforbody{
   font-size: 0.813rem;
-  font-family: AvnirmyFontRegular;
+  font-family: MyAvenir;
   line-height: 1.125rem;
   font-weight: 400;
 }
@@ -52,7 +52,7 @@ $breakpoint_desktop:1280px;
 @mixin des_tab_fontforh2{
   font-size: 2.25rem;
   font-weight: 700;
-    font-family: Avnirbold;
+    font-family: MyAvenir;
     line-height: 2.75rem;
 
 }
@@ -82,5 +82,8 @@ $breakpoint_desktop:1280px;
 
 
 
+// Need to fix
 
-
+// 1. Sprint1 according to the feedback , i fixed some points,
+// but remains i ll fix on next Sprint
+// 2.And also i have some alignment issue on show display, ill fix it
