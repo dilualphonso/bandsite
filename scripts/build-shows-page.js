@@ -28,6 +28,10 @@
 
 
 
+
+
+
+
 const shows = [{
     date: "Mon Sept 09 2024",
     venue: "Ronald Lane",
@@ -71,14 +75,28 @@ const shows = [{
 
 const showsEl = document.querySelector(".shows");
 
-const showHeaderEl = document.createElement('div');
-showHeaderEl.classList.add("shows__header");
-showsEl.append(showHeaderEl);
+const deskTitleEl = document.createElement('div');
+deskTitleEl.classList.add("shows__main");
+showsEl.append(deskTitleEl);
+
+
+
+
+
+
+  const showHeaderEl = document.createElement('div');
+  showHeaderEl.classList.add("shows__header");
+  deskTitleEl.append(showHeaderEl);
+
+
+
+
 
 const tabDateTitleEl = document.createElement('h4');
 tabDateTitleEl.innerText = "Date";
 tabDateTitleEl.classList.add("shows__heading-date")
 showHeaderEl.append(tabDateTitleEl);
+
 
 const tabVenueTitleEl = document.createElement('h4');
 tabVenueTitleEl.innerText = "Venue";
@@ -110,34 +128,37 @@ function displayShowDetails(show) {
 
     const showsection = document.querySelector(".shows");
 
+
+
+
     const showEl = document.createElement("article");
-    showEl.classList.add("show");
-    showsection.append(showEl);
+    showEl.classList.add("shows__show");
+    deskTitleEl.append(showEl);
 
     const showContainerEl = document.createElement('div');
-    showContainerEl.classList.add("show__container");
+    showContainerEl.classList.add("shows__container");
    showEl.append(showContainerEl);
 
     const showlistEl = document.createElement("ul");
-    showlistEl.classList.add("show__lists");
+    showlistEl.classList.add("shows__lists");
     showContainerEl.append(showlistEl);
 
 
     const TabletEl = document.createElement('div');
-    TabletEl.classList.add("show__wrapper")
+    TabletEl.classList.add("shows__wrapper")
     showlistEl.append(TabletEl);
 
 
 
   const dateTitleEl = document.createElement('div');
   dateTitleEl.innerText = "Date";
-  dateTitleEl.classList.add("show__subtitle")
+  dateTitleEl.classList.add("shows__subtitle")
   TabletEl.append(dateTitleEl);
 
 
 
 const showDateEl = document.createElement("li");
-showDateEl.classList.add("show__date");
+showDateEl.classList.add("shows__date");
 showDateEl.innerText = show.date;
     //showDateS1.appendChild(document.createTextNode("Four"));
     TabletEl.append(showDateEl);
@@ -153,22 +174,22 @@ showDateEl.innerText = show.date;
 
     const venueTitleEl = document.createElement('div');
     venueTitleEl.innerText = "Venue";
-    venueTitleEl.classList.add("show__subtitle")
+    venueTitleEl.classList.add("shows__subtitle")
     TabletEl.append(venueTitleEl);
 
 
     const showVenueEl = document.createElement("li");
-    showVenueEl.classList.add("show__venue");
+    showVenueEl.classList.add("shows__venue");
     showVenueEl.innerText = show.venue;
     TabletEl.append(showVenueEl);
 
     const locationTitleEl = document.createElement('div');
     locationTitleEl.innerText = "Location";
-    locationTitleEl.classList.add("show__subtitle")
+    locationTitleEl.classList.add("shows__subtitle")
     TabletEl.append(locationTitleEl);
 
     const showLocationEl = document.createElement("li");
-    showLocationEl.classList.add("show__location");
+    showLocationEl.classList.add("shows__location");
     showLocationEl.innerText =show.location;
     TabletEl.append(showLocationEl);
 
@@ -179,7 +200,7 @@ showDateEl.innerText = show.date;
 
      var btnEl = document.createElement('button');
      btnEl.textContent = 'Buy Tickets';
-     btnEl.classList.add("show__button");
+     btnEl.classList.add("shows__button");
      TabletEl.append(btnEl);
 
 
@@ -193,7 +214,7 @@ showDateEl.innerText = show.date;
      //divider.setAttribute("width", "100px");
 
     /* Then you'll need to add the element to the page */
-    divider.classList.add("show__divider");
+    divider.classList.add("shows__divider");
 
     showEl.append(divider);
 
@@ -237,15 +258,15 @@ showDateEl.innerText = show.date;
 showEl.addEventListener('click', function(event){
 
     event.preventDefault();
-    if ( document.querySelector(".show--selected")){
+    if ( document.querySelector(".shows__show--selected")){
 
-       document.querySelector(".show--selected").classList.remove('show--selected');
+       document.querySelector(".shows__show--selected").classList.remove('shows__show--selected');
 
     }
 
       console.log(showEl);
 
-      showEl.classList.add('show--selected');
+      showEl.classList.add('shows__show--selected');
 
    });
 

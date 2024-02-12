@@ -8,16 +8,16 @@ const defaultComments = [{
 },
 
 {
-    name: "dilusha Alponso",
-    date: "11/02/2024",
-    review: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains."
+    name: "Christina Cabrera",
+    date: "10/28/2023",
+    review: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day"
 },
 
 {
 
-    name: "Asher Sam",
-    date: "11/01/2024",
-    review: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains."
+    name: "Isaac Tadesse",
+    date: "10/20/2023",
+    review: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."
 }
 
 ]
@@ -26,7 +26,7 @@ const defaultComments = [{
 
 
 const reviewcontainer = document.createElement('div');
-reviewcontainer.classList.add("comment__bottom");
+reviewcontainer.classList.add("comments__bottom");
 commentssection.append(reviewcontainer);
 
 
@@ -64,7 +64,7 @@ showAllReviews(defaultComments);
 
 function displayReviewDetails(defaultcomment) {
 
-   const reviewcontainer1 = document.querySelector("comment__bottom");
+   const reviewcontainer1 = document.querySelector("comments__bottom");
 
     const review = document.createElement("figure");
     review.classList.add("review");
@@ -180,7 +180,10 @@ const newReviewDate = currentDayOfMonth + "/" + (currentMonth + 1) + "/" + curre
 
 showAllReviews(defaultComments);
 let nameField =document. getElementById("name");
+let commentArea = document.getElementById("message");
    nameField.value= "";
+   commentArea.value="";
+
 
 
 });

@@ -13,6 +13,28 @@
   src: url("/asset/fonts/AvenirNextLTProDemi.ttf");
   font-weight: 600;
 }
+.header {
+  width: 100%;
+  background-color: #323232;
+  margin: 0 auto;
+}
+.header__logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header__logo {
+  width: 7rem;
+  padding: 1rem 0;
+}
+.header__menu {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin-bottom: 0;
+  width: 100%;
+}
 .header__links {
   text-align: center;
   padding-bottom: 1rem;
@@ -23,31 +45,6 @@
   line-height: 1.125rem;
   font-weight: 400;
 }
-@media (min-width: 768px) and (max-width: 1280px) {
-  .header__links {
-    width: 1vw;
-    height: 6rem;
-    position: relative;
-    top: 2.5rem;
-    font-size: 0.875rem;
-    font-family: AvnirmyFontRegular;
-    line-height: 1.375rem;
-    font-weight: 400;
-  }
-}
-@media (min-width: 1280px) {
-  .header__links {
-    font-size: 0.875rem;
-    font-family: AvnirmyFontRegular;
-    line-height: 1.375rem;
-    font-weight: 400;
-    height: 100%;
-    top: 3rem;
-    align-items: center;
-    width: 100%;
-    justify-content: center;
-  }
-}
 .header__links--active {
   color: #FFFFFF;
   border-bottom: 3px solid #FFFFFF;
@@ -56,25 +53,46 @@
 .header__links--inactive {
   color: #E1E1E1;
 }
+
 @media (min-width: 768px) and (max-width: 1280px) {
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .header__logo-container {
+    margin-left: 1.5rem;
+    padding-left: 1.5rem;
+  }
+  .header__logo {
+    width: 7rem;
+  }
+  .header__links {
+    width: 1vw;
+    height: 6rem;
+    position: relative;
+    top: 2.5rem;
+  }
+  .header__menu {
+    width: 30%;
+    align-items: center;
+    margin-top: 0;
+    margin-left: 1.5rem;
+    justify-content: center;
+    padding-right: 2rem;
+  }
   .header__border-biography {
     width: 4rem;
     padding-left: 0;
     border-bottom: 2px solid #FFFFFF;
   }
-}
-.header__border-show {
-  text-align: left;
-}
-@media (min-width: 768px) and (max-width: 1280px) {
   .header__border-show {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     margin-left: 1.5rem;
   }
 }
-
-@media (min-width: 1280px) {
+@media screen and (min-width: 1280px) {
   .header {
     display: flex;
     flex-direction: row;
@@ -173,7 +191,7 @@
     padding: 0 1.5rem 0 0rem;
   }
 }
-@media (min-width: 1280px) {
+@media screen and (min-width: 1280px) {
   .heroimage {
     max-width: 100%;
     height: 40rem;
@@ -260,7 +278,7 @@
     font-weight: 700;
   }
 }
-@media (min-width: 1280px) {
+@media screen and (min-width: 1280px) {
   .band__title {
     font-size: 2.25rem;
     font-weight: 700;
@@ -363,7 +381,7 @@
     padding-bottom: 2.25rem;
   }
 }
-@media (min-width: 1280px) {
+@media screen and (min-width: 1280px) {
   .paragraph__title {
     font-size: 1.5rem;
     font-weight: 600;
@@ -440,12 +458,12 @@
     padding-left: 0;
   }
   .gallery__photos img {
-    max-height: 7rem;
-    max-width: 15rem;
+    max-height: 25%;
+    max-width: 30%;
     margin: 0 0.5rem 1.5rem 0rem;
   }
 }
-@media (min-width: 1280px) {
+@media screen and (min-width: 1280px) {
   .gallery__title {
     font-size: 2.25rem;
     font-weight: 700;
@@ -477,6 +495,24 @@
   padding-bottom: 1rem;
   margin-bottom: 0;
 }
+@media (min-width: 768px) and (max-width: 1280px) {
+  .comments__title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    font-family: Avnirbold;
+    line-height: 2.75rem;
+    margin-left: 2.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comments__title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    font-family: Avnirbold;
+    line-height: 2.75rem;
+    padding-left: 2rem;
+  }
+}
 .comments__right-container {
   display: flex;
   flex-direction: column;
@@ -497,6 +533,18 @@
   margin-top: 0;
   padding-bottom: 1rem;
 }
+@media (min-width: 768px) and (max-width: 1280px) {
+  .comments__fields {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comments__fields {
+    margin-left: 18rem;
+    margin-right: 18rem;
+  }
+}
 .comments__name {
   font-size: 0.813rem;
   font-family: AvnirmyFontRegular;
@@ -509,8 +557,25 @@
   text-transform: uppercase;
   color: #AFAFAF;
 }
+@media (min-width: 768px) and (max-width: 1280px) {
+  .comments__name {
+    font-size: 0.875rem;
+    font-family: AvnirmyFontRegular;
+    line-height: 1.375rem;
+    font-weight: 400;
+    font-weight: 600;
+  }
+}
 .comments__label-name {
   padding-bottom: 0.25rem;
+}
+@media (min-width: 768px) and (max-width: 1280px) {
+  .comments__label-name {
+    font-size: 0.875rem;
+    font-family: AvnirmyFontRegular;
+    line-height: 1.375rem;
+    font-weight: 400;
+  }
 }
 .comments__name-textBox {
   height: 3rem;
@@ -543,6 +608,14 @@
   padding-bottom: 0.5rem;
   color: #AFAFAF;
 }
+@media (min-width: 768px) and (max-width: 1280px) {
+  .comments__subjecttxt {
+    font-size: 0.875rem;
+    font-family: AvnirmyFontRegular;
+    line-height: 1.375rem;
+    font-weight: 400;
+  }
+}
 .comments__textwrap {
   display: flex;
   flex-direction: column;
@@ -570,6 +643,29 @@
   border: 1px solid #323232;
   outline-width: 0;
 }
+@media (min-width: 768px) and (max-width: 1280px) {
+  .comments__textarea {
+    font-size: 0.875rem;
+    font-family: AvnirmyFontRegular;
+    line-height: 1.375rem;
+    font-weight: 400;
+    font-weight: 600;
+  }
+}
+@media (min-width: 768px) and (max-width: 1280px) {
+  .comments__right-container {
+    align-items: end;
+    justify-content: flex-end;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comments__right-container {
+    align-items: end;
+    justify-content: flex-end;
+    padding-right: 0;
+    margin-right: 0;
+  }
+}
 .comments__button {
   margin-top: 1rem;
   font-size: 0.875rem;
@@ -591,12 +687,43 @@
   background-color: #000000;
   z-index: 1;
 }
+@media (min-width: 768px) and (max-width: 1280px) {
+  .comments__button {
+    width: 10rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-left: 24rem;
+    margin-right: 0;
+    height: 3rem;
+    font-size: 0.875rem;
+    font-family: AvnirmyFontRegular;
+    line-height: 1.375rem;
+    font-weight: 400;
+    font-weight: 600;
+  }
+  .comments__button:hover {
+    background-color: #000000;
+    z-index: 1;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comments__bottom {
+    margin-left: 10rem;
+    margin-right: 10rem;
+  }
+}
 
 .review {
   margin-left: 1rem;
   margin-right: 1rem;
   margin-top: 0;
   margin-bottom: 0;
+}
+@media (min-width: 768px) and (max-width: 1280px) {
+  .review {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
 }
 .review__wrapper {
   display: flex;
@@ -632,6 +759,15 @@
   font-family: AvnirmyFontDemi;
   line-height: 1.375rem;
 }
+@media (min-width: 768px) and (max-width: 1280px) {
+  .review__name {
+    font-size: 0.875rem;
+    font-family: AvnirmyFontRegular;
+    line-height: 1.375rem;
+    font-weight: 400;
+    font-weight: 700;
+  }
+}
 .review__right-container {
   display: flex;
   flex-direction: column;
@@ -649,6 +785,14 @@
   padding-bottom: 1rem;
   padding-top: 1rem;
 }
+@media (min-width: 768px) and (max-width: 1280px) {
+  .review__sentence {
+    font-size: 0.875rem;
+    font-family: AvnirmyFontRegular;
+    line-height: 1.375rem;
+    font-weight: 400;
+  }
+}
 .review__date {
   font-size: 0.813rem;
   font-family: AvnirmyFontRegular;
@@ -656,6 +800,14 @@
   font-weight: 400;
   color: #AFAFAF;
   justify-content: right;
+}
+@media (min-width: 768px) and (max-width: 1280px) {
+  .review__date {
+    font-size: 0.875rem;
+    font-family: AvnirmyFontRegular;
+    line-height: 1.375rem;
+    font-weight: 400;
+  }
 }
 .review__line-bottom {
   color: #E1E1E1;
@@ -666,104 +818,15 @@
   margin-top: 0;
   margin-bottom: 1rem;
 }
-
-@media (min-width: 1280px) {
-  .footer__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .footer__title {
-    font-size: 2.25rem;
-    font-weight: 700;
-    font-family: Avnirbold;
-    line-height: 2.75rem;
-    padding: 3rem 2.25rem 2.25rem 1.25rem;
-    font-size: 2.25rem;
-    margin-left: 2.25rem;
-  }
-  .footer__tabletlogo {
-    display: inline-block;
-  }
-  .footer__logoimg {
-    box-sizing: content-box;
-    max-width: 25rem;
-    height: 1.5rem;
-    padding-top: 0.9rem;
-    margin-right: 2rem;
-    padding-right: 3rem;
-  }
-  .logo {
-    display: none;
+@media (min-width: 768px) and (max-width: 1280px) {
+  .review__line-bottom {
+    margin-left: 5rem;
+    margin-right: 5rem;
   }
 }
-@media (min-width: 1280px) {
-  .social {
-    padding-top: 1.5rem;
-  }
-  .social__icons {
-    padding-right: 29rem;
-  }
-  .social__icons img {
-    width: 3rem;
-    height: 3rem;
-    margin-left: 1.5ren;
-    padding: 0 0 1rem;
-    margin-right: 1rem;
-  }
-  .agents {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-left: 1rem;
-    align-items: center;
-  }
-  .address {
-    margin-left: 3rem;
-  }
-  .address__name {
-    font-size: 0.875rem;
-    font-family: AvnirmyFontRegular;
-    line-height: 1.25rem;
-    font-weight: 400;
-    padding-bottom: 1rem;
-  }
-  .address__email {
-    padding-top: 1.5rem;
-  }
-  .artist__link {
-    padding-top: 1.5rem;
-  }
-  .artist__title {
-    font-size: 0.875rem;
-    font-family: AvnirmyFontRegular;
-    line-height: 1.25rem;
-    font-weight: 400;
-    padding-bottom: 1rem;
-  }
-  .entertainment {
-    margin-right: 28rem;
-    margin-left: 1rem;
-  }
-  .entertainment__title {
-    font-size: 0.875rem;
-    font-family: AvnirmyFontRegular;
-    line-height: 1.25rem;
-    font-weight: 400;
-    padding-bottom: 1rem;
-  }
-  .entertainment__link {
-    padding-top: 1.5rem;
-  }
-  .footerlogo {
-    display: none;
-  }
-  .copyright__sentence {
-    font-size: 0.875rem;
-    font-family: AvnirmyFontRegular;
-    line-height: 1.25rem;
-    font-weight: 400;
-    margin-left: 2.25rem;
-    padding: 2.25rem 2.25rem 2.5rem 2.25rem;
+@media screen and (min-width: 1280px) {
+  .review__line-bottom {
+    margin-left: 15rem;
+    margin-right: 15rem;
   }
 }/*# sourceMappingURL=bio.css.map */

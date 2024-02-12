@@ -7,21 +7,23 @@ $breakpoint_desktop:1280px;
 
 
 
-@mixin desktop {
-  @media (min-width:$breakpoint_desktop ){
-
-    @content;
-
-  }
-
-}
-
 @mixin tablet {
  @media (min-width:$breakpoint_tablet) and (max-width:$breakpoint_desktop){
 
        @content;
 
  }
+}
+
+
+
+@mixin desktop {
+  @media screen and (min-width:$breakpoint_desktop ){
+
+    @content;
+
+  }
+
 }
 
 @mixin mobilefontforh2{

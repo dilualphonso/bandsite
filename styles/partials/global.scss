@@ -18,6 +18,10 @@ html,
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 *::placeholder {
 
   @include mobilefontforh3;
@@ -133,212 +137,322 @@ html,
 
 
 
- .footer {
-    background-color: $primary-Black;
-    margin: 0 auto;
+    .footer {
+      background-color: $primary-Black;
+      margin: 0 auto;
 
-    &__container {
-        margin: 0 1rem;
-        @include tablet{
-          margin-left: 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-right: 4rem;
-        }
-    }
+      &__container {
+          margin: 0 1rem;
+      }
 
-    &__title {
-        @include mobilefontforh2;
-        color: $primary-white;
-        margin: 0;
-        padding: 3rem 0 1.5rem 0;
-        @include tablet{
-          @include des_tab_fontforh2;
-          padding: 0;
-        }
-    }
+      &__title {
+          @include mobilefontforh2;
+          color: $primary-white;
+          margin: 0;
+          padding: 3rem 0 1.5rem 0;
+      }
 
-    &__tabletlogo {
-        display: none;
-        @include tablet{
-
-          min-height: 10rem;
-            display: unset;
-
-    }
+      &__tabletlogo {
+          display: none;
+      }
   }
-@include tablet{
 
-  &__logoimg {
-      max-width: 25rem;
-      padding-top: 1.5rem;
-      margin-top: 3rem;
-  }
-}
-}
-
-.logo {
-  @include tablet{
-
-
-  display: none;
-  }
-}
-
-.social {
-
-  @include tablet {
-    padding-top: 1.5rem;
-        padding-right: 4.5rem;
-  }
-    &__icons img {
-        width: 3rem;
-        height: 3rem;
-        margin-left: 0;
-        padding: 0 0 1rem 0;
-
-        @include tablet{
+  .social {
+      &__icons img {
           width: 3rem;
           height: 3rem;
-          padding: 0 0 1rem;
-          margin-right: 1rem;
-        }
+          margin-left: 0;
+          padding: 0 0 1rem 0;
+      }
+  }
 
+  .address {
+      color: $primary-white;
 
-    }
-}
+      &__name {
+          @include mobilefontforbody;
+          margin: 0;
+          padding: 1rem 0 0 1rem;
+      }
 
-.agents {
+      &__details {
+          @include mobilefontforbody;
+          padding: 0rem 0 0 1rem;
+      }
+  }
+
+  .artist {
+      color: $primary-white;
+
+      &__title {
+          @include mobilefontforbody;
+          margin: 0;
+          padding: 1rem 0 0 1rem;
+      }
+
+      &__details {
+          @include mobilefontforbody;
+          padding: 0rem 0 1rem 1rem;
+      }
+  }
+
+  .entertainment {
+      color: $primary-white;
+
+      &__title {
+          @include mobilefontforbody;
+          margin: 0;
+          padding: 0rem 0 0 1rem;
+      }
+
+      &__details {
+          @include mobilefontforbody;
+          padding: 0rem 0 0 1rem;
+      }
+  }
+
+  .logo {
+      &__img {
+          width: 8rem;
+          padding: 1.5rem 0 0 1rem;
+      }
+  }
+
+  .copyright {
+      &__sentence {
+          @include mobilefontforbody;
+          color: $primary-white;
+          margin: 0;
+          padding: 0.5rem 0 1.5rem 1rem;
+      }
+  }
+
+  //tablet view footer
   @include tablet {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-right: 1.5rem;
-    padding-left: 1.5rem;
-    align-items: center;
-  }
-}
+      .footer {
+          &__container {
+              margin-left: 2.25rem;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin-right: 2.25rem;
+          }
 
-.address {
-    color: $primary-white;
+          &__title {
+              @include des_tab_fontforh2;
+              padding: 0;
+          }
 
-    &__name {
-        @include mobilefontforbody;
-        margin: 0;
-        padding: 1rem 0 0 1rem;
+          &__tabletlogo {
+              min-height: 10rem;
+              display: unset;
+          }
 
-
-    @include tablet {
-      @include footercopyfont;
-      padding-bottom: 1rem;
-    }
-  }
-
-    &__details {
-        @include mobilefontforbody;
-        padding: 0rem 0 0 1rem;
-    }
-
-    @include tablet{
-
-    &__email{
-      padding-top: 1.5rem;
-            @include footercopyfont;
-    }
-  }
-}
-
-.artist {
-    color: $primary-white;
-
-    &__title {
-        @include mobilefontforbody;
-        margin: 0;
-        padding: 1rem 0 0 1rem;
-
-        @include tablet {
-          @include footercopyfont;
-          padding-bottom: 1rem;
-        }
-    }
-
-    &__details {
-        @include mobilefontforbody;
-        padding: 0rem 0 1rem 1rem;
-    }
-    &__link {
-      @include tablet{
-      padding-top: 1.5rem;
-      @include footercopyfont;
+          &__logoimg {
+              max-width: 25rem;
+              padding-top: 1.5rem;
+              margin-top: 3rem;
+          }
       }
-    }
-}
 
-.entertainment {
-    color: $primary-white;
-
-    @include  tablet {
-      padding-right: 1rem;
-    }
-
-    &__title {
-        @include mobilefontforbody;
-        margin: 0;
-        padding: 0rem 0 0 1rem;
-        @include tablet {
-          @include footercopyfont;
-            padding-bottom: 1rem;
-        }
-    }
-
-    &__details {
-        @include mobilefontforbody;
-        padding: 0rem 0 0 1rem;
-    }
-
-    &__link{
-      @include tablet {
-        padding-top: 1.5rem;
-        @include footercopyfont;
+      .logo {
+          display: none;
       }
-    }
-
-
-}
-
-
-.footerlogo {
-  @include tablet{
-
-
-  display: none;
   }
-}
 
-.logo {
-    &__img {
-        width: 8rem;
-        padding: 1.5rem 0 0 1rem;
-    }
-}
+  @include tablet {
+      .social {
+          padding-top: 1.5rem;
+          padding-right: 1.5rem;
 
-.copyright {
-    &__sentence {
-        @include mobilefontforbody;
-        color: $primary-white;
-        margin: 0;
-        padding: 0.5rem 0 1.5rem 1rem;
+          &__icons {
+              padding-right: 6rem;
+          }
 
-        @include tablet {
+          &__icons img {
+              width: 3rem;
+              height: 3rem;
+              padding: 0 0 1rem;
+              margin-right: 1rem;
+          }
+      }
 
+      .agents {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          margin-right: 1.5rem;
+          padding-left: 1.5rem;
+          align-items: center;
+      }
 
-                @include footercopyfont;
-                margin-left: 2.25rem;
-                padding: 2.25rem 2.25rem 2.5rem 0rem;
+      .address {
+          &__name {
+              @include footercopyfont;
+              padding-bottom: 1rem;
+          }
 
+          &__email {
+              padding-top: 1.5rem;
+              @include footercopyfont;
+          }
+      }
 
-    }
+      .artist {
+          &__title {
+              @include footercopyfont;
+              padding-bottom: 1rem;
+          }
 
-    }
-}
+          &__link {
+              padding-top: 1.5rem;
+              @include footercopyfont;
+          }
+      }
+
+      .entertainment {
+          padding-right: 1rem;
+
+          &__title {
+              @include footercopyfont;
+              padding-bottom: 1rem;
+          }
+
+          &__link {
+              padding-top: 1.5rem;
+              @include footercopyfont;
+          }
+      }
+
+      .footerlogo {
+          display: none;
+      }
+
+      .copyright {
+          &__sentence {
+              @include footercopyfont;
+              margin-left: 2.25rem;
+              padding: 2.25rem 2.25rem 2.5rem 0rem;
+          }
+      }
+  }
+
+  //desktop view footer
+  @include desktop {
+      .footer {
+          &__container {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+          }
+
+          &__title {
+              @include des_tab_fontforh2;
+              padding: 3rem 2.25rem 2.25rem 1.25rem;
+              font-size: 2.25rem;
+              margin-left: 2.25rem;
+          }
+
+          &__tabletlogo {
+              // min-height: 15rem;
+              display: inline-block;
+          }
+
+          &__logoimg {
+              //padding-right: 1.5rem;
+              //margin-left: 3rem;
+              box-sizing: content-box;
+              max-width: 25rem;
+              height: 1.5rem;
+              padding-top: 0.9rem;
+              margin-right: 2rem;
+              padding-right: 3rem;
+          }
+      }
+
+      .logo {
+          display: none;
+      }
+  }
+
+  @include desktop {
+      .social {
+          padding-top: 1.5rem;
+
+          &__icons {
+              padding-right: 25rem;
+          }
+
+          &__icons img {
+              width: 3rem;
+              height: 3rem;
+              margin-left: 1.5ren;
+              padding: 0 0 1rem;
+              margin-right: 1rem;
+          }
+      }
+
+      .agents {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          padding-left: 1rem;
+          align-items: center;
+      }
+
+      .address {
+          // margin-right: 1.5rem;
+          margin-left: 3rem;
+
+          //margin-right: 5rem;
+          //padding-left: 3rem;
+          &__name {
+              @include footercopyfont;
+              padding-bottom: 1rem;
+          }
+
+          &__email {
+              padding-top: 1.5rem;
+          }
+      }
+
+      .artist {
+
+          // margin-right: 4rem;
+          //margin-left: 5rem;
+          &__link {
+              padding-top: 1.5rem;
+          }
+
+          &__title {
+              @include footercopyfont;
+              padding-bottom: 1rem;
+          }
+      }
+
+      .entertainment {
+          margin-right: 28rem;
+          margin-left: 1rem;
+
+          &__title {
+              @include footercopyfont;
+              padding-bottom: 1rem;
+          }
+
+          &__link {
+              padding-top: 1.5rem;
+          }
+      }
+
+      .footerlogo {
+          display: none;
+      }
+
+      .copyright {
+          &__sentence {
+              @include footercopyfont;
+              margin-left: 2.25rem;
+              padding: 2.25rem 2.25rem 2.5rem 2.25rem;
+          }
+      }
+  }

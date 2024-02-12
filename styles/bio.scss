@@ -3,6 +3,30 @@
 @use './partials/color'as *;
 
 .header {
+    width: 100%;
+    background-color: $primary-Black;
+    margin: 0 auto;
+
+    &__logo-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__logo {
+        width: 7rem;
+        padding: 1rem 0;
+    }
+
+    &__menu {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+        margin-bottom: 0;
+        width: 100%;
+
+    }
 
     &__links {
         text-align: center;
@@ -11,22 +35,8 @@
         margin: 0 0rem 0 0;
         @include mobilefontforbody;
 
-        @include tablet{
-            width: 1vw;
-            height: 6rem;
-            position: relative;
-            top: 2.5rem;
-          @include  des_tab_fontforbody;
-        }
 
-        @include desktop{
-            @include  des_tab_fontforbody;
-            height: 100%;
-            top: 3rem;
-            align-items: center;
-            width: 100%;
-            justify-content: center;
-        }
+
 
         &--active {
             color: $primary-white;
@@ -40,35 +50,55 @@
     }
 
 
+}
+
+//ending mobile view header and begining tabletview
+@include tablet {
+    .header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        &__logo-container {
+            //  width: 20%;
+            margin-left: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        &__logo {
+            width: 7rem;
+            //margin: 0;
+        }
+
+        &__links {
+            width: 1vw;
+            height: 6rem;
+            position: relative;
+            top: 2.5rem;
+        }
+
+        &__menu {
+            width: 30%;
+            align-items: center;
+            margin-top: 0;
+            margin-left: 1.5rem;
+            justify-content: center;
+            padding-right: 2rem;
+        }
 
         &__border-biography {
-            @include tablet{
             width: 4rem;
             padding-left: 0;
             border-bottom: 2px solid $primary-white;
-            }
         }
 
         &__border-show {
-
-         text-align: left;
-
-            @include tablet{
             padding-left: 1.5rem;
             padding-right: 1.5rem;
             margin-left: 1.5rem;
         }
     }
-
 }
-
-
-
-
-
-
-//ending mobile view header and begining tabletview
-
 
 //ending tablet view hearder , destop view starts
 @include desktop {
@@ -450,8 +480,8 @@
         }
 
         &__photos img {
-            max-height: 7rem;
-            max-width: 15rem;
+            max-height: 25%;
+            max-width: 30%;
             margin: 0 0.5rem 1.5rem 0rem;
         }
     }
@@ -496,6 +526,16 @@
         padding-top: 1.5rem;
         padding-bottom: 1rem;
         margin-bottom: 0;
+
+        @include tablet {
+            @include des_tab_fontforh2;
+            margin-left: 2.5rem;
+        }
+
+        @include desktop {
+            @include des_tab_fontforh2;
+            padding-left: 2rem;
+        }
     }
 
     &__right-container{
@@ -529,6 +569,18 @@
         //margin-left: 1rem
 
         padding-bottom:1rem ;
+
+        @include tablet {
+            margin-left: 5rem;
+            margin-right: 5rem;
+
+        }
+
+        @include desktop {
+            margin-left: 18rem;
+            margin-right: 18rem;
+
+        }
     }
 
   &__name{
@@ -540,11 +592,24 @@
     text-transform: uppercase;
     color: $primary_silver;
 
+    @include tablet{
+        @include des_tab_fontforbody;
+        font-weight: 600;
+
+
+       }
+
 
   }
 
   &__label-name{
     padding-bottom: 0.25rem;
+
+    @include tablet{
+        @include des_tab_fontforbody;
+
+
+       }
   }
 
   &__name-textBox{
@@ -586,6 +651,12 @@
     padding-bottom:0.5rem;
     color: $primary_silver;
 
+    @include tablet{
+        @include des_tab_fontforbody;
+
+
+       }
+
 
 
 }
@@ -620,6 +691,13 @@ padding-right: 0rem;
 
   }
 
+  @include tablet{
+    @include des_tab_fontforbody;
+    font-weight: 600;
+
+
+   }
+
 
 
 }
@@ -630,6 +708,22 @@ padding-right: 0rem;
 //     padding-right: 1rem;
 
 // }
+
+&__right-container{
+
+    @include tablet {
+    align-items: end;
+    justify-content: flex-end;
+    }
+
+    @include desktop {
+        align-items: end;
+    justify-content: flex-end;
+    padding-right: 0;
+    margin-right: 0;
+
+        }
+}
 
 &__button{
     margin-top: 1rem;
@@ -655,6 +749,36 @@ color: $primary-white;
     background-color: $secondary-darkBlack;
     z-index: 1;
 }
+
+@include tablet {
+
+    width: 10rem;
+    padding-left: 2rem;
+    padding-right: 2rem ;
+  margin-left: 24rem;
+  margin-right: 0;
+  height: 3rem;
+
+  @include des_tab_fontforbody;
+  font-weight: 600;
+
+  &:hover{
+    background-color: $secondary-darkBlack;
+    z-index: 1;
+}
+
+
+
+}
+
+
+
+}
+    &__bottom {
+    @include desktop{
+    margin-left: 10rem;
+    margin-right: 10rem;
+    }
 }
 
 
@@ -663,11 +787,22 @@ color: $primary-white;
 
 
 
-       .review{
+.review{
         margin-left:1rem;
         margin-right:1rem ;
         margin-top: 0;
         margin-bottom: 0;
+
+        @include desktop{
+
+
+
+        }
+
+        @include tablet{
+            margin-left: 5rem;
+            margin-right: 5rem;
+        }
 
 
 
@@ -696,6 +831,8 @@ color: $primary-white;
            margin-top: 0;
            margin-bottom: 1.5rem;
           // padding-left: 1rem;
+
+
         }
 
         &__Avatar{
@@ -725,6 +862,13 @@ color: $primary-white;
 
            //flex-wrap: wrap;
 
+           @include tablet{
+            @include des_tab_fontforbody;
+            font-weight: 700;
+
+           }
+
+
 
         }
 
@@ -735,6 +879,7 @@ color: $primary-white;
             //padding-left: 0;
            // margin-left: 1rem;
            width: 100%;
+
 
         }
 
@@ -751,6 +896,12 @@ color: $primary-white;
            // line-height: 20px;
            //text-indent: 1rem;
 
+           @include tablet{
+            @include des_tab_fontforbody;
+           }
+
+
+
 
         }
 
@@ -759,6 +910,11 @@ color: $primary-white;
             @include mobilefontforbody;
             color: $primary_silver;
 justify-content: right;
+
+
+@include tablet{
+    @include des_tab_fontforbody;
+   }
 
 
        }
@@ -774,7 +930,19 @@ justify-content: right;
 
        margin-top: 0;
        margin-bottom: 1rem;
+
+       @include tablet{
+        margin-left: 5rem;
+        margin-right: 5rem;
+      }
+
+      @include desktop{
+        margin-left: 15rem;
+        margin-right: 15rem;
+      }
+
        }
+
 
     }
 
@@ -788,122 +956,4 @@ justify-content: right;
 
 
 
-//desktop view footer
-@include desktop {
-    .footer {
-        &__container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        &__title {
-            @include des_tab_fontforh2;
-            padding: 3rem 2.25rem 2.25rem 1.25rem;
-            font-size: 2.25rem;
-            margin-left: 2.25rem;
-        }
-
-        &__tabletlogo {
-            // min-height: 15rem;
-            display: inline-block;
-        }
-
-        &__logoimg {
-            //padding-right: 1.5rem;
-            //margin-left: 3rem;
-            box-sizing: content-box;
-            max-width: 25rem;
-            height: 1.5rem;
-            padding-top: 0.9rem;
-            margin-right: 2rem;
-            padding-right: 3rem;
-        }
-    }
-
-    .logo {
-        display: none;
-    }
-}
-
-@include desktop {
-    .social {
-        padding-top: 1.5rem;
-
-        &__icons {
-            padding-right: 29rem;
-        }
-
-        &__icons img {
-            width: 3rem;
-            height: 3rem;
-            margin-left: 1.5ren;
-            padding: 0 0 1rem;
-            margin-right: 1rem;
-        }
-    }
-
-    .agents {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding-left: 1rem;
-        align-items: center;
-    }
-
-    .address {
-        // margin-right: 1.5rem;
-        margin-left: 3rem;
-
-        //margin-right: 5rem;
-        //padding-left: 3rem;
-        &__name {
-            @include footercopyfont;
-            padding-bottom: 1rem;
-        }
-
-        &__email {
-            padding-top: 1.5rem;
-        }
-    }
-
-    .artist {
-
-        // margin-right: 4rem;
-        //margin-left: 5rem;
-        &__link {
-            padding-top: 1.5rem;
-        }
-
-        &__title {
-            @include footercopyfont;
-            padding-bottom: 1rem;
-        }
-    }
-
-    .entertainment {
-        margin-right: 28rem;
-        margin-left: 1rem;
-
-        &__title {
-            @include footercopyfont;
-            padding-bottom: 1rem;
-        }
-
-        &__link {
-            padding-top: 1.5rem;
-        }
-    }
-
-    .footerlogo {
-        display: none;
-    }
-
-    .copyright {
-        &__sentence {
-            @include footercopyfont;
-            margin-left: 2.25rem;
-            padding: 2.25rem 2.25rem 2.5rem 2.25rem;
-        }
-    }
-}
+//desktop view foot
