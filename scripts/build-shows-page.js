@@ -1,44 +1,31 @@
-const shows = [{
-    date: "Mon Sept 09 2024",
-    venue: "Ronald Lane",
-    location: "San Francisco, CA"
 
- },
 
- {
-    date: "Tue Sept 17 2024",
-    venue: "Pier 3 East",
-    location: "San Francisco,CA"
- },
 
- {
+const getShows = async () =>{
 
-    date: "Sat Oct 12 2024 ",
-    venue: "View Lounge",
-    location: "San Francisco,CA"
- },
+   const userData = await BandSiteApiInstance.getShowData();
+   console.log(userData);
 
- {
+    userData.forEach(show => {
 
-    date: "Sat Nov 16 2024",
-    venue: "Hyatt Agency",
-    location: "San Francisco,CA"
- },
 
- {
+       displayShowDetails(show);
 
-    date: "Fri Nov 29 2024",
-    venue: "Moscow Center",
-    location: "San Francisco,CA"
+   });
 
- },
 
- {
-    date: "Wed Dec 18 2024 ",
-    venue: "Press Club",
-    location: "San Francisco,CA"
- }
-]
+
+
+}
+
+getShows();
+
+
+
+
+
+
+
 
 const showsEl = document.querySelector(".shows");
 
@@ -73,11 +60,7 @@ tabExtraEl.classList.add("shows__heading-element")
 showHeaderEl.append(tabExtraEl);
 
 
-for (let i = 0; i < shows.length; i++) {
- const show = shows[i];
 
- displayShowDetails(show);
-}
 
 
 function displayShowDetails(show) {
@@ -93,14 +76,14 @@ function displayShowDetails(show) {
  showContainerEl.classList.add("shows__container");
  showEl.append(showContainerEl);
 
- const showlistEl = document.createElement("ul");
- showlistEl.classList.add("shows__lists");
- showContainerEl.append(showlistEl);
+//  const showlistEl = document.createElement("ul");
+//  showlistEl.classList.add("shows__lists");
+//  showContainerEl.append(showlistEl);
 
 
  const TabletEl = document.createElement('div');
  TabletEl.classList.add("shows__wrapper")
- showlistEl.append(TabletEl);
+ showEl.append(TabletEl);
 
 
  const dateTitleEl = document.createElement('div');
@@ -109,9 +92,20 @@ function displayShowDetails(show) {
  TabletEl.append(dateTitleEl);
 
 
- const showDateEl = document.createElement("li");
+ const showDateEl = document.createElement("p");
  showDateEl.classList.add("shows__date");
- showDateEl.innerText = show.date;
+
+ let milliseconds = show.date;
+ //console.log (milliseconds);
+ let showDate = new Date(milliseconds);
+// console.log("Milliseconds = " + date);
+ const currentDayOfMonth = showDate.getDate();
+ const currentMonth = showDate.getMonth();
+ const currentYear = showDate.getFullYear();
+
+ const newShowDate = currentDayOfMonth + "/" + (currentMonth + 1) + "/" + currentYear;
+
+ showDateEl.innerText = newShowDate;
 
  TabletEl.append(showDateEl);
 
@@ -122,9 +116,9 @@ function displayShowDetails(show) {
  TabletEl.append(venueTitleEl);
 
 
- const showVenueEl = document.createElement("li");
+ const showVenueEl = document.createElement("p");
  showVenueEl.classList.add("shows__venue");
- showVenueEl.innerText = show.venue;
+ showVenueEl.innerText = show.place;
  TabletEl.append(showVenueEl);
 
  const locationTitleEl = document.createElement('div');
@@ -132,7 +126,7 @@ function displayShowDetails(show) {
  locationTitleEl.classList.add("shows__subtitle")
  TabletEl.append(locationTitleEl);
 
- const showLocationEl = document.createElement("li");
+ const showLocationEl = document.createElement("p");
  showLocationEl.classList.add("shows__location");
  showLocationEl.innerText = show.location;
  TabletEl.append(showLocationEl);

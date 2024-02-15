@@ -1,26 +1,6 @@
 const commentssection = document.querySelector(".comments");
 
-const defaultComments = [{
-      name: "Victor Pinto",
-      date: "11/02/2023",
-      review: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains."
 
-   },
-
-   {
-      name: "Christina Cabrera",
-      date: "10/28/2023",
-      review: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day"
-   },
-
-   {
-
-      name: "Isaac Tadesse",
-      date: "10/20/2023",
-      review: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."
-   }
-
-]
 
 
 const reviewcontainer = document.createElement('div');
@@ -28,24 +8,60 @@ reviewcontainer.classList.add("comments__bottom");
 commentssection.append(reviewcontainer);
 
 
-function showAllReviews(defaultComments) {
 
-   reviewcontainer.innerHTML = "";
+const getComments = async () =>{
 
-   for (let i = 0; i < defaultComments.length; i++) {
-      const defaultComment = defaultComments[i];
+   const userData = await BandSiteApiInstance.getData();
+   console.log(userData);
+
+   userData.forEach(userComment => {
 
 
-      displayReviewDetails(defaultComment);
+  displayReviewDetails(userComment);
 
-   }
+
+   });
+
+
+
 
 }
 
-showAllReviews(defaultComments);
+getComments();
 
 
-function displayReviewDetails(defaultcomment) {
+
+const timeConverter = async (milisecond) =>{
+
+   const userData = await BandSiteApiInstance.getData();
+   console.log(userData);
+
+   userData.forEach(user => {
+
+      milisecond = user.date;
+
+
+
+
+   });
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+function displayReviewDetails(userComment) {
 
    const reviewcontainer1 = document.querySelector("comments__bottom");
 
@@ -78,13 +94,28 @@ function displayReviewDetails(defaultcomment) {
 
    const reviewname = document.createElement('h4');
    reviewname.classList.add("review__name");
-   reviewname.innerText = defaultcomment.name;
+   reviewname.innerText = userComment.name;
 
    reviewtextWrapper.appendChild(reviewname);
 
    const reviewDate = document.createElement("time");
    reviewDate.classList.add("review__date");
-   reviewDate.innerText = defaultcomment.date;
+
+    let milliseconds = userComment.timestamp;
+    //console.log (milliseconds);
+    let ReviewDate = new Date(milliseconds);
+   // console.log("Milliseconds = " + date);
+    const currentDayOfMonth = ReviewDate.getDate();
+    const currentMonth = ReviewDate.getMonth();
+    const currentYear = ReviewDate.getFullYear();
+
+    const newReviewDate = currentDayOfMonth + "/" + (currentMonth + 1) + "/" + currentYear;
+
+
+
+
+
+reviewDate.innerText = newReviewDate;
    reviewtextWrapper.appendChild(reviewDate);
 
    const reviewMessageContainer = document.createElement('div');
@@ -94,53 +125,57 @@ function displayReviewDetails(defaultcomment) {
 
    const reviewmessage = document.createElement('p');
    reviewmessage.classList.add("review__sentence")
-   reviewmessage.innerText = defaultcomment.review;
+   reviewmessage.innerText = userComment.comment;
    reviewMessageContainer.appendChild(reviewmessage);
 
 
 }
 
-let horizonalline1 = document.createElement("hr");
-horizonalline1.classList.add("review__line-bottom");
-commentssection.appendChild(horizonalline1);
+// let horizonalline1 = document.createElement("hr");
+// horizonalline1.classList.add("review__line-bottom");
+// commentssection.appendChild(horizonalline1);
+
+
+
+
+
+
+const postComments = async ({fullName,reviewText}) =>{
+
+    const postData = await BandSiteApiInstance.postData(fullName,reviewText);
+
+    getComments();
+
+
+  }
 
 
 const reviewFormEl = document.forms.reviewform;
 const btnEl = document.querySelector(".comments__button")
 
 
-reviewFormEl.addEventListener("submit", (event) => {
 
-   event.preventDefault();
+ reviewFormEl.addEventListener ("submit", (event) => {
 
+    event.preventDefault();
 
-   const fullNameEl = event.target.fullName.value;
-   const reviewTextEl = event.target.reviewText.value;
-   const ReviewDate = new Date();
+    const fullNameEl = event.target.fullName.value;
+    const reviewTextEl = event.target.reviewText.value;
 
+    postComments({fullName:fullNameEl,reviewText:reviewTextEl});
 
-   const currentDayOfMonth = ReviewDate.getDate();
-   const currentMonth = ReviewDate.getMonth();
-   const currentYear = ReviewDate.getFullYear();
-
-   const newReviewDate = currentDayOfMonth + "/" + (currentMonth + 1) + "/" + currentYear;
-
-
-   const writtenReview = {
-      name: fullNameEl,
-      date: newReviewDate,
-      review: reviewTextEl
-
-   }
-
-   defaultComments.unshift(writtenReview);
+    let nameField = document.getElementById("name");
+    let commentArea = document.getElementById("message");
+    nameField.value = "";
+    commentArea.value = "";
 
 
-   showAllReviews(defaultComments);
-   let nameField = document.getElementById("name");
-   let commentArea = document.getElementById("message");
-   nameField.value = "";
-   commentArea.value = "";
 
 
-});
+
+
+
+
+
+
+ });

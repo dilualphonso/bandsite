@@ -60,7 +60,7 @@
 
 		&__logo-container {
 
-			margin-left: 1.5rem;
+			margin-left: 2rem;
 			padding-left: 1.5rem;
 		}
 
@@ -80,7 +80,7 @@
 			width: 30%;
 			align-items: center;
 			margin-top: 0;
-			margin-left: 1.5rem;
+			margin-left:4rem;
 			justify-content: center;
 			padding-right: 2rem;
 		}
@@ -88,13 +88,17 @@
 		&__border-biography {
 			width: 4rem;
 			padding-left: 0;
-			border-bottom: 2px solid $primary-white;
+			margin-right: 2rem;
+
 		}
 
 		&__border-show {
-			padding-left: 1.5rem;
-			padding-right: 1.5rem;
-			margin-left: 1.5rem;
+			//padding-left: 1rem;
+			width: 3rem;
+			//padding-right: 1.5rem;
+			padding-top: 0.25rem;
+			margin-left: 2rem;
+			border-bottom: 2px solid $primary-white;
 		}
 	}
 }
@@ -106,6 +110,13 @@
 		flex-direction: row;
 		width: 100%;
 
+		&__logo-container {
+
+			margin-left: 0rem;
+			padding-left: 0rem;
+			margin-right: 3rem;
+		}
+
 		&__logo {
 			padding: 0 0 0 3.938rem;
 			box-sizing: content-box;
@@ -113,46 +124,82 @@
 
 		&__links {
 			height: 100%;
-			top: 3rem;
+			//top: 5rem;
+			//padding-top: 2rem;
 			align-items: center;
 			width: 100%;
-			justify-content: center;
+			//justify-content: center;
 
 			&--active {
-				padding-bottom: 1.25rem;
+
+
+				border: none;
 			}
 
 			&--inactive {
-				padding-top: 1rem;
+				//padding-bottom: 1.25rem;
+
+
 			}
 		}
 
 		&__menu {
-			width: 20%;
-			height: 100%;
+			width: 25%;
 			line-height: 5rem;
 			align-items: center;
-			margin-top: 0;
-			margin-left: 3.5rem;
+			//margin-bottom: 2rem;
+			margin-left: 2rem;
 			padding-left: 0;
+			padding-top:0rem;
+			padding-bottom:0rem ;
+			margin-top: 0;
+
 		}
 
 		&__border-biography {
 			width: 4rem;
 			padding-left: 0;
-			padding-top: 0.5rem;
+			padding-bottom:2rem;
+			//margin-right: 3rem;
+			height: 100%;
+			border: none;
+			//margin-bottom: 1rem;
+
+			padding-top: 0.25rem;
+			//bottom:1rem
 
 		}
+
+
 
 		&__border-show {
-			height: 100%;
-			padding-left: 0;
-			font-size: 1rem;
+			// height: 100%;
+			// padding-left: 0;
+			// font-size: 1rem;
+			// padding-right: 0rem;
+			// margin-right: 4.5rem;
+			// margin-left: 2rem;
+			// //padding-bottom: 2rem;
+			// //bottom:3rem;
+			// //border:none;
+			padding-bottom: 2rem;
+			// width: 4rem;
+
+			width: 3rem;
+			padding-left:0;
 			padding-right: 0rem;
-			margin-right: 4.5rem;
-			margin-left: 0rem;
-			padding-top: 2rem;
+			padding-top: 0.5rem;
+			margin-right: 4rem;
+			height: 100%;
+			border: none;
+			margin-left: 0;
+			padding-right: 0rem;
+			//margin-bottom: 1rem;
+
+			border-bottom: 2px solid $primary-white;
+
 		}
+
 	}
 }
 
@@ -191,7 +238,7 @@
 		height: 27vh;
 
 		text-transform: capitalize;
-		margin-right: 1rem;
+		//margin-right: 1rem;
 
 		@include tablet {
 			min-height: 28rem;
@@ -276,13 +323,14 @@
 	&__audio {
 
 		margin-left: 1rem;
+		margin-right: 1rem;
 
-		padding-right: 1rem;
+		//padding-right: 1rem;
 		margin-top: 1rem;
 
 
 		border-radius: 0.5rem;
-		width: 100%;
+		//width: 100%;
 
 
 		@include tablet {
@@ -293,9 +341,9 @@
 		}
 
 		@include desktop {
-			max-width: 38rem;
+			max-width: 35rem;
 			height: 13rem;
-			margin-left: 3rem;
+			margin-left: 2rem;
 
 			padding-right: 3.938rem;
 		}
@@ -367,28 +415,32 @@
 	}
 
 
-	&__heading-venue {
+&__heading-venue {
 
 
 		@include tablet {
 			margin-right: 5rem;
 
 		}
+	}
 
 
 		&__heading-date {
 
 			@include tablet {
+				min-width: 9rem;
 				margin-left: 0;
-				margin-left: 4rem;
+				padding-right: 2rem;
+
 			}
 		}
 
 		&__heading-location {
 
 			@include tablet {
-				min-width: 10rem;
-				padding-right: 2rem;
+				min-width: 8rem;
+				//padding-right: 1rem;
+				margin-bottom: 1rem;
 
 
 			}
@@ -401,17 +453,17 @@
 		}
 
 		&__heading-element {
-			min-width: 2rem;
-			margin-right: 1rem;
+			min-width: 10rem;
+			margin-right: 3rem;
 
 
 		}
-	}
+
 
 
 	&__container {
 
-		margin-left: 1rem;
+		margin-left: 0rem;
 		margin-right: 1rem;
 		margin-bottom: 1rem;
 
@@ -582,7 +634,9 @@
 
 	&__wrapper {
 
-		width: 100%;
+		//width: 100%;
+		margin-left: 1rem;
+		margin-right: 1rem;
 
 
 		@include tablet {
