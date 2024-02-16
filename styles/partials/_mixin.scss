@@ -8,7 +8,7 @@ $breakpoint_desktop:1280px;
 
 
 @mixin tablet {
- @media (min-width:$breakpoint_tablet) and (max-width:$breakpoint_desktop){
+ @media (min-width:$breakpoint_tablet){
 
        @content;
 
