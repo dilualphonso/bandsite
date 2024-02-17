@@ -64,7 +64,6 @@ a {
 .footer {
   background-color: #323232;
   margin: 0 auto;
-  margin-top: 1rem;
 }
 .footer__container {
   margin: 0 1rem;
@@ -273,6 +272,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 1rem;
   }
   .footer__title {
     font-size: 2.25rem;

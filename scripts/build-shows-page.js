@@ -145,6 +145,8 @@ function displayShowDetails(show) {
  showEl.append(divider);
 
 
+
+
  showEl.addEventListener('click', function (event) {
 
     event.preventDefault();
