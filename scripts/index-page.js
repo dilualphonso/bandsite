@@ -8,62 +8,9 @@ reviewcontainer.classList.add("comments__bottom");
 commentssection.append(reviewcontainer);
 
 
-
-const getComments = async () =>{
-
-   const userData = await BandSiteApiInstance.getData();
-   console.log(userData);
-
-   userData.forEach(userComment => {
-
-
-  displayReviewDetails(userComment);
-
-
-   });
-
-
-
-
-}
-
-getComments();
-
-
-
-const timeConverter = async (milisecond) =>{
-
-   const userData = await BandSiteApiInstance.getData();
-   console.log(userData);
-
-   userData.forEach(user => {
-
-      milisecond = user.date;
-
-
-
-
-   });
-
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
 function displayReviewDetails(userComment) {
 
-   const reviewcontainer1 = document.querySelector("comments__bottom");
+   //const reviewcontainer1 = document.querySelector("comments__bottom");
 
    const review = document.createElement("figure");
    review.classList.add("review");
@@ -131,46 +78,113 @@ reviewDate.innerText = newReviewDate;
 
 }
 
+
+
+const getComments = async () =>{
+
+   try {
+
+   const userData = await BandSiteApiInstance.getData();
+
+ const reviewData = userData.sort(function(a, b) {
+       return b.timestamp - a.timestamp;
+    })
+
+    reviewData.forEach(userComment => {
+
+
+  displayReviewDetails(userComment);
+
+
+   });
+   }
+
+   catch (error){
+
+   }
+
+}
+getComments();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // let horizonalline1 = document.createElement("hr");
 // horizonalline1.classList.add("review__line-bottom");
 // commentssection.appendChild(horizonalline1);
 
-
-
-
-
-
 const postComments = async ({fullName,reviewText}) =>{
 
-    const postData = await BandSiteApiInstance.postData(fullName,reviewText);
+   try{
 
-    getComments();
+    const post1Data = await BandSiteApiInstance.postData(fullName,reviewText);
+
+
+      //Get Comments
+      getComments();
+
+
+   }
+   catch(error) {
+
+   }
+
+
 
 
   }
 
 
+
+
+
+
+
+
 const reviewFormEl = document.forms.reviewform;
 const btnEl = document.querySelector(".comments__button")
+
+const textBox = document.querySelector(".comments__name-textBox");
+const messageArea = document.querySelector("comments__textarea");
+
+
 
 
 
  reviewFormEl.addEventListener ("submit", (event) => {
 
-    event.preventDefault();
+
+   event.preventDefault();
+
 
     const fullNameEl = event.target.fullName.value;
     const reviewTextEl = event.target.reviewText.value;
 
+
+
+
+
     postComments({fullName:fullNameEl,reviewText:reviewTextEl});
 
-    let nameField = document.getElementById("name");
-    let commentArea = document.getElementById("message");
-    nameField.value = "";
-    commentArea.value = "";
+    event.target.fullName.value = "";
+    event.target.reviewText.value = "";
 
 
-
+    clearComment()
 
 
 
@@ -179,3 +193,13 @@ const btnEl = document.querySelector(".comments__button")
 
 
  });
+
+ const fullReviePage = document.querySelector('.comments__bottom')
+
+
+ function clearComment(){
+   while (fullReviePage.firstChild) {
+      fullReviePage.removeChild(fullReviePage.firstChild);
+  }
+
+ }

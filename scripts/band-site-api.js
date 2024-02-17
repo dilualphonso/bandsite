@@ -24,13 +24,14 @@ class BandSiteApi {
 
 
 
-    async postData (fullName, reviewText){
+   async postData (fullName, reviewText){
 
-        const postData = await axios.post(`${this.baseUrl}comments?api_key=${this.apiKey}`,
+        const postingData = await axios.post(`${this.baseUrl}comments?api_key=${this.apiKey}`,
      {
         name: fullName,
         comment: reviewText
-    })
+    });
+
 
 
 
@@ -54,39 +55,6 @@ return showDetails.data;
 }
 
 const BandSiteApiInstance = new BandSiteApi('e0eea5f0-0f8c-4b54-9fc4-ff50843766d4');
-
-//console.log (BandSiteApiInstance.getShowData());
-
-
-// const getComments = async () =>{
-
-//     const userData = await BandSiteApiInstance.getData();
-//     console.log(userData);
-
-//     userData.forEach(userComment => {
-
-
-//    displayReviewDetails(userComment);
-
-
-//     });
-
-
-
-
-// }
-
-// getComments();
-
-
-
-
-
-// // const reviewcontainer = document.createElement('div');
-// // reviewcontainer.classList.add("comments__bottom");
-// // commentssection.append(reviewcontainer);
-
-
 
 
 
