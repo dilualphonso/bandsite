@@ -293,7 +293,7 @@
 			//margin-left: 2.25rem;
 			//padding: 0 1.5rem 0 0rem;
 padding-left: 0;
-			margin-right: 2.25rem;
+			margin-right: 5.25rem;
 		}
 
 		@include desktop {
@@ -608,7 +608,7 @@ align-items: center;
 
 
 			min-width: 10rem;
-			padding-bottom: 0.5rem;
+			//padding-bottom: 0.5rem;
 			@include des_tab_fontforbody;
 			font-weight: 600;
 
@@ -629,7 +629,7 @@ align-items: center;
 		@include tablet {
 
 			//margin-left: 1.5rem;
-			padding-bottom: 0.5rem;
+			//padding-bottom: 0.5rem;
 			min-width: 10rem;
 			@include des_tab_fontforbody;
 
@@ -651,7 +651,7 @@ align-items: center;
 		@include tablet {
 
 			min-width: 10rem;
-			padding-bottom: 0.5rem;
+			//padding-bottom: 0.5rem;
 			@include des_tab_fontforbody;
 
 		}
@@ -675,7 +675,8 @@ align-items: center;
 		margin-top: 1rem;
 		margin-bottom: 0rem;
 		@include tablet {
-			//margin-top: 0rem;
+			margin-left: 2.25rem;
+			margin-right: 2.25rem;
 		}
 
 		@include desktop{

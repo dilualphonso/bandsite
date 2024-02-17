@@ -65,8 +65,30 @@ a {
   background-color: #323232;
   margin: 0 auto;
 }
+@media screen and (min-width: 1280px) {
+  .footer {
+    margin-top: 1rem;
+  }
+}
 .footer__container {
   margin: 0 1rem;
+}
+@media (min-width: 768px) {
+  .footer__container {
+    margin-left: 2.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 2.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+  }
 }
 .footer__title {
   font-size: 1.5rem;
@@ -77,19 +99,115 @@ a {
   margin: 0;
   padding: 3rem 0 1.5rem 0;
 }
+@media (min-width: 768px) {
+  .footer__title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    font-family: MyAvenir;
+    line-height: 2.75rem;
+    padding: 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    font-family: MyAvenir;
+    line-height: 2.75rem;
+    padding: 3rem 1rem 2.25rem 2rem;
+    font-size: 2.25rem;
+  }
+}
 .footer__tabletlogo {
   display: none;
 }
+@media (min-width: 768px) {
+  .footer__tabletlogo {
+    min-height: 10rem;
+    display: unset;
+    padding-right: 3rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__tabletlogo {
+    padding-right: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .footer__logoimg {
+    max-width: 25rem;
+    padding-top: 1.5rem;
+    margin-top: 3rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__logoimg {
+    box-sizing: content-box;
+    max-width: 25rem;
+    height: 1.5rem;
+    padding-top: 0.9rem;
+    padding-right: 2rem;
+  }
+}
 
+@media (min-width: 768px) {
+  .logo {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .social {
+    padding-top: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .social {
+    padding-top: 1.5rem;
+  }
+}
 .social__icons img {
   width: 3rem;
   height: 3rem;
   margin-left: 0;
   padding: 0 0 1rem 0;
 }
+@media (min-width: 768px) {
+  .social__icons img {
+    width: 3rem;
+    height: 3rem;
+    padding: 0 0 1rem;
+    margin-right: 1rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .social__icons img {
+    width: 3rem;
+    height: 3rem;
+    margin-left: 1.5ren;
+    padding: 0 0 1rem;
+    margin-right: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .social__icons {
+    padding-right: 3rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .social__icons {
+    padding-right: 31rem;
+  }
+}
 
 .address {
   color: #FFFFFF;
+}
+@media screen and (min-width: 1280px) {
+  .address {
+    margin-left: 3rem;
+  }
 }
 .address__name {
   font-size: 0.813rem;
@@ -99,12 +217,45 @@ a {
   margin: 0;
   padding: 1rem 0 0 1rem;
 }
+@media (min-width: 768px) {
+  .address__name {
+    font-size: 0.875rem;
+    font-family: AvnirmyFontRegular;
+    line-height: 1.25rem;
+    font-weight: 400;
+    padding-bottom: 1rem;
+    padding-top: 0rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .address__name {
+    font-size: 0.875rem;
+    font-family: AvnirmyFontRegular;
+    line-height: 1.25rem;
+    font-weight: 400;
+    padding-bottom: 1rem;
+  }
+}
 .address__details {
   font-size: 0.813rem;
   font-family: MyAvenir;
   line-height: 1.125rem;
   font-weight: 400;
   padding: 0rem 0 0 1rem;
+}
+@media (min-width: 768px) {
+  .address__email {
+    padding-top: 1.5rem;
+    font-size: 0.875rem;
+    font-family: AvnirmyFontRegular;
+    line-height: 1.25rem;
+    font-weight: 400;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .address__email {
+    padding-top: 1.5rem;
+  }
 }
 
 .artist {
@@ -118,6 +269,24 @@ a {
   margin: 0;
   padding: 1rem 0 0 1rem;
 }
+@media (min-width: 768px) {
+  .artist__title {
+    font-size: 0.875rem;
+    font-family: AvnirmyFontRegular;
+    line-height: 1.25rem;
+    font-weight: 400;
+    padding-bottom: 1rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .artist__title {
+    font-size: 0.875rem;
+    font-family: AvnirmyFontRegular;
+    line-height: 1.25rem;
+    font-weight: 400;
+    padding-bottom: 1rem;
+  }
+}
 .artist__details {
   font-size: 0.813rem;
   font-family: MyAvenir;
@@ -125,9 +294,54 @@ a {
   font-weight: 400;
   padding: 0rem 0 1rem 1rem;
 }
+@media (min-width: 768px) {
+  .artist__link {
+    padding-top: 1.5rem;
+    font-size: 0.875rem;
+    font-family: AvnirmyFontRegular;
+    line-height: 1.25rem;
+    font-weight: 400;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .artist__link {
+    padding-top: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .agents {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 2.5rem;
+    padding-left: 1.5rem;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .agents {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 1rem;
+    align-items: center;
+  }
+}
 
 .entertainment {
   color: #FFFFFF;
+}
+@media (min-width: 768px) {
+  .entertainment {
+    padding-right: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .entertainment {
+    margin-right: 28rem;
+    margin-left: 1rem;
+  }
 }
 .entertainment__title {
   font-size: 0.813rem;
@@ -137,6 +351,38 @@ a {
   margin: 0;
   padding: 0rem 0 0 1rem;
 }
+@media (min-width: 768px) {
+  .entertainment__title {
+    font-size: 0.875rem;
+    font-family: AvnirmyFontRegular;
+    line-height: 1.25rem;
+    font-weight: 400;
+    padding-bottom: 1rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .entertainment__title {
+    font-size: 0.875rem;
+    font-family: AvnirmyFontRegular;
+    line-height: 1.25rem;
+    font-weight: 400;
+    padding-bottom: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .entertainment__link {
+    padding-top: 1.5rem;
+    font-size: 0.875rem;
+    font-family: AvnirmyFontRegular;
+    line-height: 1.25rem;
+    font-weight: 400;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .entertainment__link {
+    padding-top: 1.5rem;
+  }
+}
 .entertainment__details {
   font-size: 0.813rem;
   font-family: MyAvenir;
@@ -145,9 +391,25 @@ a {
   padding: 0rem 0 0 1rem;
 }
 
+@media screen and (min-width: 1280px) {
+  .logo {
+    display: none;
+  }
+}
 .logo__img {
   width: 8rem;
   padding: 1.5rem 0 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .footerlogo {
+    display: none;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footerlogo {
+    display: none;
+  }
 }
 
 .copyright__sentence {
@@ -159,105 +421,7 @@ a {
   margin: 0;
   padding: 0.5rem 0 1.5rem 1rem;
 }
-
 @media (min-width: 768px) {
-  .footer__container {
-    margin-left: 2.25rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-right: 2.25rem;
-  }
-  .footer__title {
-    font-size: 2.25rem;
-    font-weight: 700;
-    font-family: MyAvenir;
-    line-height: 2.75rem;
-    padding: 0;
-  }
-  .footer__tabletlogo {
-    min-height: 10rem;
-    display: unset;
-  }
-  .footer__logoimg {
-    max-width: 25rem;
-    padding-top: 1.5rem;
-    margin-top: 3rem;
-  }
-  .logo {
-    display: none;
-  }
-}
-@media (min-width: 768px) {
-  .social {
-    padding-top: 1.5rem;
-    padding-right: 1.5rem;
-  }
-  .social__icons {
-    padding-right: 6rem;
-  }
-  .social__icons img {
-    width: 3rem;
-    height: 3rem;
-    padding: 0 0 1rem;
-    margin-right: 1rem;
-  }
-  .agents {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-right: 1.5rem;
-    padding-left: 1.5rem;
-    align-items: center;
-  }
-  .address__name {
-    font-size: 0.875rem;
-    font-family: AvnirmyFontRegular;
-    line-height: 1.25rem;
-    font-weight: 400;
-    padding-bottom: 1rem;
-  }
-  .address__email {
-    padding-top: 1.5rem;
-    font-size: 0.875rem;
-    font-family: AvnirmyFontRegular;
-    line-height: 1.25rem;
-    font-weight: 400;
-  }
-  .artist__title {
-    font-size: 0.875rem;
-    font-family: AvnirmyFontRegular;
-    line-height: 1.25rem;
-    font-weight: 400;
-    padding-bottom: 1rem;
-  }
-  .artist__link {
-    padding-top: 1.5rem;
-    font-size: 0.875rem;
-    font-family: AvnirmyFontRegular;
-    line-height: 1.25rem;
-    font-weight: 400;
-  }
-  .entertainment {
-    padding-right: 1rem;
-  }
-  .entertainment__title {
-    font-size: 0.875rem;
-    font-family: AvnirmyFontRegular;
-    line-height: 1.25rem;
-    font-weight: 400;
-    padding-bottom: 1rem;
-  }
-  .entertainment__link {
-    padding-top: 1.5rem;
-    font-size: 0.875rem;
-    font-family: AvnirmyFontRegular;
-    line-height: 1.25rem;
-    font-weight: 400;
-  }
-  .footerlogo {
-    display: none;
-  }
   .copyright__sentence {
     font-size: 0.875rem;
     font-family: AvnirmyFontRegular;
@@ -268,97 +432,6 @@ a {
   }
 }
 @media screen and (min-width: 1280px) {
-  .footer__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 1rem;
-  }
-  .footer__title {
-    font-size: 2.25rem;
-    font-weight: 700;
-    font-family: MyAvenir;
-    line-height: 2.75rem;
-    padding: 3rem 2.25rem 2.25rem 1.25rem;
-    font-size: 2.25rem;
-    margin-left: 2.25rem;
-  }
-  .footer__tabletlogo {
-    display: inline-block;
-  }
-  .footer__logoimg {
-    box-sizing: content-box;
-    max-width: 25rem;
-    height: 1.5rem;
-    padding-top: 0.9rem;
-    margin-right: 2rem;
-    padding-right: 3rem;
-  }
-  .logo {
-    display: none;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .social {
-    padding-top: 1.5rem;
-  }
-  .social__icons {
-    padding-right: 25rem;
-  }
-  .social__icons img {
-    width: 3rem;
-    height: 3rem;
-    margin-left: 1.5ren;
-    padding: 0 0 1rem;
-    margin-right: 1rem;
-  }
-  .agents {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-left: 1rem;
-    align-items: center;
-  }
-  .address {
-    margin-left: 3rem;
-  }
-  .address__name {
-    font-size: 0.875rem;
-    font-family: AvnirmyFontRegular;
-    line-height: 1.25rem;
-    font-weight: 400;
-    padding-bottom: 1rem;
-  }
-  .address__email {
-    padding-top: 1.5rem;
-  }
-  .artist__link {
-    padding-top: 1.5rem;
-  }
-  .artist__title {
-    font-size: 0.875rem;
-    font-family: AvnirmyFontRegular;
-    line-height: 1.25rem;
-    font-weight: 400;
-    padding-bottom: 1rem;
-  }
-  .entertainment {
-    margin-right: 28rem;
-    margin-left: 1rem;
-  }
-  .entertainment__title {
-    font-size: 0.875rem;
-    font-family: AvnirmyFontRegular;
-    line-height: 1.25rem;
-    font-weight: 400;
-    padding-bottom: 1rem;
-  }
-  .entertainment__link {
-    padding-top: 1.5rem;
-  }
-  .footerlogo {
-    display: none;
-  }
   .copyright__sentence {
     font-size: 0.875rem;
     font-family: AvnirmyFontRegular;
