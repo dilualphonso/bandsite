@@ -3,30 +3,84 @@
 @use './partials/color' as *;
 
 .header {
-	width: 100%;
-	background-color: $primary-Black;
-	margin: 0 auto;
+	// width: 100%;
+	// background-color: $primary-Black;
+	// margin: 0 auto;
 
-	&__logo-container {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
 
-	&__logo {
-		width: 7rem;
-		padding: 1rem 0;
-	}
 
-	&__menu {
-		list-style-type: none;
-		display: flex;
-		justify-content: space-around;
-		padding: 0;
-		margin-bottom: 0;
-		width: 100%;
+	// @include tablet{
+	// 	display: flex;
+	// 	flex-direction: row;
+	// 	align-items: center;
+	// }
+	// @include desktop{
+	// 	display: flex;
+	// 	flex-direction: row;
+	// 	width: 100%;
+	// }
 
-	}
+	// &__logo-container {
+	// 	display: flex;
+	// 	align-items: center;
+	// 	justify-content: center;
+	// 	@include tablet {
+
+	// 		margin-left: 2.25rem;
+	// 		padding-left: 0.5rem;
+	// 	}
+	// @include desktop{
+
+	// 		margin-left: 0rem;
+	// 		padding-left: 0rem;
+	// 		margin-right: 1rem;
+	// 	}
+	// }
+
+	// &__logo {
+	// 	width: 7rem;
+	// 	padding: 1rem 0;
+	// 	@include tablet {
+	// 		width: 7rem;
+
+	// 	}
+
+	// 	@include desktop {
+	// 		padding: 0 0 0 3.938rem;
+	// 		box-sizing: content-box;
+	// 	}
+	// }
+
+	// &__menu {
+	// 	list-style-type: none;
+	// 	display: flex;
+	// 	justify-content: space-around;
+	// 	padding: 0;
+	// 	margin-bottom: 0;
+	// 	width: 100%;
+
+	// 	@include tablet {
+	// 		width: 30%;
+	// 		align-items: center;
+	// 		margin-top: 0;
+	// 		margin-left:4rem;
+	// 		justify-content: center;
+	// 		padding-right: 2rem;
+	// 	}
+
+	// 	@include desktop {
+	// 		width: 25%;
+	// 		line-height: 5rem;
+	// 		align-items: center;
+	// 		//margin-bottom: 2rem;
+	// 		margin-left: 2rem;
+	// 		padding-left: 0;
+	// 		padding-top:0rem;
+	// 		padding-bottom:0rem ;
+	// 		margin-top: 0;
+	// 	}
+
+	// }
 
 	&__links {
 		text-align: center;
@@ -40,134 +94,97 @@
 			color: $primary-white;
 			border-bottom: 3px solid $primary-white;
 			font-weight: 700;
+
+
+			@include desktop {
+				border: none;
+			}
 		}
 
 		&--inactive {
 			color: $secondory-mercury;
 		}
-	}
 
-
-}
-
-//ending mobile view header and begining tabletview
-@include tablet {
-	.header {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-
-		&__logo-container {
-
-			margin-left: 1.5rem;
-			padding-left: 1.5rem;
-		}
-
-		&__logo {
-			width: 7rem;
-
-		}
-
-		&__links {
+		@include tablet {
 			width: 1vw;
 			height: 6rem;
 			position: relative;
 			top: 2.5rem;
 		}
 
-		&__menu {
-			width: 30%;
-			align-items: center;
-			margin-top: 0;
-			margin-left: 1.5rem;
-			justify-content: center;
-			padding-right: 2rem;
-		}
 
-		&__border-biography {
+		@include desktop {
+			height: 100%;
+			position: relative;
+			top: 2rem;
+			//padding-top: 2rem;
+			//align-items: center;
+			width: 100%;
+		}
+	}
+
+	&__border-biography {
+
+		@include tablet {
 			width: 4rem;
 			padding-left: 0;
+			margin-right: 2rem;
 			border-bottom: 2px solid $primary-white;
-		}
+			}
 
-		&__border-show {
-			padding-left: 1.5rem;
-			padding-right: 1.5rem;
-			margin-left: 1.5rem;
+		@include desktop {
+			width: 4rem;
+			padding-left: 0;
+			padding-bottom:3rem;
+			//margin-right: 3rem;
+			height: 100%;
+			border: none;
+			//margin-bottom: 1rem;
+
+			border-bottom: 2px solid $primary-white;
+			//bottom:1rem
+
 		}
 	}
-}
 
-//ending tablet view hearder , destop view starts
-@include desktop {
-	.header {
-		display: flex;
-		flex-direction: row;
-		width: 100%;
+	&__border-show {
 
-		&__logo-container {
+		@include tablet {
+			//padding-left: 1rem;
+			width: 3rem;
+			//padding-right: 1.5rem;
+			//padding-top: 0.25rem;
+			margin-left: 2rem;
 
-			margin-left: 1.5rem;
-			padding-left: 1.5rem;
 		}
 
-		&__logo {
-			padding: 0 0 0 3.938rem;
-			box-sizing: content-box;
-			width: 7rem;
-		}
+		@include desktop {
 
-		&__links {
-			// height: 100%;
-			// top: 0rem;
-			// align-items: center;
-			// width: 100%;
-			// justify-content: center;
 
-			width: 1vw;
-			//height: 5rem;
-			position: relative;
-			//top: 2rem;
-			padding-left: 4rem;
+			padding-bottom: 3rem;
+			// width: 4rem;
 
-			&--active {
-				padding-bottom: 1.25rem;
-			}
-
-			&--inactive {
-				padding-top: 1rem;
-			}
-		}
-
-		&__menu {
-			width: 20%;
-			height: 100%;
-			line-height: 5rem;
-			align-items: center;
-			margin-top: 0;
-		margin-left: 3.5rem;
-			padding-left: 0;
-		}
-
-		&__border-biography {
-			//width: 6rem;
-			padding-left: 0;
-			padding-top: 2rem;
-			//margin-right: 3.5rem;
-			height: 100%;
-		}
-
-		&__border-show {
-			//height: 100%;
-			padding-left: 0;
-			font-size: 1rem;
+			width: 3rem;
+			padding-left:0;
 			padding-right: 0rem;
-			margin-right: 4.5rem;
-			margin-left: 0rem;
-			padding-bottom: 1rem;
-		}
+			//padding-top: 0.5rem;
+			margin-right: 4rem;
+			height: 100%;
+			border: none;
+			margin-left: 0;
+			padding-right: 0rem;
+			//margin-bottom: 1rem;
+
+
+
 	}
+	}
+
+
+
 }
+
+
 
 //mobile view heroimage starts
 .heroimage {
@@ -180,6 +197,16 @@
 	padding-top: 0;
 	position: relative;
 	margin-inline: auto;
+
+	@include tablet{
+		height: 30rem;
+	}
+
+	@include desktop {
+		max-width: 100%;
+		height: 40rem;
+
+	}
 
 	&__overlay {
 		position: absolute;
@@ -195,6 +222,14 @@
 		align-items: center;
 		height: 27vh;
 		margin: 0 auto;
+
+		@include tablet {
+			min-height: 28rem;
+		}
+
+		@include desktop {
+			min-height: 100%;
+		}
 	}
 
 	&__title {
@@ -207,19 +242,8 @@
 		line-height: 2rem;
 		z-index: 1;
 		text-transform: capitalize;
-	}
-}
 
-//ending mobile view of hero image tablet view starts
-@include tablet {
-	.heroimage {
-		height: 30rem;
-
-		&__container {
-			min-height: 28rem;
-		}
-
-		&__title {
+		@include tablet {
 			font-family: Avnirbold;
 			font-size: 3.75rem;
 			font-weight: 700;
@@ -227,20 +251,8 @@
 			margin-left: 2.25rem;
 			padding: 0 1.5rem 0 0rem;
 		}
-	}
-}
 
-//end of tabview , starting of desktop view
-@include desktop {
-	.heroimage {
-		max-width: 100%;
-		height: 40rem;
-
-		&__container {
-			min-height: 100%;
-		}
-
-		&__title {
+	@include desktop {
 			font-family: Avnirbold;
 			padding: 0;
 			padding-left: 3rem;
@@ -251,13 +263,26 @@
 	}
 }
 
-//mobile view band starting
 .band {
 	&__title {
 		padding-left: 1rem;
 		@include mobilefontforh2;
 		padding-top: 1.5rem;
 		margin: 0 auto;
+
+	@include tablet{
+			@include des_tab_fontforh2;
+			padding: 3rem 2.25rem 2.25rem 0;
+			margin-left: 2.25rem;
+			max-width: 100%;
+		}
+
+		@include desktop{
+			@include des_tab_fontforh2;
+			padding: 3rem 0 2.25rem 3.938rem;
+			max-width: 100%;
+		}
+
 	}
 
 	&__img {
@@ -265,97 +290,76 @@
 		width: 100%;
 		padding: 1rem 1rem 0 1rem;
 		max-height: 35rem;
+		@include tablet {
+			padding: 0 3rem 0 3rem;
+			margin: 0 2.25rem 0 2.25rem;
+		}
+
+	@include desktop {
+			padding: 0 3.938rem 0 3.938rem;
+			margin: 0 5rem 0 0;
+		}
 	}
 
 	&__desc {
 		@include mobilefontforh3;
 		margin: 0;
 		line-height: 1.375rem;
+		@include tablet {
+			margin: 0 2.25rem;
+		}
+
+	@include desktop {
+			margin-right: 5rem;
+			margin-left: 5rem;
+		}
+
 	}
 
 	&__des1 {
 		padding: 1rem 1rem 0 1rem;
 		margin-top: 0;
 		margin-bottom: 0;
+	@include tablet {
+			padding: 2.25rem 2.25rem 0.5rem;
+			@include des_tab_fontforh3;
+		}
+
+		@include desktop {
+			padding: 2.25rem 3.938rem 0 3.938rem;
+			@include des_tab_fontforh3;
+		}
+
+
 	}
 
 	&__des2 {
 		padding: 0.5rem 1rem 0 1rem;
 		margin: 0;
-	}
-}
-
-// tablet view started for band
-@include tablet {
-	.band {
-		&__title {
-			@include des_tab_fontforh2;
-			padding: 3rem 2.25rem 2.25rem 0;
-			margin-left: 2.25rem;
-			max-width: 100%;
-		}
-
-		&__container {
-			margin-right: 2.25rem;
-			padding-right: 2.25rem;
-		}
-
-		&__img {
-			padding: 0 3rem 0 3rem;
-			margin: 0 2.25rem 0 2.25rem;
-		}
-
-		&__desc {
-			margin: 0 2.25rem;
-		}
-
-		&__des1 {
-			padding: 2.25rem 2.25rem 0.5rem;
-			@include des_tab_fontforh3;
-		}
-
-		&__des2 {
+		@include tablet {
 			padding: 0rem 2.25rem 0 2.25rem;
 			@include mobilefontforh3;
 			font-weight: 700;
 		}
-	}
-}
-
-//desktop band view finished
-@include desktop {
-	.band {
-		&__title {
-			@include des_tab_fontforh2;
-			padding: 3rem 0 2.25rem 3.938rem;
-			max-width: 100%;
-		}
-
-		&__container {
-			margin: 0 5rem;
-		}
-
-		&__img {
-			padding: 0 3.938rem 0 3.938rem;
-			margin: 0 5rem 0 0;
-		}
-
-		&__desc {
-			margin-right: 5rem;
-			margin-left: 5rem;
-		}
-
-		&__des1 {
-			padding: 2.25rem 3.938rem 0 3.938rem;
-			@include des_tab_fontforh3;
-		}
-
-		&__des2 {
+		@include desktop {
 			padding: 1rem 3.938rem 0 3.938rem;
 			@include des_tab_fontforh3;
 		}
 	}
+
+	&__container {
+
+		@include tablet{
+		margin-right: 2.25rem;
+		padding-right: 2.25rem;
+		}
+
+		@include desktop {
+			margin: 0 5rem;
+		}
+	}
 }
+
 
 //mobile view paragraph
 .paragraph {
@@ -369,27 +373,8 @@
 		margin-bottom: 0;
 		margin-top: 0;
 		text-transform: capitalize;
-	}
 
-	&__para1 {
-		@include mobilefontforbody;
-		padding: 1rem 1rem 0 1rem;
-		margin-bottom: 0;
-		margin-top: 0;
-	}
-
-	&__para2 {
-		@include mobilefontforbody;
-		padding: 1rem 1rem 0rem 1rem;
-		margin-bottom: 0;
-		margin-top: 0;
-	}
-}
-
-//tablet view paragraph
-@include tablet {
-	.paragraph {
-		&__title {
+		@include tablet {
 			padding: 3rem 2.25rem 0 2.25rem;
 			@include des_tab_fontforh3;
 			margin-left: 2.25rem;
@@ -397,58 +382,74 @@
 			margin-bottom: 0;
 		}
 
-		&__para {
-			display: flex;
-			gap: 2rem;
-			padding: 0 2.25rem 0 1.5rem;
-		}
-
-		&__para1 {
-			@include des_tab_fontforbody;
-			flex: 50%;
-			margin-left: 2.25rem;
-		}
-
-		&__para2 {
-			@include des_tab_fontforbody;
-			flex: 50%;
-			margin-right: 2.25rem;
-			padding-bottom: 2.25rem;
-		}
-	}
-}
-
-//desktop viewnparagraph
-@include desktop {
-	.paragraph {
-		&__title {
+		@include desktop {
 			@include des_tab_fontforh3;
 			padding: 3rem 3.938rem 0 3.938rem;
 			margin-bottom: 0;
 			margin-left: 5rem;
 		}
+	}
 
-		&__para {
+	&__para {
+		@include tablet {
+		display: flex;
+		gap: 2rem;
+		padding: 0 2.25rem 0 1.5rem;
+		}
+
+		@include desktop{
 			display: flex;
 			gap: 2rem;
 			padding: 2.25rem 3.938rem 2.5rem 3rem;
 			box-sizing: content-box;
 		}
+	}
 
-		&__para1 {
+
+	&__para1 {
+		@include mobilefontforbody;
+		padding: 1rem 1rem 0 1rem;
+		margin-bottom: 0;
+		margin-top: 0;
+
+	@include tablet {
+			@include des_tab_fontforbody;
+			flex: 50%;
+			margin-left: 2.25rem;
+		}
+
+		@include desktop {
 			flex: 50%;
 			margin-left: 5rem;
 			@include des_tab_fontforbody;
 			padding-top: 0rem;
 		}
+	}
 
-		&__para2 {
+	&__para2 {
+		@include mobilefontforbody;
+		padding: 0rem 1rem 0rem 1rem;
+		margin-bottom: 0;
+		margin-top: 0;
+
+		@include tablet {
+			@include des_tab_fontforbody;
+			flex: 50%;
+			margin-right: 2.25rem;
+			padding-bottom: 2.25rem;
+		}
+
+		@include desktop{
 			flex: 50%;
 			margin-right: 5rem;
 			@include des_tab_fontforbody;
 		}
 	}
 }
+
+
+
+
 
 //mobile view gallery
 .gallery {
@@ -464,64 +465,71 @@
 		padding-bottom: 1rem;
 		margin-top: 0;
 		margin-bottom: 0;
+
+		@include tablet{
+			@include des_tab_fontforh2;
+			margin: 0 2.25rem;
+			padding: 3rem 2.25rem 1.5rem 0rem;
+		}
+
+		@include desktop {
+
+				@include des_tab_fontforh2;
+				padding: 3rem 2.25rem 2.25rem 3.938rem;
+
+
+		}
 	}
 
-	&__photos img {
+	&__photos {
+
+		@include tablet{
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		justify-content: center;
+		padding-left: 0;
+		}
+
+		@include desktop {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+			justify-content: center;
+		}
+	}
+
+	&__picture {
 		box-sizing: border-box;
 		height: 50%;
 		width: 100%;
 		margin-bottom: 1rem;
 		padding-left: 1rem;
 		padding-right: 1rem;
-	}
-}
-
-// tablet view gallery
-@include tablet {
-	.gallery {
-		&__title {
-			@include des_tab_fontforh2;
-			margin: 0 2.25rem;
-			padding: 3rem 2.25rem 1.5rem 0rem;
-		}
-
-		&__photos {
-			display: flex;
-			flex-wrap: wrap;
-			flex-direction: row;
-			justify-content: center;
-			padding-left: 0;
-		}
-
-		&__photos img {
+		@include tablet {
 			max-height: 25%;
 			max-width: 30%;
 			margin: 0 0.5rem 1.5rem 0rem;
 		}
-	}
-}
 
-//desktop view gallery
-@include desktop {
-	.gallery {
-		&__title {
-			@include des_tab_fontforh2;
-			padding: 3rem 2.25rem 2.25rem 3.938rem;
-		}
-
-		&__photos {
-			display: flex;
-			flex-wrap: wrap;
-			flex-direction: row;
-			justify-content: center;
-		}
-
-		&__photos img {
+		@include desktop {
 			max-height: 14rem;
 			max-width: 24rem;
 			padding: 0 1.5rem 1.25rem 1rem;
 			gap: 1rem;
 		}
+	}
+}
+
+
+
+//desktop view gallery
+@include desktop {
+	.gallery {
+
+
+
+
 	}
 }
 

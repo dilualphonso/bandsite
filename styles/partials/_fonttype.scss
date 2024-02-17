@@ -1,20 +1,20 @@
 @font-face {
     font-family: MyAvenir;
-    src: url("/asset/fonts/AvenirNextLTProBold.ttf");
+    src: url("/asset/fonts/AvenirNextLTProBold.ttf") format("truetype");
     font-weight: 700;
 
 }
 
 @font-face {
     font-family: MyAvenir;
-    src: url("/asset/fonts/AvenirNextLTPro.ttf");
+    src: url("/asset/fonts/AvenirNextLTPro.ttf") format("truetype");;
     font-weight: 400;
 
 }
 
 @font-face {
     font-family:MyAvenir;
-    src: url("/asset/fonts/AvenirNextLTProDemi.ttf");
+    src: url("/asset/fonts/AvenirNextLTProDemi.ttf") format("truetype");;
     font-weight: 600;
 
 }

@@ -194,12 +194,12 @@ const messageArea = document.querySelector("comments__textarea");
 
  });
 
- const fullReviePage = document.querySelector('.comments__bottom')
+ const fullReviewPage = document.querySelector('.comments__bottom')
 
 
  function clearComment(){
-   while (fullReviePage.firstChild) {
-      fullReviePage.removeChild(fullReviePage.firstChild);
+   while (fullReviewPage.firstChild) {
+      fullReviewPage.removeChild(fullReviewPage.firstChild);
   }
 
  }
