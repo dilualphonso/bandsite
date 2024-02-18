@@ -1,688 +1,459 @@
-@use './partials/mixin' as *;
-@use './partials/fonttype' as *;
-@use './partials/color' as *;
-
+@use './partials/mixin'as *;
+@use './partials/fonttype'as *;
+@use './partials/color'as *;
 
 .header {
+    &__links {
+        text-align: center;
+        padding-bottom: 1rem;
+        width: 50vw;
+        margin: 0 0rem 0 0;
+        @include mobile-font-body;
 
+        &--active {
+            color: $primary-white;
+            border-bottom: 3px solid $primary-white;
+            font-weight: 700;
 
-	&__links {
-		text-align: center;
-		padding-bottom: 1rem;
-		width: 50vw;
-		margin: 0 0rem 0 0;
-		@include mobilefontforbody;
+            @include desktop {
+                border: none;
+            }
+        }
 
+        &--inactive {
+            color: $secondory-mercury;
+        }
 
+        @include tablet {
+            width: 1vw;
+            height: 6rem;
+            position: relative;
+            top: 2.5rem;
+        }
 
-&--active {
-			color: $primary-white;
-			border-bottom: 3px solid $primary-white;
-			font-weight: 700;
+        @include desktop {
+            height: 100%;
+            top: 2rem;
+            width: 100%;
+        }
+    }
 
-			@include desktop {
-				border: none;
-			}
-		}
+    &__border-biography {
+        @include tablet {
+            width: 4rem;
+            padding-left: 0;
+            margin-right: 2rem;
+        }
 
-		&--inactive {
-			color: $secondory-mercury;
+        @include desktop {
+            padding-bottom: 3rem;
+            height: 100%;
+            border: none;
+        }
+    }
 
-		}
+    &__border-show {
+        @include tablet {
+            width: 3rem;
+            padding-top: 0.25rem;
+            margin-left: 2rem;
+            border-bottom: 2px solid $primary-white;
+        }
 
-		@include tablet {
-			width: 1vw;
-			height: 6rem;
-			position: relative;
-			top: 2.5rem;
-		}
-
-		@include desktop {
-			height: 100%;
-			position: relative;
-			top: 2rem;
-			//padding-top: 2rem;
-			//align-items: center;
-			width: 100%;
-		}
-
-	}
-
-	&__border-biography {
-		@include tablet {
-		width: 4rem;
-		padding-left: 0;
-		margin-right: 2rem;
-		}
-
-		@include desktop {
-			width: 4rem;
-			padding-left: 0;
-			padding-bottom:3rem;
-			//margin-right: 3rem;
-			height: 100%;
-			border: none;
-			//margin-bottom: 1rem;
-
-
-			//bottom:1rem
-
-		}
-
-	}
-
-	&__border-show {
-		@include tablet {
-		//padding-left: 1rem;
-		width: 3rem;
-		//padding-right: 1.5rem;
-		padding-top: 0.25rem;
-		margin-left: 2rem;
-		border-bottom: 2px solid $primary-white;
-	}
-
-	@include desktop {
-
-
-			padding-bottom: 3rem;
-			// width: 4rem;
-
-			width: 3rem;
-			padding-left:0;
-			padding-right: 0rem;
-			//padding-top: 0.5rem;
-			margin-right: 4rem;
-			height: 100%;
-			border: none;
-			margin-left: 0;
-			padding-right: 0rem;
-			//margin-bottom: 1rem;
-
-			border-bottom: 2px solid $primary-white;
-
-
-	}
-
-	}
+        @include desktop {
+            padding-bottom: 3rem;
+            width: 3rem;
+            padding-left: 0;
+            padding-right: 0rem;
+            margin-right: 4rem;
+            height: 100%;
+            margin-left: 0;
+            padding-right: 0rem;
+        }
+    }
 }
-
-//ending mobile view header and begining tabletview
-
-//ending tablet view hearder , destop view starts
-
-
 
 .heroimage {
-	background-image: url("/asset/images/hero-shows.jpg");
+    background-image: url("/asset/images/hero-shows.jpg");
+    min-width: 100%;
+    height: 73vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 0;
+    position: relative;
+    margin-inline: auto;
 
-	min-width: 100%;
-	height: 73vh;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	padding-top: 0;
-	position: relative;
-	margin-inline: auto;
+    @include tablet {
+        height: 30rem;
+    }
 
-	@include tablet {
-		height: 30rem;
-	}
+    &__overlay {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0%;
+        left: 0%;
+        background-color: rgba(32, 32, 32, 0.5);
+    }
 
+    &__container {
+        display: flex;
+        align-items: left;
+        flex-direction: column;
+        max-width: 100%;
+        height: 27vh;
+        text-transform: capitalize;
 
-	&__overlay {
-		position: absolute;
-		height: 100%;
-		width: 100%;
-		top: 0%;
-		left: 0%;
-		background-color: rgba(32, 32, 32, 0.5);
-	}
+        @include tablet {
+            min-height: 28rem;
+        }
 
-	&__container {
-		display: flex;
-		align-items: left;
-		flex-direction: column;
-		max-width: 100%;
-		height: 27vh;
+        @include desktop {
+            flex-direction: row;
+            align-items: center;
+        }
+    }
 
-		text-transform: capitalize;
-		//margin-right: 1rem;
+    &__subtitle {
+        @include mobile-font-h3;
+        font-weight: 600;
+        color: $primary-white;
+        text-align: left;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 2rem;
+        margin-top: 0;
+        margin-bottom: 1rem;
 
-		@include tablet {
-			min-height: 28rem;
-		}
+        @include tablet {
+            @include desktop-tablet-font-h3;
+            //margin-left: 2.25rem;
+            padding-left: 0.25rem;
+        }
 
-		@include desktop {
-			flex-direction: row;
-			//height: 10vh;
-			//justify-content: space-between;
-			align-items: center;
+        @include desktop {
+            padding-left: 3.938rem;
+            margin-left: 0;
+        }
+    }
 
+    &__title {
+        padding-left: 1rem;
+        padding-top: 1rem;
+        font-family: "MyAvenir";
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: $primary-white;
+        line-height: 2rem;
+        z-index: 1;
+        text-align: left;
+        margin-top: 0;
+        margin-bottom: 1rem;
+        margin-right: 1rem;
 
-		}
+        @include tablet {
+            font-family: "MyAvenir";
+            font-size: 3.75rem;
+            font-weight: 700;
+            line-height: 4.25rem;
+            padding-left: 0;
+            margin-right: 5.25rem;
+        }
 
+        @include desktop {
+            padding-left: 3.938rem;
+            margin: 0;
+        }
+    }
 
-	}
+    &__titles {
+        @include tablet {
+            margin-left: 2.25rem;
+            padding-left: 0;
+        }
 
-	&__subtitle {
-		@include mobilefontforh3;
-		color: $primary-white;
-		text-align: left;
-		padding-left: 1rem;
-		padding-right: 1rem;
-		padding-top: 2rem;
+        @include desktop {
+            margin-right: 3rem;
+            width: 50%;
+            margin-left: 0;
+            padding-bottom: 5rem;
+        }
+    }
 
+    &__audio {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        border-radius: 0.5rem;
 
-		margin-top: 0;
-		margin-bottom: 1rem;
+        @include tablet {
+            width: 50%;
+            margin-left: 2.25rem;
+        }
 
-		@include tablet {
-			@include des_tab_fontforh3;
-			//margin-left: 2.25rem;
-			padding-left: 0.25rem;
-		}
-
-		@include desktop {
-			@include des_tab_fontforh3;
-			padding-left: 3.938rem;
-			margin-left: 0;
-		}
-
-	}
-
-	&__title {
-		padding-left: 1rem;
-
-		padding-top: 1rem;
-
-
-		font-family: Avnirbold;
-		font-size: 1.5rem;
-		font-weight: 700;
-		color: $primary-white;
-		line-height: 2rem;
-		z-index: 1;
-		text-align: left;
-		margin-top: 0;
-		margin-bottom: 1rem;
-		margin-right: 1rem;
-
-		@include tablet {
-			font-family: Avnirbold;
-			font-size: 3.75rem;
-			font-weight: 700;
-			line-height: 4.25rem;
-			//margin-left: 2.25rem;
-			//padding: 0 1.5rem 0 0rem;
-padding-left: 0;
-			margin-right: 5.25rem;
-		}
-
-		@include desktop {
-			font-family: Avnirbold;
-
-			padding-left: 3.938rem;
-			font-size: 3.75rem;
-			line-height: 4.25rem;
-			margin: 0;
-
-		}
-	}
-
-	&__titles{
-		@include tablet{
-			margin-left: 2.25rem;
-			padding-left: 0;
-		}
-
-
-		@include desktop{
-			margin-right: 3rem;
-			width: 50%;
-			//padding-left: 3.938rem;
-			margin-left: 0;
-			padding-bottom: 5rem;
-
-
-		}
-	}
-
-	&__audio {
-
-
-		margin-left: 1rem;
-		margin-right: 1rem;
-
-		//padding-right: 1rem;
-		margin-top: 1rem;
-		margin-bottom: 1rem;
-
-
-		border-radius: 0.5rem;
-		//width: 100%;
-
-
-		@include tablet {
-			width: 50%;
-			margin-left: 2.25rem;
-
-
-		}
-
-		@include desktop {
-			width: 50%;
-			height: 10rem;
-			//margin-left: 2rem;
-			margin-right: 0rem;
-			padding-right: 3.938rem;
-		}
-	}
+        @include desktop {
+            height: 10rem;
+            margin-right: 0rem;
+            padding-right: 3.938rem;
+        }
+    }
 }
 
-
 .shows {
-	@include desktop {
+    @include desktop {
+        display: flex;
+    }
 
-		display: flex;
+    &__title {
+        @include mobile-font-h2;
+        margin-left: 1rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1rem;
+        margin-top: 0rem;
+        margin-bottom: 0;
 
+        @include tablet {
+            margin-left: 2.25rem;
+            @include desktop-tablet-font-h2;
+        }
 
-	}
+        @include desktop {
+            padding-left: 3rem;
+        }
+    }
 
+    &__header {
+        display: none;
 
-	&__title {
+        @include tablet {
+            display: flex;
+            margin-left: 2.25rem;
+            justify-content: space-between;
+            color: $primary_silver;
+            @include mobile-font-body;
+            text-transform: uppercase;
+            padding-bottom: 0.25rem;
+            padding-top: 1rem;
+            font-family: 600;
+        }
+    }
 
-		@include mobilefontforh2;
-		margin-left: 1rem;
-		padding-top: 1.5rem;
-		padding-bottom: 1rem;
-		margin-top: 0rem;
-		margin-bottom: 0;
-
-		@include tablet {
-			margin-left: 2.25rem;
-			@include des_tab_fontforh2;
-		}
-
-		@include desktop {
-			//margin-left: 3rem;
-			padding-left: 3rem;
-		}
-
-
-	}
-
-	&__header {
-		display: none;
-
-		@include tablet {
-			display: flex;
-			margin-left: 2.5rem;
-			justify-content: space-between;
-
-			color: $primary_silver;
-
-			@include mobilefontforbody;
-			text-transform: uppercase;
-			padding-bottom: 0.25rem;
-			padding-top: 1rem;
-			font-family: 600;
-		}
-
-		@include desktop {
-			display: flex;
-			margin-left: 2.5rem;
-			justify-content: space-between;
-
-			color: $primary_silver;
-
-			@include mobilefontforbody;
-			text-transform: uppercase;
-			padding-bottom: 0.25rem;
-			padding-top: 1rem;
-			font-family: 600;
-		}
-
-	}
-
-
-&__heading-venue {
-
-
-		@include tablet {
-			margin-right: 0rem;
-			//margin-left: 3rem;
-
-		}
+    &__heading-venue {
+        @include tablet {
+            margin-right: 3rem;
+            margin-left: 1rem;
+        }
 		@include desktop{
-			//margin-left: 2rem;
-		}
-	}
-
-
-		&__heading-date {
-
-			@include tablet {
-				min-width: 5rem;
-				margin-left: 0;
-				//padding-left: 1rem;
-
-			}
-		}
-
-		&__heading-location {
-
-			@include tablet {
-				min-width: 5rem;
-				//padding-right: 1rem;
-				margin-bottom: 1rem;
 			margin-left: 2rem;
 
-
-			}
-
-			@include desktop {
-				//margin-right: 3rem;
-
-			}
-
-
 		}
-
-		&__heading-element {
-			min-width: 10rem;
-			margin-right: 3rem;
-
-			@include desktop{
-				min-width: 23rem;
-
-
-			}
-
-
-		}
-
-
-
-	&__container {
-
-		margin-left: 0rem;
-		margin-right: 1rem;
-		margin-bottom: 1rem;
-
-		@include tablet {
-			height: 100%;
-			margin-bottom: 0;
-
-		}
-
-
-		@include desktop {
-
-
-			margin-left: 10rem;
-margin-top: 0;
-margin-bottom: 0;
-height: 0.5rem;
-align-items: center;
-		}
-
-
-	}
-
-
-	&__lists {
-		padding-left: 0rem;
-		padding-top: 0rem;
-
-		@include mobilefontforh3;
-		list-style: none;
-		margin-top: 0;
-
-
-		@include tablet {
-			@include des_tab_fontforbody;
-
-
-
-		}
-
-
-	}
-
-
-	&__subtitle {
-
-		color: $primary_silver;
-
-		@include mobilefontforbody;
-		text-transform: uppercase;
-		padding-bottom: 0.25rem;
-		//padding-top: 1rem;
-
-		@include tablet {
-			display: none;
-		}
-
-		@include desktop {
-			display: none;
-		}
-
-
-	}
-
-
-	&__button {
-
-
-		color: $primary-white;
-		background-color: $primary-Black;
-
-		margin-right: 0rem;
-
-		padding: 1rem;
-
-
-		@include mobilefontforh3;
-
-
-		height: 3rem;
-		width: 100%;
-		text-transform: uppercase;
-
-		border: none;
-		border-radius: 0.5rem;
-		word-spacing: 0.2rem;
-		cursor: inherit;
-
-
-		@include tablet {
-			width: 10rem;
-			align-items: right;
-			margin-right: 2.25rem;
-
-			margin-top: 0.5rem;
-		}
-
-		@include desktop {
-			width: 10rem;
-			height: 3rem;
-			//margin-bottom: 1rem;
-			margin-top: 0rem
-
-
-
-		}
-
-	}
-
-
-	&__date {
-
-		margin-top: 0;
-
-
-		@include mobilefontforh3;
-		font-weight: 700;
-
-		@include tablet {
-
-			//margin-left: 2.25rem;
-
-
-			min-width: 10rem;
-			//padding-bottom: 0.5rem;
-			@include des_tab_fontforbody;
-			font-weight: 600;
-
-		}
-
-		@include desktop{
-			padding-bottom: 0rem;
-		}
-	}
-
-
-	&__venue {
-
-		@include mobilefontforh3;
-		color: $primary-Black;
-		margin-top: 0;
-
-		@include tablet {
-
-			//margin-left: 1.5rem;
-			//padding-bottom: 0.5rem;
-			min-width: 10rem;
-			@include des_tab_fontforbody;
-
-
-		}
-		@include desktop{
-			padding-bottom: 0rem;
-		}
-
-	}
-
-
-	&__location {
-
-		@include mobilefontforh3;
-		color: $primary-Black;
-		margin-top: 0;
-
-		@include tablet {
-
-			min-width: 10rem;
-			//padding-bottom: 0.5rem;
-			@include des_tab_fontforbody;
-
-		}
-
-		@include desktop {
-			margin-right: 4rem;
-			padding-bottom: 0rem;
-		}
-
-
-	}
-
-
-	&__divider {
-
-		border-top: 1px solid $secondory-mercury;
-
-
-		//margin-right: 1rem;
-		//margin-left: 1rem;
-		margin-top: 1rem;
-		margin-bottom: 0rem;
-		@include tablet {
-			margin-left: 2.25rem;
-			margin-right: 2.25rem;
-		}
-
-		@include desktop{
-
-			margin-top: 0.5rem;
-			margin-right: 12rem;
-
-		}
-	}
-
-
-	&__wrapper {
-
-		//width: 100%;
-		margin-left: 1rem;
-		margin-right: 1rem;
-
-
-		@include tablet {
-			display: flex;
-			flex-direction: row;
-			justify-content: space-between;
-
-			align-items: center;
-
-			text-align: justify;
-
-			align-items: flex-end;
-		margin-left: 2.25rem;
-		margin-right: 2.25rem;
-		//height: 100%;
-		}
-
-		@include desktop {
-			display: flex;
-			flex-direction: row;
-			justify-content: space-between;
+    }
+
+    &__heading-date {
+        @include tablet {
+            min-width: 5rem;
+            margin-left: 0;
+        }
+    }
+
+    &__heading-location {
+        @include tablet {
+            min-width: 5rem;
+            margin-bottom: 1rem;
+        }
+
+        @include desktop {
+            margin-left: 1rem;
+        }
+    }
+
+    &__heading-element {
+        min-width: 10rem;
+        margin-right: 5rem;
+
+        @include desktop {
+            min-width: 23rem;
+        }
+    }
+
+    &__container {
+        margin-left: 0rem;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+
+        @include tablet {
+            height: 100%;
+            margin-bottom: 0;
+        }
+
+        @include desktop {
+            margin-left: 10rem;
+            margin-top: 0;
+            height: 0.5rem;
+            align-items: center;
+        }
+    }
+
+    &__lists {
+        padding-left: 0rem;
+        padding-top: 0rem;
+        @include mobile-font-h3;
+        list-style: none;
+        margin-top: 0;
+
+        @include tablet {
+            @include desktop-tablet-font-body;
+        }
+    }
+
+    &__subtitle {
+        color: $primary_silver;
+        @include mobile-font-body;
+        text-transform: uppercase;
+        padding-bottom: 0.25rem;
+
+        @include tablet {
+            display: none;
+        }
+
+        @include desktop {
+            display: none;
+        }
+    }
+
+    &__button {
+        color: $primary-white;
+        background-color: $primary-Black;
+        margin-right: 0rem;
+        padding: 1rem;
+        @include mobile-font-h3;
+        height: 3rem;
+        width: 100%;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 0.5rem;
+        word-spacing: 0.2rem;
+        cursor: inherit;
+
+        @include tablet {
+            width: 10rem;
+            align-items: right;
+            margin-right: 2.25rem;
+            margin-top: 0.5rem;
+        }
+
+        @include desktop {
+            height: 3rem;
+            margin-top: 0rem
+        }
+    }
+
+    &__date {
+        margin-top: 0;
+        @include mobile-font-h3;
+
+        @include tablet {
+            min-width: 10rem;
+            @include desktop-tablet-font-body;
+            font-weight: 600;
+        }
+
+        @include desktop {
+            padding-bottom: 0rem;
+        }
+    }
+
+    &__venue {
+        @include mobile-font-h3;
+        color: $primary-Black;
+        margin-top: 0;
+
+        @include tablet {
+            min-width: 10rem;
+            @include desktop-tablet-font-body;
+        }
+
+        @include desktop {
+            padding-bottom: 0rem;
+        }
+    }
+
+    &__location {
+        @include mobile-font-h3;
+        color: $primary-Black;
+        margin-top: 0;
+
+        @include tablet {
+            min-width: 10rem;
+            @include desktop-tablet-font-body;
+        }
+
+        @include desktop {
+            margin-right: 4rem;
+            padding-bottom: 0rem;
+        }
+    }
+
+    &__divider {
+        border-top: 1px solid $secondory-mercury;
+        margin-top: 1rem;
+        margin-bottom: 0rem;
+
+        @include tablet {
+            margin-left: 2.25rem;
+            margin-right: 2.25rem;
+        }
+
+        @include desktop {
+            margin-top: 0.5rem;
+            margin-right: 12rem;
+        }
+    }
+
+    &__wrapper {
+        margin-left: 1rem;
+        margin-right: 1rem;
+
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            text-align: justify;
+            align-items: flex-end;
+            margin-left: 2.25rem;
+            margin-right: 2.25rem;
+        }
+
+        @include desktop {
             margin-right: 10rem;
+        }
+    }
 
-		}
+    &__show {
+        width: 100%;
+        cursor: pointer;
+        margin-top: 0;
+        padding-bottom: 0;
 
+        &--selected {
+            background-color: $secondory-mercury;
+        }
 
-	}
+        @include desktop {
+            &:not(&--selected):hover {
+                background-color: $background_alabaster;
+                margin-bottom: 1rem;
+            }
+        }
+    }
 
-
-	&__show {
-
-		width: 100%;
-		cursor: pointer;
-
-
-		margin-top: 0;
-		padding-bottom: 0;
-
-		&--selected {
-			background-color: $secondory-mercury;
-
-
-		}
-
-
-		@include desktop {
-			&:not(&--selected):hover {
-				background-color: $background_alabaster;
-
-				margin-bottom: 1rem;
-
-
-
-			}
-
-
-		}
-
-
-	}
-
-	&__main {
-
-		@include desktop{
-			margin-left: 18rem;
-			margin-right: 2rem;
-		}
-	}
-
-
+    &__main {
+        @include desktop {
+            margin-left: 18rem;
+            margin-right: 2rem;
+        }
+    }
 }

@@ -1,15 +1,15 @@
 @font-face {
-  font-family: MyAvenir;
+  font-family: "MyAvenir";
   src: url("/asset/fonts/AvenirNextLTProBold.ttf") format("truetype");
   font-weight: 700;
 }
 @font-face {
-  font-family: MyAvenir;
+  font-family: "MyAvenir";
   src: url("/asset/fonts/AvenirNextLTPro.ttf") format("truetype");
   font-weight: 400;
 }
 @font-face {
-  font-family: MyAvenir;
+  font-family: "MyAvenir";
   src: url("/asset/fonts/AvenirNextLTProDemi.ttf") format("truetype");
   font-weight: 600;
 }
@@ -19,7 +19,7 @@
   width: 50vw;
   margin: 0 0rem 0 0;
   font-size: 0.813rem;
-  font-family: MyAvenir;
+  font-family: "MyAvenir";
   line-height: 1.125rem;
   font-weight: 400;
 }
@@ -47,7 +47,6 @@
 @media screen and (min-width: 1280px) {
   .header__links {
     height: 100%;
-    position: relative;
     top: 2rem;
     width: 100%;
   }
@@ -61,8 +60,6 @@
 }
 @media screen and (min-width: 1280px) {
   .header__border-biography {
-    width: 4rem;
-    padding-left: 0;
     padding-bottom: 3rem;
     height: 100%;
     border: none;
@@ -84,10 +81,8 @@
     padding-right: 0rem;
     margin-right: 4rem;
     height: 100%;
-    border: none;
     margin-left: 0;
     padding-right: 0rem;
-    border-bottom: 2px solid #FFFFFF;
   }
 }
 
@@ -137,8 +132,9 @@
 .heroimage__subtitle {
   font-size: 0.875rem;
   font-weight: 600;
-  font-family: MyAvenir;
+  font-family: "MyAvenir";
   line-height: 1.375rem;
+  font-weight: 600;
   color: #FFFFFF;
   text-align: left;
   padding-left: 1rem;
@@ -151,17 +147,13 @@
   .heroimage__subtitle {
     font-size: 1.5rem;
     font-weight: 600;
-    font-family: AvnirmyFontDemi;
+    font-family: "MyAvenir";
     line-height: 2rem;
     padding-left: 0.25rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .heroimage__subtitle {
-    font-size: 1.5rem;
-    font-weight: 600;
-    font-family: AvnirmyFontDemi;
-    line-height: 2rem;
     padding-left: 3.938rem;
     margin-left: 0;
   }
@@ -169,7 +161,7 @@
 .heroimage__title {
   padding-left: 1rem;
   padding-top: 1rem;
-  font-family: Avnirbold;
+  font-family: "MyAvenir";
   font-size: 1.5rem;
   font-weight: 700;
   color: #FFFFFF;
@@ -182,7 +174,7 @@
 }
 @media (min-width: 768px) {
   .heroimage__title {
-    font-family: Avnirbold;
+    font-family: "MyAvenir";
     font-size: 3.75rem;
     font-weight: 700;
     line-height: 4.25rem;
@@ -192,10 +184,7 @@
 }
 @media screen and (min-width: 1280px) {
   .heroimage__title {
-    font-family: Avnirbold;
     padding-left: 3.938rem;
-    font-size: 3.75rem;
-    line-height: 4.25rem;
     margin: 0;
   }
 }
@@ -228,7 +217,6 @@
 }
 @media screen and (min-width: 1280px) {
   .heroimage__audio {
-    width: 50%;
     height: 10rem;
     margin-right: 0rem;
     padding-right: 3.938rem;
@@ -243,7 +231,7 @@
 .shows__title {
   font-size: 1.5rem;
   font-weight: 700;
-  font-family: MyAvenir;
+  font-family: "MyAvenir";
   line-height: 2rem;
   margin-left: 1rem;
   padding-top: 1.5rem;
@@ -256,7 +244,7 @@
     margin-left: 2.25rem;
     font-size: 2.25rem;
     font-weight: 700;
-    font-family: MyAvenir;
+    font-family: "MyAvenir";
     line-height: 2.75rem;
   }
 }
@@ -271,27 +259,11 @@
 @media (min-width: 768px) {
   .shows__header {
     display: flex;
-    margin-left: 2.5rem;
+    margin-left: 2.25rem;
     justify-content: space-between;
     color: #AFAFAF;
     font-size: 0.813rem;
-    font-family: MyAvenir;
-    line-height: 1.125rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    padding-bottom: 0.25rem;
-    padding-top: 1rem;
-    font-family: 600;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .shows__header {
-    display: flex;
-    margin-left: 2.5rem;
-    justify-content: space-between;
-    color: #AFAFAF;
-    font-size: 0.813rem;
-    font-family: MyAvenir;
+    font-family: "MyAvenir";
     line-height: 1.125rem;
     font-weight: 400;
     text-transform: uppercase;
@@ -302,7 +274,13 @@
 }
 @media (min-width: 768px) {
   .shows__heading-venue {
-    margin-right: 0rem;
+    margin-right: 3rem;
+    margin-left: 1rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows__heading-venue {
+    margin-left: 2rem;
   }
 }
 @media (min-width: 768px) {
@@ -315,12 +293,16 @@
   .shows__heading-location {
     min-width: 5rem;
     margin-bottom: 1rem;
-    margin-left: 2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows__heading-location {
+    margin-left: 1rem;
   }
 }
 .shows__heading-element {
   min-width: 10rem;
-  margin-right: 3rem;
+  margin-right: 5rem;
 }
 @media screen and (min-width: 1280px) {
   .shows__heading-element {
@@ -342,7 +324,6 @@
   .shows__container {
     margin-left: 10rem;
     margin-top: 0;
-    margin-bottom: 0;
     height: 0.5rem;
     align-items: center;
   }
@@ -352,7 +333,7 @@
   padding-top: 0rem;
   font-size: 0.875rem;
   font-weight: 600;
-  font-family: MyAvenir;
+  font-family: "MyAvenir";
   line-height: 1.375rem;
   list-style: none;
   margin-top: 0;
@@ -360,7 +341,7 @@
 @media (min-width: 768px) {
   .shows__lists {
     font-size: 0.875rem;
-    font-family: AvnirmyFontRegular;
+    font-family: "MyAvenir";
     line-height: 1.375rem;
     font-weight: 400;
   }
@@ -368,7 +349,7 @@
 .shows__subtitle {
   color: #AFAFAF;
   font-size: 0.813rem;
-  font-family: MyAvenir;
+  font-family: "MyAvenir";
   line-height: 1.125rem;
   font-weight: 400;
   text-transform: uppercase;
@@ -391,7 +372,7 @@
   padding: 1rem;
   font-size: 0.875rem;
   font-weight: 600;
-  font-family: MyAvenir;
+  font-family: "MyAvenir";
   line-height: 1.375rem;
   height: 3rem;
   width: 100%;
@@ -411,7 +392,6 @@
 }
 @media screen and (min-width: 1280px) {
   .shows__button {
-    width: 10rem;
     height: 3rem;
     margin-top: 0rem;
   }
@@ -420,15 +400,14 @@
   margin-top: 0;
   font-size: 0.875rem;
   font-weight: 600;
-  font-family: MyAvenir;
+  font-family: "MyAvenir";
   line-height: 1.375rem;
-  font-weight: 700;
 }
 @media (min-width: 768px) {
   .shows__date {
     min-width: 10rem;
     font-size: 0.875rem;
-    font-family: AvnirmyFontRegular;
+    font-family: "MyAvenir";
     line-height: 1.375rem;
     font-weight: 400;
     font-weight: 600;
@@ -442,7 +421,7 @@
 .shows__venue {
   font-size: 0.875rem;
   font-weight: 600;
-  font-family: MyAvenir;
+  font-family: "MyAvenir";
   line-height: 1.375rem;
   color: #323232;
   margin-top: 0;
@@ -451,7 +430,7 @@
   .shows__venue {
     min-width: 10rem;
     font-size: 0.875rem;
-    font-family: AvnirmyFontRegular;
+    font-family: "MyAvenir";
     line-height: 1.375rem;
     font-weight: 400;
   }
@@ -464,7 +443,7 @@
 .shows__location {
   font-size: 0.875rem;
   font-weight: 600;
-  font-family: MyAvenir;
+  font-family: "MyAvenir";
   line-height: 1.375rem;
   color: #323232;
   margin-top: 0;
@@ -473,7 +452,7 @@
   .shows__location {
     min-width: 10rem;
     font-size: 0.875rem;
-    font-family: AvnirmyFontRegular;
+    font-family: "MyAvenir";
     line-height: 1.375rem;
     font-weight: 400;
   }
@@ -519,9 +498,6 @@
 }
 @media screen and (min-width: 1280px) {
   .shows__wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     margin-right: 10rem;
   }
 }

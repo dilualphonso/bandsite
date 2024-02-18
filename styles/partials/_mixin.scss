@@ -26,55 +26,55 @@ $breakpoint_desktop:1280px;
 
 }
 
-@mixin mobilefontforh2{
+@mixin mobile-font-h2{
   font-size: 1.5rem;
   font-weight: 700;
-    font-family: MyAvenir;
+    font-family: "MyAvenir";
     line-height: 2rem;
 
 }
 
-@mixin mobilefontforh3{
+@mixin mobile-font-h3{
   font-size: 0.875rem;
   font-weight: 600;
-    font-family: MyAvenir;
+    font-family: "MyAvenir";
     line-height: 1.375rem;
 
 }
 
-@mixin mobilefontforbody{
+@mixin mobile-font-body{
   font-size: 0.813rem;
-  font-family: MyAvenir;
+  font-family: "MyAvenir";
   line-height: 1.125rem;
   font-weight: 400;
 }
 
-@mixin des_tab_fontforh2{
+@mixin desktop-tablet-font-h2{
   font-size: 2.25rem;
   font-weight: 700;
-    font-family: MyAvenir;
+    font-family: "MyAvenir";
     line-height: 2.75rem;
 
 }
 
-@mixin des_tab_fontforh3{
+@mixin desktop-tablet-font-h3{
   font-size: 1.5rem;
   font-weight: 600;
-    font-family: AvnirmyFontDemi;
+    font-family: "MyAvenir";
     line-height: 2rem;
 
 }
 
-@mixin des_tab_fontforbody{
+@mixin desktop-tablet-font-body{
   font-size: 0.875rem;
-  font-family: AvnirmyFontRegular;
+  font-family: "MyAvenir";
   line-height: 1.375rem;
   font-weight: 400;
 }
 
-@mixin footercopyfont{
+@mixin desktop-tablet-footer-copy-font{
   font-size: 0.875rem;
-  font-family: AvnirmyFontRegular;
+  font-family: "MyAvenir";
   line-height: 1.25rem;
   font-weight: 400;
 }
