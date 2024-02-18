@@ -26,7 +26,7 @@ function displayReviewDetails(userComment) {
 
 
    const reviewAvatar = document.createElement('div');
-   reviewAvatar.classList.add("review__Avatar");
+   reviewAvatar.classList.add("review__placeholder");
    reviewAvatar.src = "";
 
    reviewWrapper.appendChild(reviewAvatar);
