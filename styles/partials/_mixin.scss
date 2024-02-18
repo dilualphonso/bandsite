@@ -11,11 +11,8 @@ $breakpoint_desktop:1280px;
  @media (min-width:$breakpoint_tablet){
 
        @content;
-
  }
 }
-
-
 
 @mixin desktop {
   @media screen and (min-width:$breakpoint_desktop ){
@@ -80,10 +77,3 @@ $breakpoint_desktop:1280px;
 }
 
 
-
-
-// Need to fix
-
-// 1. Sprint1 according to the feedback , i fixed some points,
-// but remains i ll fix on next Sprint
-// 2.And also i have some alignment issue on show display, ill fix it
